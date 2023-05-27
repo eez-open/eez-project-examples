@@ -1,0 +1,34 @@
+{
+    "name": "eez-project-examples",
+    "version": "0.0.1",
+    "description": "",
+    "main": "build/build-catalog.ts",
+    "scripts": {
+        "start": "cd build && tsc && node build-catalog.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eez-open/eez-project-examples.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "GPL-3.0-only",
+    "bugs": {
+        "url": "https://github.com/eez-open/eez-project-examples/issues"
+    },
+    "homepage": "https://github.com/eez-open/eez-project-examples#readme",
+    "dependencies": {
+        "@types/archiver": "^2.1.2",
+        "@types/decompress": "^4.2.3",
+        "@types/node": "^12.11.1",
+        "@types/request": "^2.48.1",
+        "@types/request-promise-native": "^1.0.15",
+        "@types/sha256": "^0.2.0",
+        "archiver": "^3.0.0",
+        "decompress": "^4.2.1",
+        "jimp": "^0.9.8",
+        "request": "^2.88.0",
+        "request-promise-native": "^1.0.5",
+        "sha256": "^0.2.0"
+    }
+}
