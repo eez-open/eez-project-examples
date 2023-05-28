@@ -6,6 +6,8 @@ Each eez-project file must have following properties defined inside Settings:
     - Description
     - Image
     - Keywords
+    - [Optional] Target Platform
+    - [Optional] Target Platform Link
 
 The name of example is extracted from the eez-project file name (excluding `.eez-project` extension). So, choose the file name carefully.
 

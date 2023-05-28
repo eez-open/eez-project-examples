@@ -1,146 +1,267 @@
 {
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
   "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
     "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
       "projectVersion": "v3",
       "projectType": "dashboard",
-      "imports": []
+      "imports": [],
+      "description": "Example of TextInput widget and Flow.parseDouble function",
+      "image": "data:image/png;base64,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",
+      "keywords": "TextInput"
     },
     "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
       "configurations": [
         {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
           "name": "Default"
         }
       ],
-      "files": []
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h"
     }
   },
   "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
     "globalVariables": [],
     "structures": [],
     "enums": []
   },
   "actions": [],
-  "pages": [
+  "userPages": [
     {
+      "objID": "f7d19866-809f-3036-46ef-350ffb9a1704",
       "components": [
         {
+          "objID": "f90b60d0-0665-1f2d-d7bb-8672ca4b6e2e",
           "type": "TextInputWidget",
           "left": 81,
           "top": 74,
           "width": 160,
           "height": 32,
-          "wireID": "b7bc81ed-8ab6-4af7-bff0-e167467f921e",
           "customInputs": [],
           "customOutputs": [],
-          "asOutputProperties": [
-            "action"
-          ],
           "data": "text",
           "style": {
+            "objID": "fb6a8ebf-ffb2-c572-e37b-06078605c72c",
             "inheritFrom": "default"
-          }
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "f6d14372-4e46-effb-8417-72b4295fa025",
+              "eventName": "ON_INPUT",
+              "handlerType": "flow"
+            }
+          ]
         },
         {
+          "objID": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
           "type": "TextWidget",
           "left": 304,
           "top": 74,
-          "width": 146,
+          "width": 176,
           "height": 32,
-          "wireID": "35f9e4e2-c8c2-470f-98c1-c0f47d4c5db6",
           "customInputs": [],
           "customOutputs": [],
-          "data": "text",
+          "data": "\"Input text: \\\"\" + text + \"\\\"\"",
           "style": {
+            "objID": "7e9248a4-65d7-7e9e-b307-1e128e85390f",
             "inheritFrom": "default"
           },
+          "timeline": [],
+          "eventHandlers": [],
           "text": ""
         },
         {
+          "objID": "3ff50907-83c1-3780-6dd9-86fd394135b5",
           "type": "LogActionComponent",
-          "left": 450,
-          "top": -122,
-          "width": 87,
-          "height": 54,
-          "wireID": "89fe7605-acd7-4f0d-821f-4543fd2ef067",
+          "left": 551,
+          "top": 0,
+          "width": 126,
+          "height": 55,
           "customInputs": [
             {
-              "name": "value",
-              "type": "struct:$TextInputActionParams"
+              "objID": "6a0551f1-1405-daa8-2c9f-7aba9895c92a",
+              "name": "event",
+              "type": "struct:$TextInputChangeEvent"
             }
           ],
           "customOutputs": [],
-          "value": "value.value"
+          "value": "event.value"
         },
         {
+          "objID": "e94d48a8-4b18-c941-0c17-1b6d7c7141e4",
           "type": "ButtonWidget",
           "left": 81,
-          "top": 127,
+          "top": 136,
           "width": 64,
           "height": 32,
-          "wireID": "8f116f13-38e7-40fa-f81b-854a9620be92",
           "customInputs": [],
           "customOutputs": [],
-          "asOutputProperties": [
-            "action"
-          ],
-          "data": "\"Set\"",
+          "data": "\"Parse\"",
           "style": {
+            "objID": "05c58537-4548-c9da-8467-13171e04d126",
             "inheritFrom": "default"
           },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "8759476e-3ba7-026d-795f-37c0743da694",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
           "disabledStyle": {
+            "objID": "179f438a-5572-8fde-c5e8-620ccef49b05",
             "inheritFrom": "default"
           }
         },
         {
+          "objID": "b58e31bf-781c-6dcf-5be2-e0aefaff28b3",
           "type": "SetVariableActionComponent",
-          "left": 500,
-          "top": 69,
-          "width": 222,
-          "height": 58,
-          "wireID": "6553ccc5-5b2c-4219-86c1-4d327f9e0cd8",
+          "left": 518,
+          "top": 311,
+          "width": 193,
+          "height": 56,
           "customInputs": [
             {
-              "name": "param",
-              "type": "struct:$TextInputActionParams"
+              "objID": "ffae1751-f5a4-30fe-21e6-82a04c67a2ee",
+              "name": "value",
+              "type": "double"
             }
           ],
           "customOutputs": [],
           "entries": [
             {
+              "objID": "d2360f81-3d9e-54fc-c0b4-b7218d06cbda",
               "variable": "num_value",
-              "value": "param.value"
+              "value": "value"
             }
           ]
+        },
+        {
+          "objID": "43afe426-29eb-4aca-ca1a-f867330bf9d1",
+          "type": "TextWidget",
+          "left": 304,
+          "top": 136,
+          "width": 146,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Parsed number: \" + num_value",
+          "style": {
+            "objID": "b860bec0-5311-4f14-ab5f-e3b4a7e05ca7",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "text": ""
+        },
+        {
+          "objID": "53f4920e-1598-4644-d44d-342f821c68e5",
+          "type": "EvalExprActionComponent",
+          "left": 204,
+          "top": 311,
+          "width": 201,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "catchError": true,
+          "expression": "Flow.parseDouble(text)"
+        },
+        {
+          "objID": "0739c85d-cd0d-4c00-9fb1-e5f3c369ae58",
+          "type": "TextWidget",
+          "left": 81,
+          "top": 190,
+          "width": 369,
+          "height": 32,
+          "customInputs": [
+            {
+              "objID": "64039e29-d11c-42ec-c8bc-9f3a1435edc2",
+              "name": "error_message",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "data": "error_message",
+          "style": {
+            "objID": "ceb69654-9c29-4c8a-defb-05b07eb3deef",
+            "inheritFrom": "default",
+            "color": "#c22626"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "7a7bd3ce-cc27-4f55-977d-b1cbf1d8e970",
+          "type": "ConstantActionComponent",
+          "left": 767,
+          "top": 311,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"\""
         }
       ],
       "connectionLines": [
         {
-          "source": "b7bc81ed-8ab6-4af7-bff0-e167467f921e",
-          "output": "action",
-          "target": "89fe7605-acd7-4f0d-821f-4543fd2ef067",
+          "objID": "52ede00f-7048-e88d-f887-627342656407",
+          "source": "f90b60d0-0665-1f2d-d7bb-8672ca4b6e2e",
+          "output": "ON_INPUT",
+          "target": "3ff50907-83c1-3780-6dd9-86fd394135b5",
+          "input": "event"
+        },
+        {
+          "objID": "b26dc081-f3f5-4e12-c13b-1df2947be16f",
+          "source": "53f4920e-1598-4644-d44d-342f821c68e5",
+          "output": "result",
+          "target": "b58e31bf-781c-6dcf-5be2-e0aefaff28b3",
           "input": "value"
         },
         {
-          "source": "8f116f13-38e7-40fa-f81b-854a9620be92",
-          "output": "action",
-          "target": "6553ccc5-5b2c-4219-86c1-4d327f9e0cd8",
+          "objID": "3e1c9079-dd45-465f-f255-1cb9957961f2",
+          "source": "e94d48a8-4b18-c941-0c17-1b6d7c7141e4",
+          "output": "CLICKED",
+          "target": "53f4920e-1598-4644-d44d-342f821c68e5",
           "input": "@seqin"
         },
         {
-          "source": "b7bc81ed-8ab6-4af7-bff0-e167467f921e",
-          "output": "action",
-          "target": "6553ccc5-5b2c-4219-86c1-4d327f9e0cd8",
-          "input": "param"
+          "objID": "0982236f-019c-4109-d4ec-a759eb28b791",
+          "source": "7a7bd3ce-cc27-4f55-977d-b1cbf1d8e970",
+          "output": "value",
+          "target": "0739c85d-cd0d-4c00-9fb1-e5f3c369ae58",
+          "input": "error_message"
+        },
+        {
+          "objID": "843ffc21-2ab7-40e1-bc29-2ecfe8b89168",
+          "source": "b58e31bf-781c-6dcf-5be2-e0aefaff28b3",
+          "output": "@seqout",
+          "target": "7a7bd3ce-cc27-4f55-977d-b1cbf1d8e970",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ad5310b4-71e0-4895-ca85-48a411bc54d0",
+          "source": "53f4920e-1598-4644-d44d-342f821c68e5",
+          "output": "@error",
+          "target": "0739c85d-cd0d-4c00-9fb1-e5f3c369ae58",
+          "input": "error_message"
         }
       ],
       "localVariables": [
         {
+          "objID": "727a92b1-2620-4273-6b56-29d271e9f057",
           "name": "text",
           "type": "string",
-          "defaultValue": "\"Hello, world!\"",
+          "defaultValue": "\"?\"",
           "persistent": false
         },
         {
+          "objID": "d627b9a7-8739-0658-6151-058b0e62cff6",
           "name": "num_value",
           "type": "double",
           "defaultValue": "0",
@@ -152,14 +273,20 @@
       "left": 0,
       "top": 0,
       "width": 480,
-      "height": 272
+      "height": 272,
+      "lvglLocalStyles": {
+        "objID": "85b8de51-5d90-5c45-cc62-7cde259434b7"
+      }
     }
   ],
+  "userWidgets": [],
   "styles": [
     {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
       "name": "default"
     },
     {
+      "objID": "cbcc6b9c-c80e-dda0-abb1-1c5e225d0cd7",
       "name": "main",
       "inheritFrom": "",
       "css": "background-color: #eee;\n"
@@ -168,6 +295,7 @@
   "colors": [],
   "themes": [
     {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
       "name": "default",
       "colors": []
     }

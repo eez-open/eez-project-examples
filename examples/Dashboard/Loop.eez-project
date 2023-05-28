@@ -1,0 +1,303 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "imports": [],
+      "description": "Example of Loop action",
+      "image": "data:image/png;base64,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",
+      "keywords": "loop"
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [
+      {
+        "objID": "9106b4ff-6a34-d9cc-f1c0-6c74a091b9da",
+        "name": "tetramino",
+        "type": "struct:Tetramino",
+        "defaultValue": "{\n  shape: 0,\n  xCenter: 0,\n  yCenter: 0,\n  rotation: 0\n}"
+      },
+      {
+        "objID": "3130c10e-db10-7ce9-ebd6-3b0e28bfdb28",
+        "name": "playfield",
+        "type": "array:integer",
+        "defaultValue": "[\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0,\n  0,0,0,0,0,0,0,0,0,0\n]"
+      }
+    ],
+    "structures": [
+      {
+        "objID": "7dc2b3d3-6b7f-4d91-dde7-109bea9c3077",
+        "name": "Tetramino",
+        "fields": [
+          {
+            "objID": "a801d7f0-74c7-d59c-07f5-92f0bee6e477",
+            "name": "shape",
+            "type": "integer"
+          },
+          {
+            "objID": "6289b9a2-39a4-b89c-2f84-f30b2d850afe",
+            "name": "xCenter",
+            "type": "integer"
+          },
+          {
+            "objID": "a199d88b-9525-88f4-8fb3-33c861164396",
+            "name": "yCenter",
+            "type": "integer"
+          },
+          {
+            "objID": "641ef021-0856-8da9-dd1d-5f4bc6d20b9e",
+            "name": "rotation",
+            "type": "integer"
+          }
+        ]
+      }
+    ],
+    "enums": []
+  },
+  "actions": [],
+  "userPages": [
+    {
+      "objID": "f7d19866-809f-3036-46ef-350ffb9a1704",
+      "components": [
+        {
+          "objID": "f90b60d0-0665-1f2d-d7bb-8672ca4b6e2e",
+          "type": "TextWidget",
+          "left": 26,
+          "top": 18,
+          "width": 151,
+          "height": 38,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Orientation: \" + i",
+          "style": {
+            "objID": "fb6a8ebf-ffb2-c572-e37b-06078605c72c",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "text": ""
+        },
+        {
+          "objID": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
+          "type": "LoopActionComponent",
+          "left": 204,
+          "top": -104,
+          "width": 217,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "1",
+          "to": "100",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "3ff50907-83c1-3780-6dd9-86fd394135b5",
+          "type": "StartActionComponent",
+          "left": -164,
+          "top": -104,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "e94d48a8-4b18-c941-0c17-1b6d7c7141e4",
+          "type": "LogActionComponent",
+          "left": 627,
+          "top": -181,
+          "width": 87,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "i"
+        },
+        {
+          "objID": "b58e31bf-781c-6dcf-5be2-e0aefaff28b3",
+          "type": "ButtonWidget",
+          "left": 37,
+          "top": 170,
+          "width": 121,
+          "height": 65,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Restart\"",
+          "style": {
+            "objID": "46a91e32-db07-1f1c-ebb3-114ddd3c98a1",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "e542d417-d601-b3ba-beda-1e43b92c111e",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
+          "enabled": "!started",
+          "disabledStyle": {
+            "objID": "026ead4a-0729-5cd8-f2f6-955b6b19a4f4",
+            "inheritFrom": "default"
+          }
+        },
+        {
+          "objID": "a9c55d8b-73ed-bd49-d870-12f6504ac2d2",
+          "type": "SetVariableActionComponent",
+          "left": 0,
+          "top": -104,
+          "width": 134,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "8d4689ef-7e2f-d977-f216-d4bd14118d6a",
+              "variable": "started",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "objID": "049694e6-5989-d362-dc6f-82e8c4e0f13b",
+          "type": "SetVariableActionComponent",
+          "left": 565,
+          "top": 8,
+          "width": 140,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "0db048f5-238c-fec8-50a3-68ad12148035",
+              "variable": "started",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "objID": "cc3037e7-8f0f-70c8-a53b-38328fa3137b",
+          "type": "DelayActionComponent",
+          "left": 498,
+          "top": -181,
+          "width": 87,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "milliseconds": "100"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "52ede00f-7048-e88d-f887-627342656407",
+          "source": "3ff50907-83c1-3780-6dd9-86fd394135b5",
+          "output": "@seqout",
+          "target": "a9c55d8b-73ed-bd49-d870-12f6504ac2d2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ed3d540f-2b24-f299-506d-c2eb0a8a1d40",
+          "source": "e94d48a8-4b18-c941-0c17-1b6d7c7141e4",
+          "output": "@seqout",
+          "target": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
+          "input": "next"
+        },
+        {
+          "objID": "d1c02421-6008-116c-0cdb-7241ab4ba1db",
+          "source": "b58e31bf-781c-6dcf-5be2-e0aefaff28b3",
+          "output": "CLICKED",
+          "target": "a9c55d8b-73ed-bd49-d870-12f6504ac2d2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7a2ec30a-2b24-43db-7227-1e37811067f7",
+          "source": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
+          "output": "done",
+          "target": "049694e6-5989-d362-dc6f-82e8c4e0f13b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b9cccdc4-bdd7-dd40-37c1-08d7861eb16f",
+          "source": "a9c55d8b-73ed-bd49-d870-12f6504ac2d2",
+          "output": "@seqout",
+          "target": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
+          "input": "start"
+        },
+        {
+          "objID": "7e51c507-60f8-a462-b76e-14170dc2cdd3",
+          "source": "dd4888a8-6ddf-bda8-ee39-329ba1088f6e",
+          "output": "@seqout",
+          "target": "cc3037e7-8f0f-70c8-a53b-38328fa3137b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7e10c12a-b935-209d-6120-39cd8e4891e3",
+          "source": "cc3037e7-8f0f-70c8-a53b-38328fa3137b",
+          "output": "@seqout",
+          "target": "e94d48a8-4b18-c941-0c17-1b6d7c7141e4",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "f6bb0a59-f8d8-892a-b805-ed3d63f13f45",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0"
+        },
+        {
+          "objID": "edbbc569-0e74-b30a-e2c3-cfe4ba0382c0",
+          "name": "started",
+          "type": "boolean",
+          "defaultValue": "true",
+          "persistent": false
+        }
+      ],
+      "name": "Page",
+      "style": "main_page",
+      "left": 0,
+      "top": 0,
+      "width": 480,
+      "height": 272,
+      "lvglLocalStyles": {
+        "objID": "85b8de51-5d90-5c45-cc62-7cde259434b7"
+      }
+    }
+  ],
+  "userWidgets": [],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default"
+    },
+    {
+      "objID": "0fca4c07-b0dd-4388-7a9b-7826f573eb95",
+      "name": "main_page",
+      "inheritFrom": "default",
+      "backgroundColor": "#d8d5ee"
+    }
+  ],
+  "colors": [],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": []
+    }
+  ]
+}
