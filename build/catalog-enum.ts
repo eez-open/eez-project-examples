@@ -48,9 +48,7 @@ export async function getCatalog() {
                     targetPlatformLink
                 });
             } else {
-                if (!(type == "firmware-module")) {
-                    console.warn(`Missing description, image or keywords in ${file}`);
-                }
+                console.warn(`Missing description, image or keywords in ${file}`);
             }
         } catch (err) {
             console.error(err);

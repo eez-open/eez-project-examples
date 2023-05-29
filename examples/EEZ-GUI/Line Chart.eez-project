@@ -45,7 +45,134 @@
   },
   "variables": {
     "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
-    "globalVariables": [],
+    "globalVariables": [
+      {
+        "objID": "a73bbed8-5d6c-4884-a5ae-90059cdd4817",
+        "id": 1,
+        "name": "alert_message",
+        "description": "Message in alert dialog",
+        "type": "string",
+        "defaultValue": "\"Are you sure?\"",
+        "native": true
+      },
+      {
+        "objID": "550a282b-4adc-4dba-f340-329202c722af",
+        "id": 2,
+        "name": "keypad_text",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "61733096-2f2b-48e6-a56a-9c6f4c46d8ac",
+        "id": 3,
+        "name": "keypad_edit_unit",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "33671ead-8060-4bdc-d5b8-2dd916116d5f",
+        "id": 4,
+        "name": "keypad_sign_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "ce509d56-ff40-451d-8b59-35eb17504d5a",
+        "id": 5,
+        "name": "keypad_unit_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "9e979aa5-a412-4c66-e7c4-0a3ff6646c7c",
+        "id": 6,
+        "name": "keypad_dot_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "c5a4b9d6-62f9-4f6b-c001-19471e600b89",
+        "id": 7,
+        "name": "keypad_option1_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "2e81f65f-5099-4f89-8ca5-15da201e8a71",
+        "id": 8,
+        "name": "keypad_option1_text",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "997ee84a-5751-4769-8342-56de9be61486",
+        "id": 9,
+        "name": "keypad_option2_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "44b24006-4a2f-48b4-a427-7e0dfc98613a",
+        "id": 10,
+        "name": "keypad_option2_text",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "5ce6b3c0-0fab-42a6-926c-ad42b2817e39",
+        "id": 11,
+        "name": "keypad_option3_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "9cfecfb8-26ad-4658-db33-4f90720580a3",
+        "id": 12,
+        "name": "keypad_option3_text",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "e5057431-c659-4336-e965-d5589a330b3f",
+        "id": 13,
+        "name": "keypad_mode",
+        "type": "integer",
+        "defaultValue": "0",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "aee9d54f-12b0-4ed3-d6e1-474fa9aad55d",
+        "id": 14,
+        "name": "keypad_ok_enabled",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      }
+    ],
     "structures": [
       {
         "objID": "7e2d1ab8-377a-4074-c5cf-a66e8f51bb8f",
@@ -74,9 +201,185 @@
         ]
       }
     ],
-    "enums": []
+    "enums": [
+      {
+        "objID": "14c2931d-e65b-46e9-f169-55cdd18f27c5",
+        "name": "Touch_calibration_point",
+        "members": [
+          {
+            "objID": "9688a1f4-c0f7-40b9-d4f2-0bad82ed2b86",
+            "name": "Top left",
+            "value": 0
+          },
+          {
+            "objID": "99aa0bfe-29f5-46ab-b8c4-d0f295eb8c05",
+            "name": "Bottom right",
+            "value": 1
+          },
+          {
+            "objID": "b491256c-debf-436a-bed2-e45ab05140da",
+            "name": "Top right",
+            "value": 2
+          }
+        ]
+      }
+    ]
   },
-  "actions": [],
+  "actions": [
+    {
+      "objID": "23704333-9149-40e7-9d89-d83d94a6affb",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 1,
+      "name": "yes",
+      "implementationType": "native"
+    },
+    {
+      "objID": "69fdfa77-a0a9-4afa-c6f9-a43a2318c76a",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 2,
+      "name": "no",
+      "implementationType": "native"
+    },
+    {
+      "objID": "c45ffbf9-5c8a-43d1-bedd-32ad1729bd65",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 3,
+      "name": "cancel",
+      "implementationType": "native"
+    },
+    {
+      "objID": "74d51fae-28c9-4dc6-c035-f9531257d9e2",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 4,
+      "name": "edit",
+      "implementationType": "native"
+    },
+    {
+      "objID": "085244b6-b604-4bae-ad59-d4cd5a24687a",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 5,
+      "name": "drag_overlay",
+      "implementationType": "native"
+    },
+    {
+      "objID": "e6c05b33-2192-42c9-ac46-e2d3b13a2a64",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 6,
+      "name": "scroll",
+      "implementationType": "native"
+    },
+    {
+      "objID": "bc39ba75-2c81-41ea-b222-7f4758997356",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 7,
+      "name": "keypad_key",
+      "implementationType": "native"
+    },
+    {
+      "objID": "cf84e187-0bb7-4d07-e7c6-163bb0918e69",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 8,
+      "name": "keypad_back",
+      "implementationType": "native"
+    },
+    {
+      "objID": "6e49a549-e1a5-425f-cd36-21620e148622",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 9,
+      "name": "keypad_unit",
+      "implementationType": "native"
+    },
+    {
+      "objID": "a948a4ca-9ee8-430c-cba9-22ddb72fb505",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 10,
+      "name": "keypad_option1",
+      "implementationType": "native"
+    },
+    {
+      "objID": "29c3ac85-c4e3-4faf-fccd-c74a62ed9bcc",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 11,
+      "name": "keypad_option2",
+      "implementationType": "native"
+    },
+    {
+      "objID": "bc4de1ac-f4d4-4934-ebb9-597a055d3645",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 12,
+      "name": "keypad_option3",
+      "implementationType": "native"
+    },
+    {
+      "objID": "8b099f52-0371-45db-e287-27ed0cc496f7",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 13,
+      "name": "keypad_sign",
+      "implementationType": "native"
+    },
+    {
+      "objID": "0ec5b97d-e67c-460e-e0e4-59a17325c1b3",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 14,
+      "name": "keypad_ok",
+      "implementationType": "native"
+    },
+    {
+      "objID": "96b6b95f-2fd7-45c4-d31d-2df559865759",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 15,
+      "name": "keypad_cancel",
+      "implementationType": "native"
+    },
+    {
+      "objID": "836a9bf8-e37a-4e07-8b54-147766232016",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 16,
+      "name": "toggle_keypad_mode",
+      "implementationType": "native"
+    },
+    {
+      "objID": "8f1106fe-6647-4056-95aa-90ddabc74392",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "id": 17,
+      "name": "keypad_space",
+      "implementationType": "native"
+    }
+  ],
   "userPages": [
     {
       "objID": "dc8c5e32-a2aa-9d2d-a70b-4d971f3c2b8d",
@@ -559,6 +862,242 @@
       "name": "line_chart_axis",
       "inheritFrom": "line_chart",
       "font": "small"
+    },
+    {
+      "objID": "356d3dcd-8f71-4792-f54d-e5a93bba3b42",
+      "id": 1,
+      "name": "default",
+      "description": "",
+      "inheritFrom": "",
+      "font": "medium",
+      "alignHorizontal": "center",
+      "alignVertical": "center",
+      "color": "text",
+      "backgroundColor": "background",
+      "activeColor": "background",
+      "activeBackgroundColor": "text",
+      "borderColor": "border",
+      "padding": "0"
+    },
+    {
+      "objID": "4296dd7f-6a71-4b6a-c7b6-349f09a60152",
+      "id": 2,
+      "name": "info_alert",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "padding": "20",
+      "margin": "20"
+    },
+    {
+      "objID": "2b9b5759-f866-4b99-dcec-57a192d92b0d",
+      "id": 3,
+      "name": "error_alert",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "color": "dark_text",
+      "backgroundColor": "error",
+      "activeColor": "error",
+      "activeBackgroundColor": "dark_text",
+      "padding": "20",
+      "margin": "20"
+    },
+    {
+      "objID": "4e67d471-cec0-4a40-ba11-045fc2e4a887",
+      "id": 4,
+      "name": "error_alert_button",
+      "inheritFrom": "button",
+      "alwaysBuild": true,
+      "padding": "8 16 8 16"
+    },
+    {
+      "objID": "1d4053c2-502f-4ca6-f6bd-10c31b0de5e5",
+      "id": 5,
+      "name": "select_enum_item_popup_container",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "color": "drop_down_list_color",
+      "backgroundColor": "drop_down_list_background",
+      "activeColor": "drop_down_list_background",
+      "activeBackgroundColor": "drop_down_list_color",
+      "padding": "12"
+    },
+    {
+      "objID": "9a32924f-151f-4a2e-e3e1-cd8be4eeabcc",
+      "id": 6,
+      "name": "select_enum_item_popup_container_S",
+      "inheritFrom": "select_enum_item_popup_container",
+      "alwaysBuild": true
+    },
+    {
+      "objID": "b0b9d830-02d9-4fec-8917-415c12b705b2",
+      "id": 7,
+      "name": "select_enum_item_popup_item",
+      "inheritFrom": "select_enum_item_popup_container",
+      "alwaysBuild": true,
+      "padding": "6"
+    },
+    {
+      "objID": "37cafc3b-e976-4447-f767-125269db0f4e",
+      "id": 8,
+      "name": "select_enum_item_popup_item_S",
+      "inheritFrom": "select_enum_item_popup_container_S",
+      "alwaysBuild": true,
+      "alignHorizontal": "left",
+      "padding": "6"
+    },
+    {
+      "objID": "b8d5753e-1b44-45e5-d5f3-3d4fe73dc408",
+      "id": 9,
+      "name": "select_enum_item_popup_disabled_item",
+      "inheritFrom": "select_enum_item_popup_item",
+      "alwaysBuild": true,
+      "color": "drop_down_list_color_disabled"
+    },
+    {
+      "objID": "6f345212-d548-4a57-fb2e-ee5f37903b0a",
+      "id": 10,
+      "name": "select_enum_item_popup_disabled_item_S",
+      "inheritFrom": "select_enum_item_popup_item_S",
+      "alwaysBuild": true,
+      "color": "drop_down_list_color_disabled"
+    },
+    {
+      "objID": "e6a88ce9-e1b8-4afb-a269-d1ea24dd1b39",
+      "id": 11,
+      "name": "menu_with_buttons_message",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "alignVertical": "top",
+      "color": "text",
+      "backgroundColor": "background",
+      "activeColor": "background",
+      "activeBackgroundColor": "text",
+      "padding": "0 0 10 0",
+      "margin": "0"
+    },
+    {
+      "objID": "675de375-fba5-420f-83d1-e515d0c96dba",
+      "id": 12,
+      "name": "menu_with_buttons_container",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "padding": "20",
+      "margin": "20"
+    },
+    {
+      "objID": "fa708dd6-9e06-4d65-e17e-dd53d85fb34e",
+      "id": 13,
+      "name": "menu_with_buttons_button",
+      "inheritFrom": "button",
+      "alwaysBuild": true,
+      "padding": "0 4",
+      "margin": "0"
+    },
+    {
+      "objID": "37acbe04-b48b-4373-b414-5c44b4f613a5",
+      "id": 14,
+      "name": "fps_graph",
+      "inheritFrom": "default",
+      "alwaysBuild": true,
+      "color": "#00ff1e",
+      "backgroundColor": "#000000",
+      "borderSize": "1",
+      "borderColor": "backdrop"
+    },
+    {
+      "objID": "bda2974a-376d-465c-cde7-2bbca4b7e6de",
+      "id": 15,
+      "name": "slider_widget",
+      "inheritFrom": "default",
+      "color": "slider_widget_color",
+      "backgroundColor": "slider_widget_background"
+    },
+    {
+      "objID": "5af2a9b1-ab7f-4220-d782-1dadad0159e1",
+      "id": 16,
+      "name": "switch_widget",
+      "inheritFrom": "default",
+      "color": "switch_widget_color",
+      "backgroundColor": "switch_widget_background_off",
+      "activeColor": "switch_widget_color",
+      "activeBackgroundColor": "switch_widget_background_on",
+      "focusColor": "switch_widget_color",
+      "borderSize": "2",
+      "borderColor": "switch_widget_border",
+      "padding": "3 0"
+    },
+    {
+      "objID": "1f4eaab2-0915-443d-d6db-b3ebd8945c57",
+      "id": 17,
+      "name": "drop_down_list",
+      "inheritFrom": "default",
+      "color": "drop_down_list_color",
+      "backgroundColor": "drop_down_list_background",
+      "activeColor": "drop_down_list_color",
+      "activeBackgroundColor": "drop_down_list_active_background",
+      "borderColor": "drop_down_list_border"
+    },
+    {
+      "objID": "cbfe4b4e-7414-483c-aeaf-dc69d2bf2f36",
+      "id": 18,
+      "name": "roller_widget",
+      "inheritFrom": "default"
+    },
+    {
+      "objID": "42b64458-be27-43bb-cadb-af1c09708108",
+      "id": 19,
+      "name": "roller_widget_selected_value",
+      "inheritFrom": "default",
+      "borderSize": "2",
+      "borderRadius": "4",
+      "borderColor": "#c0c0c0"
+    },
+    {
+      "objID": "a20e0714-d726-4bc4-c299-65252e5d07d2",
+      "id": 20,
+      "name": "roller_widget_unselected_value",
+      "inheritFrom": "default",
+      "color": "#808080"
+    },
+    {
+      "objID": "5863519c-178e-4204-e76d-6213c6938465",
+      "id": 21,
+      "name": "background",
+      "inheritFrom": "default",
+      "backgroundColor": "background",
+      "backgroundImage": ""
+    },
+    {
+      "objID": "c6c69a95-0afb-443f-a45b-ccc6d3f1efa0",
+      "id": 22,
+      "name": "button",
+      "inheritFrom": "default",
+      "color": "button_text",
+      "backgroundColor": "button_background",
+      "activeColor": "button_text",
+      "activeBackgroundColor": "button_active_background",
+      "borderSize": "2",
+      "borderRadius": "8",
+      "borderColor": "button_border"
+    },
+    {
+      "objID": "0dc3b5d5-db89-4a1a-e5d3-cda8afb4a758",
+      "id": 23,
+      "name": "button_disabled",
+      "inheritFrom": "button",
+      "color": "button_disabled_text",
+      "backgroundColor": "button_disabled_background",
+      "activeColor": "button_disabled_text",
+      "activeBackgroundColor": "button_disabled_background",
+      "borderColor": "button_disabled_border"
+    },
+    {
+      "objID": "8e66252c-d34a-458d-d886-4b4bd5fc7fa1",
+      "id": 24,
+      "name": "note_M",
+      "inheritFrom": "default",
+      "color": "dark_text",
+      "backgroundColor": "note"
     }
   ],
   "fonts": [
@@ -4436,6 +4975,136 @@
           }
         }
       ]
+    },
+    {
+      "objID": "b98084ce-1eaf-4eaf-a080-5639deaa2fb2",
+      "id": 2,
+      "name": "shadow",
+      "renderingEngine": "freetype",
+      "source": {
+        "objID": "9213c515-8076-440f-9730-8b10f6ad2737",
+        "filePath": "Oswald-Medium.ttf",
+        "size": 14
+      },
+      "bpp": 8,
+      "height": 20,
+      "ascent": 20,
+      "descent": 0,
+      "glyphs": [
+        {
+          "objID": "030274b6-8e47-4cd8-a908-2033f9668477",
+          "encoding": 32,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "0000000000000000000303030303060606060606000000000000030606060a0a0a0a0a0a0a0a0a0a000000000306060a10101010171717171717171700000003060a10171b1e21212828282828282828000003060a101b000000000000000000000000000000060a101b280000000000000000000000000000030a101b28390000000000000000000000000000060a1721364e000000000000000000000000000006101b2c445f000000000000000000000000000306101e324e7000000000000000000000000000030a102139587a00000000000000000000000000060a10213d5f8400000000000000000000000000060a1728405f8b00000000000000000000000000060a172844668b00000000000000000000000000060a172844668b00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000"
+          }
+        },
+        {
+          "objID": "3cd2c4e7-deff-4959-bde7-1be386477f3f",
+          "encoding": 33,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "06060606060606060606060606060606060606060a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a171717171717171717171717171717171717171728282828282828282828282828282828282828280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "objID": "a6d998c4-e104-4919-86d5-cdaead472a28",
+          "encoding": 34,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "06060606060603030303030000000000000000000a0a0a0a0a0a0a0a0a0a060606030000000000001717171717171717101010100a06060300000000282828282828282821211e1b17100a0603000000000000000000000000000000001b100a0603000000000000000000000000000000281b100a0600000000000000000000000000000039281b100a0300000000000000000000000000004e3621170a0600000000000000000000000000005f442c1b10060000000000000000000000000000704e321e100603000000000000000000000000007a583921100a0300000000000000000000000000845f3d21100a06000000000000000000000000008b5f4028170a06000000000000000000000000008b664428170a06000000000000000000000000008b664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06"
+          }
+        },
+        {
+          "objID": "8d5ba658-51f8-4c0d-8e8e-dab2d1327248",
+          "encoding": 35,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000"
+          }
+        },
+        {
+          "objID": "a9593bc4-55c4-4e3b-a15c-a4f0634bab7d",
+          "encoding": 36,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06"
+          }
+        },
+        {
+          "objID": "8baa952a-5b54-4b8b-f885-b2f87c730aaf",
+          "encoding": 37,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668e00000000000000000000000000060a172844668b00000000000000000000000000060a172844668b00000000000000000000000000060a1728405f8b00000000000000000000000000060a10213d5f84f8000000000000000000000000030a102139587ac5fb00000000000000000000000306101e324e708eb0c8ddeaf4f4fbfbfbfbfbfb0006101b2c445f7a99adbeccd2d6dddddddddddd00060a1721364e667a8e9faab0b4b4b4b4b4b4b400030a101b28394e5f707a84888b8b8b8e8e8e8e0000060a101b2836444e585f5f66666666666666000003060a101b212c32393d404444444444444400000003060a10171b1e21212828282828282828000000000306060a101010101717171717171b1b000000000000030606060a0a0a0a0a0a0a0d0d0d000000000000000000030303030306060a0a0a0a"
+          }
+        },
+        {
+          "objID": "1388da28-8781-4e5f-8634-955001ccb649",
+          "encoding": 38,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000fbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbfbddddddddddddddddddddddddddddddddddddddddb4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b4b48e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e6666666666666666666666666666666666666666444444444444444444444444444444444444444428282828282828282828282828282828282828281b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a"
+          }
+        },
+        {
+          "objID": "b44c9be1-23dc-49ea-fa06-d459c4dc79e4",
+          "encoding": 39,
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "dx": 20,
+          "glyphBitmap": {
+            "width": 20,
+            "height": 20,
+            "pixelArray": "000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008e664428170a06000000000000000000000000008b664428170a06000000000000000000000000008b664428170a06000000000000000000000000008b5f4028170a06000000000000000000000000f8845f3d21100a060000000000000000000000fbc57a583921100a03fbfbfbfbfbfbf4f4eaddc8b08e704e321e100603ddddddddddddd6d2ccbead997a5f442c1b100600b4b4b4b4b4b4b4b0aa9f8e7a664e3621170a06008e8e8e8e8b8b8b88847a705f4e39281b100a0300666666666666665f5f584e4436281b100a06000044444444444444403d39322c211b100a06030000282828282828282821211e1b17100a06030000001b17171717171717101010100a060603000000000d0d0a0a0a0a0a0a0a0a060606030000000000000a0a0a0606060303030303000000000000000000"
+          }
+        }
+      ],
+      "alwaysBuild": true
     }
   ],
   "bitmaps": [],
