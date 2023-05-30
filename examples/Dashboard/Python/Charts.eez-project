@@ -13,7 +13,7 @@
       "resourceFiles": [
         {
           "objID": "4b5640cc-a3ed-4fb2-d144-f30667cd8769",
-          "filePath": "charts.py"
+          "filePath": "Charts.py"
         }
       ]
     },
@@ -60,10 +60,10 @@
           "customInputs": [],
           "customOutputs": [],
           "catchError": false,
-          "description": "Start Python script from file charts.py located at the same folder as current dashboard project",
+          "description": "Start Python script from file Charts.py located at the same folder as current dashboard project",
           "scriptSourceOption": "script-file",
           "scriptSourceInline": "",
-          "scriptSourceFile": "System.ProjectFolder + \"/charts.py\"",
+          "scriptSourceFile": "System.ProjectFolder + \"/Charts.py\"",
           "pythonPath": "\"\""
         },
         {

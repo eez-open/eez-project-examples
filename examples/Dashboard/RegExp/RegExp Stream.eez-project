@@ -13,7 +13,7 @@
       "resourceFiles": [
         {
           "objID": "37eb5d00-3af5-434c-80dd-fb2a6de33058",
-          "filePath": "test.py"
+          "filePath": "RegExp Stream.py"
         }
       ]
     },
@@ -60,7 +60,7 @@
           "customInputs": [],
           "customOutputs": [],
           "command": "\"python\"",
-          "arguments": "[System.ProjectFolder + \"/test.py\"]"
+          "arguments": "[System.ProjectFolder + \"/RegExp Stream.py\"]"
         },
         {
           "objID": "e3624e11-d967-4de9-9bf7-379931f05395",
