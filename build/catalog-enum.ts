@@ -4,9 +4,8 @@ import { basename, dirname } from "path";
 
 var request = require("request-promise-native");
 
-function getDescription(json: any, name: string, path: string, url?: string) {
+function getDescription(json: any, name: string, path: string, folder: string, url?: string) {
     const type = json.settings?.general?.projectType;
-    const folder = dirname(path);
     const description = json.settings?.general?.description;
     const image = json.settings?.general?.image;
     const keywords = json.settings?.general?.keywords;
@@ -60,10 +59,13 @@ export async function getCatalog() {
             const jsonStr = await fsPromises.readFile(file, "utf8");
             const json = JSON.parse(jsonStr);
 
+            const path = file.replace(/\\/g, "/").substring("../examples/".length);
+
             const description = getDescription(
                 json,
                 basename(file, ".eez-project"),
-                file.replace(/\\/g, "/").substring("../examples/".length)
+                path,
+                dirname(path)
             );
 
             if (description) {
@@ -104,6 +106,7 @@ export async function getCatalog() {
                 json,
                 basename(exampleRepository.projectPath, ".eez-project"),
                 exampleRepository.projectPath,
+                exampleRepository.folder,
                 exampleRepository.url
             );
 
