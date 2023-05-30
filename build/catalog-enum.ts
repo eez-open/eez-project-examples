@@ -16,6 +16,7 @@ export async function getCatalog() {
         displayHeight?: number;
         targetPlatform?: string;
         targetPlatformLink?: string;
+        resourceFiles: string[];
     }[] = [];
 
     for (const file of eezProjectfiles) {
@@ -45,7 +46,8 @@ export async function getCatalog() {
                     displayWidth,
                     displayHeight,
                     targetPlatform,
-                    targetPlatformLink
+                    targetPlatformLink,
+                    resourceFiles: json.settings?.resources?.files || [],
                 });
             } else {
                 console.warn(`Missing description, image or keywords in ${file}`);
