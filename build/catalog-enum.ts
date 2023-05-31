@@ -121,8 +121,6 @@ export async function getCatalog() {
             "/master/" +
             exampleRepository.projectPath;
 
-        console.log(downloadUrl);
-
         let projectFile: Buffer = await request({
             method: "GET",
             url: downloadUrl,
