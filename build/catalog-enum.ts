@@ -4,7 +4,33 @@ import { basename, dirname } from "path";
 
 var request = require("request-promise-native");
 
-function getDescription(json: any, name: string, path: string, folder: string, url?: string) {
+const EEZ_PROJECT_EXAMPLES_REPOSITORY = "https://github.com/eez-open/eez-project-examples";
+
+interface IProjectExample {
+    repository: string;
+    eezProjectPath: string;
+    folder: string;
+    exampleName: string;
+
+    type: string;
+    description: string;
+    image: string;
+    keywords: string;
+    displayWidth?: number;
+    displayHeight?: number;
+    targetPlatform?: string;
+    targetPlatformLink?: string;
+    resourceFiles: string[];
+}
+
+function getDescription(
+    repository: string,
+    eezProjectPath: string,
+    folder: string,
+    json: any,
+): IProjectExample | undefined {
+    const exampleName = basename(eezProjectPath, ".eez-project");
+
     const type = json.settings?.general?.projectType;
     const description = json.settings?.general?.description;
     const image = json.settings?.general?.image;
@@ -14,13 +40,30 @@ function getDescription(json: any, name: string, path: string, folder: string, u
     const targetPlatform = json.settings?.general?.targetPlatform;
     const targetPlatformLink = json.settings?.general?.targetPlatformLink;
 
+    const resourceFiles = [];
+    if (json.settings?.general?.resourceFiles) {
+        for (const resourceFile of json.settings.general.resourceFiles) {
+            if (resourceFile.filePath) {
+                resourceFiles.push(resourceFile.filePath);
+            }
+        }
+    }
+    if (json.settings?.general?.imports) {
+        for (const importDirective of json.settings.general.imports) {
+            if (importDirective.projectFilePath) {
+                resourceFiles.push(importDirective.projectFilePath);
+            }
+        }
+    }
+
     if (description && image && keywords) {
         return {
-            url,
-            name,
-            type,
-            path,
+            repository,
+            eezProjectPath,
             folder,
+            exampleName,
+
+            type,
             description,
             image,
             keywords,
@@ -28,7 +71,7 @@ function getDescription(json: any, name: string, path: string, folder: string, u
             displayHeight,
             targetPlatform,
             targetPlatformLink,
-            resourceFiles: json.settings?.resources?.files || [],
+            resourceFiles
         };
     }
 
@@ -38,34 +81,22 @@ function getDescription(json: any, name: string, path: string, folder: string, u
 export async function getCatalog() {
     const eezProjectfiles = await glob("../examples/**/*.eez-project");
 
-    let catalog: {
-        url?: string;
-        name: string;
-        type: string;
-        path: string;
-        folder: string;
-        description: string;
-        image: string;
-        keywords: string[];
-        displayWidth?: number;
-        displayHeight?: number;
-        targetPlatform?: string;
-        targetPlatformLink?: string;
-        resourceFiles: string[];
-    }[] = [];
+    let catalog: IProjectExample[] = [];
 
     for (const file of eezProjectfiles) {
         try {
             const jsonStr = await fsPromises.readFile(file, "utf8");
             const json = JSON.parse(jsonStr);
 
-            const path = file.replace(/\\/g, "/").substring("../examples/".length);
+            const projectPath = file
+                .replace(/\\/g, "/")
+                .substring("../examples/".length);
 
             const description = getDescription(
-                json,
-                basename(file, ".eez-project"),
-                path,
-                dirname(path)
+                EEZ_PROJECT_EXAMPLES_REPOSITORY,
+                projectPath,
+                dirname(projectPath),
+                json
             );
 
             if (description) {
@@ -103,11 +134,10 @@ export async function getCatalog() {
             const json = JSON.parse(jsonStr);
 
             const description = getDescription(
-                json,
-                basename(exampleRepository.projectPath, ".eez-project"),
+                exampleRepository.url,
                 exampleRepository.projectPath,
                 exampleRepository.folder,
-                exampleRepository.url
+                json
             );
 
             if (description) {

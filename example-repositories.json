@@ -4,9 +4,31 @@
         "projectPath": "resources/BB3 dashboard.eez-project",
         "folder": "Dashboard"
     },
+
+    {
+        "url": "https://github.com/eez-open/stm32f469i-disco-eez-flow-demo",
+        "projectPath": "Src/stm32f469i-disco-eez-flow-demo.eez-project",
+        "folder": "EEZ-GUI"
+    },
+    {
+        "url": "https://github.com/eez-open/sdl-eez-flow-demo",
+        "projectPath": "sdl-eez-flow-demo.eez-project",
+        "folder": "EEZ-GUI"
+    },
+
     {
         "url": "https://github.com/eez-open/stm32h745i-disco-lvgl-demo",
         "projectPath": "CM7/eez-project/smart-home-low-res.eez-project",
+        "folder": "LVGL"
+    },
+    {
+        "url": "https://github.com/eez-open/stm32f469i-disco-lvgl-demo",
+        "projectPath": "eez-project/smart-home.eez-project",
+        "folder": "LVGL"
+    },
+    {
+        "url": "https://github.com/eez-open/esp32-lvgl-eez-demo",
+        "projectPath": "examples/Heltec/esp32-lvgl-eez-demo-Heltec.eez-project",
         "folder": "LVGL"
     },
     {
@@ -20,28 +42,8 @@
         "folder": "LVGL"
     },
     {
-        "url": "https://github.com/eez-open/esp32-lvgl-eez-demo",
-        "projectPath": "examples/Heltec/esp32-lvgl-eez-demo-Heltec.eez-project",
-        "folder": "LVGL"
-    },
-    {
-        "url": "https://github.com/eez-open/stm32f469i-disco-eez-flow-demo",
-        "projectPath": "Src/stm32f469i-disco-eez-flow-demo.eez-project",
-        "folder": "EEZ-GUI"
-    },
-    {
-        "url": "https://github.com/eez-open/stm32f469i-disco-lvgl-demo",
-        "projectPath": "eez-project/smart-home.eez-project",
-        "folder": "LVGL"
-    },
-    {
         "url": "https://github.com/eez-open/lvgl-web-demo",
         "projectPath": "lvgl-web-demo.eez-project",
         "folder": "LVGL"
-    },
-    {
-        "url": "https://github.com/eez-open/sdl-eez-flow-demo",
-        "projectPath": "sdl-eez-flow-demo.eez-project",
-        "folder": "EEZ-GUI"
     }
 ]
