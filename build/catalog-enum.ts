@@ -90,7 +90,7 @@ export async function getCatalog() {
 
             const projectPath = file
                 .replace(/\\/g, "/")
-                .substring("../examples/".length);
+                .substring("../".length);
 
             const description = getDescription(
                 EEZ_PROJECT_EXAMPLES_REPOSITORY,
