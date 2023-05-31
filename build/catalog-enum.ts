@@ -95,7 +95,7 @@ export async function getCatalog() {
             const description = getDescription(
                 EEZ_PROJECT_EXAMPLES_REPOSITORY,
                 projectPath,
-                dirname(projectPath),
+                dirname(projectPath).substring("examples/".length),
                 json
             );
 

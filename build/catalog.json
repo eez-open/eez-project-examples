@@ -2,7 +2,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/LVGL/Smart Home.eez-project",
-        "folder": "examples/LVGL",
+        "folder": "LVGL",
         "projectName": "Smart Home",
         "projectType": "lvgl",
         "description": "Smart home example",
@@ -15,7 +15,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/LVGL/Smart Home Low Res.eez-project",
-        "folder": "examples/LVGL",
+        "folder": "LVGL",
         "projectName": "Smart Home Low Res",
         "projectType": "lvgl",
         "description": "Smart home example in low resolution",
@@ -28,7 +28,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/LVGL/Meter.eez-project",
-        "folder": "examples/LVGL",
+        "folder": "LVGL",
         "projectName": "Meter",
         "projectType": "lvgl",
         "description": "Example of LVGL Meter widget",
@@ -41,7 +41,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/EEZ-GUI/QR code.eez-project",
-        "folder": "examples/EEZ-GUI",
+        "folder": "EEZ-GUI",
         "projectName": "QR code",
         "projectType": "firmware",
         "description": "Examples of using QRCode widget",
@@ -54,7 +54,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/EEZ-GUI/Multi-Language.eez-project",
-        "folder": "examples/EEZ-GUI",
+        "folder": "EEZ-GUI",
         "projectName": "Multi-Language",
         "projectType": "firmware",
         "description": "Example of multi language project",
@@ -67,7 +67,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/EEZ-GUI/Line Chart.eez-project",
-        "folder": "examples/EEZ-GUI",
+        "folder": "EEZ-GUI",
         "projectName": "Line Chart",
         "projectType": "firmware",
         "description": "Example of LineChart widget",
@@ -82,7 +82,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Text Input.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Text Input",
         "projectType": "dashboard",
         "description": "Example of TextInput widget and Flow.parseDouble function",
@@ -93,7 +93,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/SerialPort.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "SerialPort",
         "projectType": "dashboard",
         "description": "Example of using Serial port",
@@ -105,7 +105,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Screen Capture.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Screen Capture",
         "projectType": "dashboard",
         "description": "Example of using SCPI command to get screenshot from the BB3 and save it to the disk.",
@@ -116,7 +116,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/QR code.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "QR code",
         "projectType": "dashboard",
         "description": "Examples of using QRCode widget",
@@ -127,7 +127,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Plotly.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Plotly",
         "projectType": "dashboard",
         "description": "Example of using SCPI and Plotly to draw LineChart from data collected from the BB3.",
@@ -139,7 +139,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Multi-Language.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Multi-Language",
         "projectType": "dashboard",
         "description": "Example of multi language project",
@@ -150,7 +150,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Loop.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Loop",
         "projectType": "dashboard",
         "description": "Example of Loop action",
@@ -161,7 +161,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Delay Test.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Delay Test",
         "projectType": "dashboard",
         "description": "Example of using plotly LineChart widget to test Delay action component.",
@@ -172,7 +172,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Animation.eez-project",
-        "folder": "examples/Dashboard",
+        "folder": "Dashboard",
         "projectName": "Animation",
         "projectType": "dashboard",
         "description": "This examples is using animation timeline",
@@ -183,7 +183,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/RegExp/Regexp String.eez-project",
-        "folder": "examples/Dashboard/RegExp",
+        "folder": "Dashboard/RegExp",
         "projectName": "Regexp String",
         "projectType": "dashboard",
         "description": "Example of using regular expressions to parse string",
@@ -194,7 +194,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/RegExp/RegExp Stream.eez-project",
-        "folder": "examples/Dashboard/RegExp",
+        "folder": "Dashboard/RegExp",
         "projectName": "RegExp Stream",
         "projectType": "dashboard",
         "description": "Example of using regular expressions with streams to parse output from python script.",
@@ -207,7 +207,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/Python/Charts.eez-project",
-        "folder": "examples/Dashboard/Python",
+        "folder": "Dashboard/Python",
         "projectName": "Charts",
         "projectType": "dashboard",
         "description": "Example of using python to generate charts",
@@ -220,7 +220,7 @@
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
         "eezProjectPath": "examples/Dashboard/HTTP/Simple HTTP.eez-project",
-        "folder": "examples/Dashboard/HTTP",
+        "folder": "Dashboard/HTTP",
         "projectName": "Simple HTTP",
         "projectType": "dashboard",
         "description": "Example of using HTTP",
