@@ -6,11 +6,11 @@ var request = require("request-promise-native");
 
 const EEZ_PROJECT_EXAMPLES_REPOSITORY = "https://github.com/eez-open/eez-project-examples";
 
-interface IProjectExample {
+interface ExampleProject {
     repository: string;
     eezProjectPath: string;
     folder: string;
-    exampleName: string;
+    projectName: string;
 
     projectType: string;
     description: string;
@@ -28,8 +28,8 @@ function getDescription(
     eezProjectPath: string,
     folder: string,
     json: any,
-): IProjectExample | undefined {
-    const exampleName = basename(eezProjectPath, ".eez-project");
+): ExampleProject | undefined {
+    const projectName = basename(eezProjectPath, ".eez-project");
 
     const projectType = json.settings?.general?.projectType;
     const description = json.settings?.general?.description;
@@ -61,7 +61,7 @@ function getDescription(
             repository,
             eezProjectPath,
             folder,
-            exampleName,
+            projectName,
 
             projectType,
             description,
@@ -81,7 +81,7 @@ function getDescription(
 export async function getCatalog() {
     const eezProjectfiles = await glob("../examples/**/*.eez-project");
 
-    let catalog: IProjectExample[] = [];
+    let catalog: ExampleProject[] = [];
 
     for (const file of eezProjectfiles) {
         try {
