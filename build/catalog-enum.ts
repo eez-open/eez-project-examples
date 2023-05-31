@@ -12,7 +12,7 @@ interface IProjectExample {
     folder: string;
     exampleName: string;
 
-    type: string;
+    projectType: string;
     description: string;
     image: string;
     keywords: string;
@@ -31,7 +31,7 @@ function getDescription(
 ): IProjectExample | undefined {
     const exampleName = basename(eezProjectPath, ".eez-project");
 
-    const type = json.settings?.general?.projectType;
+    const projectType = json.settings?.general?.projectType;
     const description = json.settings?.general?.description;
     const image = json.settings?.general?.image;
     const keywords = json.settings?.general?.keywords;
@@ -63,7 +63,7 @@ function getDescription(
             folder,
             exampleName,
 
-            type,
+            projectType,
             description,
             image,
             keywords,
