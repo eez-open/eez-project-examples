@@ -4,7 +4,8 @@ import { basename, dirname } from "path";
 
 var request = require("request-promise-native");
 
-const EEZ_PROJECT_EXAMPLES_REPOSITORY = "https://github.com/eez-open/eez-project-examples";
+const EEZ_PROJECT_EXAMPLES_REPOSITORY =
+    "https://github.com/eez-open/eez-project-examples";
 
 interface ExampleProject {
     repository: string;
@@ -27,7 +28,7 @@ function getDescription(
     repository: string,
     eezProjectPath: string,
     folder: string,
-    json: any,
+    json: any
 ): ExampleProject | undefined {
     const projectName = basename(eezProjectPath, ".eez-project");
 
@@ -55,6 +56,9 @@ function getDescription(
             }
         }
     }
+    if (json.readme?.readmeFile) {
+        resourceFiles.push(json.readme?.readmeFile);
+    }
 
     if (description && image && keywords) {
         return {
@@ -71,7 +75,7 @@ function getDescription(
             displayHeight,
             targetPlatform,
             targetPlatformLink,
-            resourceFiles
+            resourceFiles,
         };
     }
 

@@ -250,7 +250,9 @@
         "displayHeight": 480,
         "targetPlatform": "The STM32F469 Discovery kit (32F469IDISCOVERY) allows users to easily develop applications with the STM32F469 high-performance MCUs with ARM®Cortex®-M4 core and Chrom-ART Accelerator™. The discovery kit enables a wide range of use cases taking advantage of premium graphics, audio, multi-sensor support, WVGA color display, security, memory extension and connectivity features. An embedded ST-LINK/V2-1 debugger/programmer is included; specialized add-on boards can be connected thanks to the Arduino™ UNO or to the expansion connectors.",
         "targetPlatformLink": "https://www.st.com/en/evaluation-tools/32f469idiscovery.html",
-        "resourceFiles": []
+        "resourceFiles": [
+            "README.md"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/sdl-eez-flow-demo",
@@ -265,7 +267,9 @@
         "displayHeight": 480,
         "targetPlatform": "Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve's award winning catalog and many Humble Bundle games.\n\nSDL officially supports Windows, macOS, Linux, iOS, and Android. Support for other platforms may be found in the source code.\n\nSDL is written in C, works natively with C++, and there are bindings available for several other languages, including C# and Python.\n\nSDL 2.0 is distributed under the zlib license. This license allows you to use SDL freely in any software.",
         "targetPlatformLink": "https://www.libsdl.org/",
-        "resourceFiles": []
+        "resourceFiles": [
+            "README.md"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/stm32h745i-disco-lvgl-demo",
@@ -355,6 +359,8 @@
         "displayHeight": 480,
         "targetPlatform": "Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, with a special focus on speed, size, and the Web platform.",
         "targetPlatformLink": "https://emscripten.org/",
-        "resourceFiles": []
+        "resourceFiles": [
+            "README.md"
+        ]
     }
 ]
