@@ -75,9 +75,7 @@
         "keywords": "LineChart",
         "displayWidth": 480,
         "displayHeight": 272,
-        "resourceFiles": [
-            "Line Chart-gui.eez-project"
-        ]
+        "resourceFiles": []
     },
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
