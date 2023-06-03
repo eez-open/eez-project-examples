@@ -15,6 +15,11 @@
         "projectPath": "sdl-eez-flow-demo.eez-project",
         "folder": "EEZ-GUI"
     },
+    {
+        "url": "https://github.com/eez-open/binarytrees-banchmark-sdl",
+        "projectPath": "binarytrees-banchmark-sdl.eez-project",
+        "folder": "EEZ-GUI"
+    },
 
     {
         "url": "https://github.com/eez-open/stm32h745i-disco-lvgl-demo",
