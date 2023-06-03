@@ -1,0 +1,1718 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "imports": [],
+      "description": "This example is running a binary-trees benchmark",
+      "image": "data:image/png;base64,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DEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMARAAAAAwxAAAQAADEMABAAAMAwBEAAAwDAEQAAAAMO8dNYdwNm5cePGWXcBAACcgYFKpVI9604AAADg+WEKGAAAwDAEQAAAAMMQAAEAAAxDAAQAADAMARAAAMAwBEAAAADDEAABAAAMQwAEAAAwDAEQAADAMP8fK9DNeO6iWDMAAAAASUVORK5CYII=",
+      "keywords": "benchmark binarytrees",
+      "resourceFiles": []
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [],
+    "structures": [
+      {
+        "objID": "f85d19b4-d837-46d7-ecb3-4c00f8dc58b8",
+        "name": "Node",
+        "fields": [
+          {
+            "objID": "6f67cdac-b8e4-43af-d12a-4a215657c0fe",
+            "name": "left",
+            "type": "struct:Node"
+          },
+          {
+            "objID": "150301fd-ebff-4045-d8be-23f7b95564e7",
+            "name": "right",
+            "type": "struct:Node"
+          }
+        ]
+      }
+    ],
+    "enums": []
+  },
+  "actions": [
+    {
+      "objID": "3e650cdb-04a0-493f-fcba-bd4420db656d",
+      "components": [
+        {
+          "objID": "29c9e83f-c768-4b18-de67-a81da2f4f03b",
+          "type": "StartActionComponent",
+          "left": -509,
+          "top": -124,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "type": "CallActionActionComponent",
+          "left": 77,
+          "top": -124,
+          "width": 102,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "binary_trees"
+        },
+        {
+          "objID": "3f5268a4-09e8-40e1-8166-865f4572e983",
+          "type": "ConstantActionComponent",
+          "left": -67,
+          "top": -124,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "5"
+        },
+        {
+          "objID": "598893d8-451b-4a72-a263-d7f9f2779453",
+          "type": "SetVariableActionComponent",
+          "left": 253,
+          "top": -124,
+          "width": 423,
+          "height": 120,
+          "customInputs": [
+            {
+              "objID": "8357a136-38a2-49b0-8aa0-cfa3a94fcc0e",
+              "name": "log",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "7dcf2139-ccaa-4646-8ceb-7dffd16c4af0",
+              "variable": "result",
+              "value": "log == (\n   \"stretch tree of depth  7\\t check: 255\\n\" + \n   \"64\\ttrees of depth 4\\t check: 1984\\n\" +\n   \"16\\ttrees of depth 6\\t check: 2032\\n\" +\n   \"long lived tree of depth 6\\t check: 127\"\n) ? 1 : 2"
+            }
+          ]
+        },
+        {
+          "objID": "6f57be55-2683-4977-fae0-d10a2fd566f8",
+          "type": "SetVariableActionComponent",
+          "left": -362,
+          "top": -124,
+          "width": 227,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "c5e55b6c-8ebb-4517-e9df-124c3ef3e37e",
+              "variable": "start_time",
+              "value": "System.getTick()"
+            }
+          ]
+        },
+        {
+          "objID": "4f30552c-8c97-4cce-f3cd-ed9f393f9f7a",
+          "type": "EvalExprActionComponent",
+          "left": -91,
+          "top": 212,
+          "width": 292,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "(System.getTick() - start_time) / 1000"
+        },
+        {
+          "objID": "c8834afa-3a12-4b82-ef55-30b5adb2949d",
+          "type": "IsTrueActionComponent",
+          "left": -261,
+          "top": 212,
+          "width": 114,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "result == 0"
+        },
+        {
+          "objID": "1f68d9ce-dc03-4f0f-8792-296b371bc222",
+          "type": "OutputActionComponent",
+          "left": 253,
+          "top": 56,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "log",
+          "outputType": "string"
+        },
+        {
+          "objID": "089b6105-1e5d-46ca-95fa-425495dde178",
+          "type": "WatchVariableActionComponent",
+          "left": 90,
+          "top": 116,
+          "width": 111,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "result"
+        },
+        {
+          "objID": "0fe9d987-db48-4871-832b-6897dd8f1be6",
+          "type": "OutputActionComponent",
+          "left": 253,
+          "top": 116,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "status",
+          "outputType": "integer"
+        },
+        {
+          "objID": "854bd7a7-bad3-499b-88ee-1e0d7803a84c",
+          "type": "EndActionComponent",
+          "left": 712,
+          "top": -124,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "0604d14f-d45c-4994-9ce6-175b82fb5b7e",
+          "type": "OutputActionComponent",
+          "left": 253,
+          "top": 212,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "time",
+          "outputType": "double"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "88337538-bc83-4f89-88de-8c9864a9a4c6",
+          "source": "29c9e83f-c768-4b18-de67-a81da2f4f03b",
+          "output": "@seqout",
+          "target": "6f57be55-2683-4977-fae0-d10a2fd566f8",
+          "input": "@seqin"
+        },
+        {
+          "objID": "02252d88-ac4f-4828-ecf5-1de12ff85f47",
+          "source": "3f5268a4-09e8-40e1-8166-865f4572e983",
+          "output": "value",
+          "target": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "input": "5f3cc094-02d4-4661-bf84-df8c5ff49b4b"
+        },
+        {
+          "objID": "01fcbfa4-fc5a-4939-9760-2c590a82d129",
+          "source": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "output": "@seqout",
+          "target": "598893d8-451b-4a72-a263-d7f9f2779453",
+          "input": "@seqin"
+        },
+        {
+          "objID": "f8c77523-5d09-44b0-8af4-6ee834b5ace4",
+          "source": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "output": "f510a13d-095d-403d-e81e-239a3e6d8649",
+          "target": "598893d8-451b-4a72-a263-d7f9f2779453",
+          "input": "log"
+        },
+        {
+          "objID": "61d13815-a9b4-49af-89b6-f1aa6793eb53",
+          "source": "6f57be55-2683-4977-fae0-d10a2fd566f8",
+          "output": "@seqout",
+          "target": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ec6bf2e9-b79f-4c30-bae1-c19a382c047d",
+          "source": "6f57be55-2683-4977-fae0-d10a2fd566f8",
+          "output": "@seqout",
+          "target": "c8834afa-3a12-4b82-ef55-30b5adb2949d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "d140d579-ef73-461f-bf58-7147847e291a",
+          "source": "4f30552c-8c97-4cce-f3cd-ed9f393f9f7a",
+          "output": "@seqout",
+          "target": "c8834afa-3a12-4b82-ef55-30b5adb2949d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "013ca91e-db7d-4c3f-8ce8-283c9ea1c496",
+          "source": "c8834afa-3a12-4b82-ef55-30b5adb2949d",
+          "output": "True",
+          "target": "4f30552c-8c97-4cce-f3cd-ed9f393f9f7a",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b852f5c9-4b75-4f48-9495-01055b987e42",
+          "source": "e78ff3d3-356b-4b07-b887-6b7b6e104b76",
+          "output": "f510a13d-095d-403d-e81e-239a3e6d8649",
+          "target": "1f68d9ce-dc03-4f0f-8792-296b371bc222",
+          "input": "@seqin"
+        },
+        {
+          "objID": "cb96e4ef-d81b-4c06-f0bd-0fc23714b699",
+          "source": "089b6105-1e5d-46ca-95fa-425495dde178",
+          "output": "variable",
+          "target": "0fe9d987-db48-4871-832b-6897dd8f1be6",
+          "input": "@seqin"
+        },
+        {
+          "objID": "74ffc823-1d65-4b83-9927-8ac9477b4a91",
+          "source": "598893d8-451b-4a72-a263-d7f9f2779453",
+          "output": "@seqout",
+          "target": "854bd7a7-bad3-499b-88ee-1e0d7803a84c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "22e9f538-89d7-404d-8171-df89da78678d",
+          "source": "4f30552c-8c97-4cce-f3cd-ed9f393f9f7a",
+          "output": "result",
+          "target": "0604d14f-d45c-4994-9ce6-175b82fb5b7e",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "7dd92acb-e306-4c04-cc39-c978c4ddfc98",
+          "name": "result",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "d907d2fe-d1e8-437d-aa86-2c814eb57172",
+          "name": "start_time",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "run_binarytrees",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "339d0c37-50e5-4899-abe8-4f8aac1bbd1e",
+      "components": [
+        {
+          "objID": "9b7b3a77-7960-49f6-c63e-593b738a90f9",
+          "type": "StartActionComponent",
+          "left": -364,
+          "top": -113,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "5097a637-bcbb-4c49-ca40-79099afa2bed",
+          "type": "EndActionComponent",
+          "left": 2040,
+          "top": 206,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "5f3cc094-02d4-4661-bf84-df8c5ff49b4b",
+          "type": "InputActionComponent",
+          "left": -364,
+          "top": -57,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "arg",
+          "inputType": "integer"
+        },
+        {
+          "objID": "b3c3304d-067c-409f-ce06-0bbd9c1dee9e",
+          "type": "EvalExprActionComponent",
+          "left": -211,
+          "top": -112,
+          "width": 187,
+          "height": 55,
+          "customInputs": [
+            {
+              "objID": "8141cb91-3162-4050-92de-8c12906fbd61",
+              "name": "arg",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "Math.max(6, arg)"
+        },
+        {
+          "objID": "41a2c081-537a-4394-acdb-5ec93fcfa492",
+          "type": "SetVariableActionComponent",
+          "left": -211,
+          "top": -26,
+          "width": 240,
+          "height": 76,
+          "customInputs": [
+            {
+              "objID": "3a7df4cb-cd12-4262-d1e6-abb221cd78ce",
+              "name": "depth",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "29a312ac-4458-46d7-c914-f223b215a8ea",
+              "variable": "maxDepth",
+              "value": "depth"
+            },
+            {
+              "objID": "d8e1c7db-b73f-4a81-f3b1-b0cc5265b13b",
+              "variable": "stretchDepth",
+              "value": "depth + 1"
+            }
+          ]
+        },
+        {
+          "objID": "f9bfea02-eed4-4603-f50e-06eb588db98f",
+          "type": "CallActionActionComponent",
+          "left": 125,
+          "top": 82,
+          "width": 96,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "create_tree"
+        },
+        {
+          "objID": "86e3ca98-a428-49ca-ce42-7af43e82ad8c",
+          "type": "EvalExprActionComponent",
+          "left": -211,
+          "top": 82,
+          "width": 132,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "stretchDepth"
+        },
+        {
+          "objID": "84debdc4-1cf2-46f7-b2e2-3578345ee53c",
+          "type": "SetVariableActionComponent",
+          "left": 173,
+          "top": -73,
+          "width": 193,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "eea26df0-1123-4ffc-9bee-217681782c6b",
+              "name": "tree",
+              "type": "struct:Node"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "5182f262-c01c-48bf-8b5b-0d81e567751e",
+              "variable": "stretchTree",
+              "value": "tree"
+            }
+          ]
+        },
+        {
+          "objID": "dd31be3e-c5bf-4ba5-d02b-62dd899aa5a4",
+          "type": "CallActionActionComponent",
+          "left": 322,
+          "top": 82,
+          "width": 104,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "checksum"
+        },
+        {
+          "objID": "f510a13d-095d-403d-e81e-239a3e6d8649",
+          "type": "OutputActionComponent",
+          "left": 1799,
+          "top": 287,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "log",
+          "outputType": "string"
+        },
+        {
+          "objID": "b8a761c0-6929-440f-acb6-ef380e3943d0",
+          "type": "LoopActionComponent",
+          "left": 1173,
+          "top": -303,
+          "width": 316,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "depth",
+          "from": "4",
+          "to": "maxDepth",
+          "step": "2",
+          "version": 1
+        },
+        {
+          "objID": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "type": "LoopActionComponent",
+          "left": 1601,
+          "top": -165,
+          "width": 285,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "0",
+          "to": "iterations - 1",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "3a9f4bbf-ab5b-4f0b-fa09-8e88529680fb",
+          "type": "SetVariableActionComponent",
+          "left": 1601,
+          "top": -303,
+          "width": 282,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "1c2e66d5-5179-4159-ffcb-121d4d5a3cc2",
+              "variable": "sum",
+              "value": "0"
+            },
+            {
+              "objID": "9e4e1761-acc3-4b3a-a84b-34ea36efa39b",
+              "variable": "iterations",
+              "value": "1 << maxDepth - depth + 4"
+            }
+          ]
+        },
+        {
+          "objID": "ef271569-c2be-429f-d1f5-0d3f47a75322",
+          "type": "CallActionActionComponent",
+          "left": 2146,
+          "top": -165,
+          "width": 96,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "create_tree"
+        },
+        {
+          "objID": "53b544e2-8216-4358-ed72-e7c288d753d4",
+          "type": "EvalExprActionComponent",
+          "left": 1995,
+          "top": -119,
+          "width": 89,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "depth"
+        },
+        {
+          "objID": "631b7428-285c-47a0-fa5c-cb00d5a3bd76",
+          "type": "SetVariableActionComponent",
+          "left": 2459,
+          "top": -165,
+          "width": 235,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "eda74a7f-b38a-4fa5-f08d-9460bcb277f2",
+              "name": "checksum",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "5dbc34bc-1a46-42a9-d641-bdce24040693",
+              "variable": "sum",
+              "value": "sum + checksum"
+            }
+          ]
+        },
+        {
+          "objID": "5c52834e-0442-4df6-92e2-2a7e7f92b0ce",
+          "type": "CallActionActionComponent",
+          "left": 2316,
+          "top": -165,
+          "width": 104,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "checksum"
+        },
+        {
+          "objID": "9fd8db4f-9499-4dd0-e955-fe2fca3b61cf",
+          "type": "CallActionActionComponent",
+          "left": 696,
+          "top": 81,
+          "width": 96,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "create_tree"
+        },
+        {
+          "objID": "bd31706f-aaac-4bdb-e2f8-403d47a86715",
+          "type": "EvalExprActionComponent",
+          "left": 504,
+          "top": 81,
+          "width": 107,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "maxDepth"
+        },
+        {
+          "objID": "5ea01f16-941e-4557-fe0d-d27ed76a8a0b",
+          "type": "CallActionActionComponent",
+          "left": 893,
+          "top": 81,
+          "width": 104,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "checksum"
+        },
+        {
+          "objID": "fb1220b4-957a-40be-fe0b-5be65748a75a",
+          "type": "SetVariableActionComponent",
+          "left": 504,
+          "top": -73,
+          "width": 315,
+          "height": 94,
+          "customInputs": [
+            {
+              "objID": "acf231ae-f05b-4004-9afc-359da135b94b",
+              "name": "checksum",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "e9f16f17-ab6f-4d28-d62b-3f0fff608cd3",
+              "variable": "log",
+              "value": "\"stretch tree of depth  \" +\nstretchDepth +\n\"\\t check: \" +\nchecksum"
+            }
+          ]
+        },
+        {
+          "objID": "d6df0545-0ed9-40ca-c6e1-29f11253768f",
+          "type": "WatchVariableActionComponent",
+          "left": 1653,
+          "top": 287,
+          "width": 92,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "log"
+        },
+        {
+          "objID": "b26a5c14-2100-4ec1-9a52-f0ecb1fcc5b5",
+          "type": "SetVariableActionComponent",
+          "left": 1601,
+          "top": 69,
+          "width": 264,
+          "height": 94,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "0ddc3e6f-31e8-483b-881c-52caa6719623",
+              "variable": "log",
+              "value": "log + \"\\n\" +\niterations +\n\"\\ttrees of depth \" + depth +\n\"\\t check: \" + sum"
+            }
+          ]
+        },
+        {
+          "objID": "f7cff364-e9aa-4d97-970d-fe42e1a1f82d",
+          "type": "SetVariableActionComponent",
+          "left": 1173,
+          "top": 206,
+          "width": 396,
+          "height": 81,
+          "customInputs": [
+            {
+              "objID": "58a9f5fa-0458-4b55-ced1-8814fb0bee06",
+              "name": "checksum",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "a13ba1a5-cccb-41aa-a15d-5a1490489b65",
+              "variable": "log",
+              "value": "log + \"\\n\" +\n\"long lived tree of depth \" + maxDepth +\n\"\\t check: \" + checksum"
+            }
+          ]
+        },
+        {
+          "objID": "30bcf1ba-3165-4ee6-98cf-8a45e16e6bde",
+          "type": "DelayActionComponent",
+          "left": 1865,
+          "top": 206,
+          "width": 87,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "milliseconds": "100"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "f5da4e48-04d2-45f1-fdca-5b32864dc117",
+          "source": "5f3cc094-02d4-4661-bf84-df8c5ff49b4b",
+          "output": "@seqout",
+          "target": "b3c3304d-067c-409f-ce06-0bbd9c1dee9e",
+          "input": "arg"
+        },
+        {
+          "objID": "0b692082-8a22-4e9e-8759-0f6ec84527a5",
+          "source": "b3c3304d-067c-409f-ce06-0bbd9c1dee9e",
+          "output": "result",
+          "target": "41a2c081-537a-4394-acdb-5ec93fcfa492",
+          "input": "depth"
+        },
+        {
+          "objID": "064221c0-aea2-4b5e-df7d-d51219c7b31a",
+          "source": "41a2c081-537a-4394-acdb-5ec93fcfa492",
+          "output": "@seqout",
+          "target": "f9bfea02-eed4-4603-f50e-06eb588db98f",
+          "input": "@seqin"
+        },
+        {
+          "objID": "9cbc5d0a-0ac8-48ab-f5ab-78970a73ce2d",
+          "source": "41a2c081-537a-4394-acdb-5ec93fcfa492",
+          "output": "@seqout",
+          "target": "86e3ca98-a428-49ca-ce42-7af43e82ad8c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "9615ad0d-de18-4fd1-846e-3dba49271771",
+          "source": "86e3ca98-a428-49ca-ce42-7af43e82ad8c",
+          "output": "result",
+          "target": "f9bfea02-eed4-4603-f50e-06eb588db98f",
+          "input": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2"
+        },
+        {
+          "objID": "83375ed9-02cf-4479-a87f-17245bf70605",
+          "source": "f9bfea02-eed4-4603-f50e-06eb588db98f",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "84debdc4-1cf2-46f7-b2e2-3578345ee53c",
+          "input": "tree"
+        },
+        {
+          "objID": "1f82273f-c7a3-4b2f-f3eb-8b2cdd78d332",
+          "source": "84debdc4-1cf2-46f7-b2e2-3578345ee53c",
+          "output": "@seqout",
+          "target": "dd31be3e-c5bf-4ba5-d02b-62dd899aa5a4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b87e3873-eeb8-4550-89cd-dd2369602bbe",
+          "source": "dd31be3e-c5bf-4ba5-d02b-62dd899aa5a4",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "fb1220b4-957a-40be-fe0b-5be65748a75a",
+          "input": "checksum"
+        },
+        {
+          "objID": "99063421-0fa5-4595-9aac-6ea3ec68096a",
+          "source": "f9bfea02-eed4-4603-f50e-06eb588db98f",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "dd31be3e-c5bf-4ba5-d02b-62dd899aa5a4",
+          "input": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254"
+        },
+        {
+          "objID": "405f8f60-f10a-4dbe-b86a-f4aebab23f6e",
+          "source": "9b7b3a77-7960-49f6-c63e-593b738a90f9",
+          "output": "@seqout",
+          "target": "b3c3304d-067c-409f-ce06-0bbd9c1dee9e",
+          "input": "@seqin"
+        },
+        {
+          "objID": "3b00ab7a-f796-455e-e173-cfd6bc176f86",
+          "source": "b8a761c0-6929-440f-acb6-ef380e3943d0",
+          "output": "@seqout",
+          "target": "3a9f4bbf-ab5b-4f0b-fa09-8e88529680fb",
+          "input": "@seqin"
+        },
+        {
+          "objID": "309c4e28-01f7-4b23-b7e1-7cfde4620e9c",
+          "source": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "output": "@seqout",
+          "target": "ef271569-c2be-429f-d1f5-0d3f47a75322",
+          "input": "@seqin"
+        },
+        {
+          "objID": "85748adb-394b-450d-b005-2ac69e416560",
+          "source": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "output": "@seqout",
+          "target": "53b544e2-8216-4358-ed72-e7c288d753d4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "f34db674-c9c2-434c-ac8d-1b6c5aecad0e",
+          "source": "53b544e2-8216-4358-ed72-e7c288d753d4",
+          "output": "result",
+          "target": "ef271569-c2be-429f-d1f5-0d3f47a75322",
+          "input": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2"
+        },
+        {
+          "objID": "89703965-8fcb-4f9d-fb40-51f10307b8b8",
+          "source": "ef271569-c2be-429f-d1f5-0d3f47a75322",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "5c52834e-0442-4df6-92e2-2a7e7f92b0ce",
+          "input": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254"
+        },
+        {
+          "objID": "f8e62b1b-2a56-4681-add3-9edbc25c16e4",
+          "source": "5c52834e-0442-4df6-92e2-2a7e7f92b0ce",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "631b7428-285c-47a0-fa5c-cb00d5a3bd76",
+          "input": "checksum"
+        },
+        {
+          "objID": "fea84570-e4f9-4ac1-90d8-997b14dac2cf",
+          "source": "b26a5c14-2100-4ec1-9a52-f0ecb1fcc5b5",
+          "output": "@seqout",
+          "target": "b8a761c0-6929-440f-acb6-ef380e3943d0",
+          "input": "next"
+        },
+        {
+          "objID": "63c877a5-fd1e-4ad3-eb60-c2c5adf43ceb",
+          "source": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "output": "done",
+          "target": "b26a5c14-2100-4ec1-9a52-f0ecb1fcc5b5",
+          "input": "@seqin"
+        },
+        {
+          "objID": "64584ad7-2de8-4c73-8809-63df8b2dd4c8",
+          "source": "3a9f4bbf-ab5b-4f0b-fa09-8e88529680fb",
+          "output": "@seqout",
+          "target": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "input": "start"
+        },
+        {
+          "objID": "7bf42709-1e72-42ca-beb6-f6b4144ff75b",
+          "source": "bd31706f-aaac-4bdb-e2f8-403d47a86715",
+          "output": "result",
+          "target": "9fd8db4f-9499-4dd0-e955-fe2fca3b61cf",
+          "input": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2"
+        },
+        {
+          "objID": "4a9d4cca-a002-40e9-e362-0471201f2a6a",
+          "source": "9fd8db4f-9499-4dd0-e955-fe2fca3b61cf",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "5ea01f16-941e-4557-fe0d-d27ed76a8a0b",
+          "input": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254"
+        },
+        {
+          "objID": "0c912464-ed5e-4ca9-b257-faaae1bb5ca1",
+          "source": "5ea01f16-941e-4557-fe0d-d27ed76a8a0b",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "b8a761c0-6929-440f-acb6-ef380e3943d0",
+          "input": "start"
+        },
+        {
+          "objID": "e627dc81-9274-4f46-c185-6c08ecb68784",
+          "source": "b8a761c0-6929-440f-acb6-ef380e3943d0",
+          "output": "done",
+          "target": "f7cff364-e9aa-4d97-970d-fe42e1a1f82d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "57c7884d-c3fb-40cd-8b73-d8b2ed07804b",
+          "source": "5ea01f16-941e-4557-fe0d-d27ed76a8a0b",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "f7cff364-e9aa-4d97-970d-fe42e1a1f82d",
+          "input": "checksum"
+        },
+        {
+          "objID": "47417049-e960-442e-c165-1eb61f8de696",
+          "source": "631b7428-285c-47a0-fa5c-cb00d5a3bd76",
+          "output": "@seqout",
+          "target": "c2e425ec-f856-44cf-af79-c24755d89301",
+          "input": "next"
+        },
+        {
+          "objID": "d63da2f2-f381-4451-ba22-a958ef195174",
+          "source": "d6df0545-0ed9-40ca-c6e1-29f11253768f",
+          "output": "variable",
+          "target": "f510a13d-095d-403d-e81e-239a3e6d8649",
+          "input": "@seqin"
+        },
+        {
+          "objID": "77507e12-a9d7-420b-ca55-27aeaa420cfe",
+          "source": "f7cff364-e9aa-4d97-970d-fe42e1a1f82d",
+          "output": "@seqout",
+          "target": "30bcf1ba-3165-4ee6-98cf-8a45e16e6bde",
+          "input": "@seqin"
+        },
+        {
+          "objID": "660418e9-cff6-4128-8dd7-38cc1a9be7c2",
+          "source": "fb1220b4-957a-40be-fe0b-5be65748a75a",
+          "output": "@seqout",
+          "target": "bd31706f-aaac-4bdb-e2f8-403d47a86715",
+          "input": "@seqin"
+        },
+        {
+          "objID": "120cfb37-1abe-4441-f014-cb643d6721d6",
+          "source": "bd31706f-aaac-4bdb-e2f8-403d47a86715",
+          "output": "@seqout",
+          "target": "9fd8db4f-9499-4dd0-e955-fe2fca3b61cf",
+          "input": "@seqin"
+        },
+        {
+          "objID": "1309c9d9-c881-413f-ed3e-32cc8f60aec6",
+          "source": "30bcf1ba-3165-4ee6-98cf-8a45e16e6bde",
+          "output": "@seqout",
+          "target": "5097a637-bcbb-4c49-ca40-79099afa2bed",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "e3301ad5-dec2-4a55-a0f6-95aec568e713",
+          "name": "maxDepth",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "902d952e-a0d7-400c-825f-6a6c5d51c8aa",
+          "name": "stretchDepth",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "308a569d-5460-4671-c6d8-4d19bc27a03f",
+          "name": "stretchTree",
+          "type": "struct:Node",
+          "defaultValue": "null",
+          "persistent": false
+        },
+        {
+          "objID": "6460e1e1-128c-4566-d612-86076371bb59",
+          "name": "depth",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "035c0373-d6f9-4a25-9ad0-3538e24d97a0",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "c08d5c63-75df-4331-c088-36518bc4d85d",
+          "name": "sum",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "bbeafd47-98eb-46d5-e776-1f3d0b37ecd7",
+          "name": "iterations",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        },
+        {
+          "objID": "0d7920b3-379a-4614-bd1f-9d617029330f",
+          "name": "log",
+          "type": "string",
+          "defaultValue": "\"\"",
+          "persistent": false
+        }
+      ],
+      "name": "binary_trees",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "219f911b-837d-48c4-c663-91d99e24b36e",
+      "components": [
+        {
+          "objID": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2",
+          "type": "InputActionComponent",
+          "left": -513,
+          "top": 45,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "depth",
+          "inputType": "integer"
+        },
+        {
+          "objID": "942f3430-6121-499e-9bf2-4d79729b91a2",
+          "type": "IsTrueActionComponent",
+          "left": -298,
+          "top": 58,
+          "width": 142,
+          "height": 73,
+          "customInputs": [
+            {
+              "objID": "8806cd8a-b1a5-4021-b53d-4515ebaec588",
+              "name": "value",
+              "type": "any"
+            }
+          ],
+          "customOutputs": [],
+          "value": "value > 0"
+        },
+        {
+          "objID": "b58b8c7e-47cc-49e5-c133-17b3630840b6",
+          "type": "CallActionActionComponent",
+          "left": 14,
+          "top": -118,
+          "width": 96,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "create_tree"
+        },
+        {
+          "objID": "b4b2f4f3-16a0-42a7-fa4d-3740792d0109",
+          "type": "EvalExprActionComponent",
+          "left": -304,
+          "top": -102,
+          "width": 154,
+          "height": 55,
+          "customInputs": [
+            {
+              "objID": "e04eb17c-ecd6-4697-9552-c29e5d248335",
+              "name": "value",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "value - 1"
+        },
+        {
+          "objID": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "type": "OutputActionComponent",
+          "left": 373,
+          "top": -9,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "tree",
+          "outputType": "struct:Node"
+        },
+        {
+          "objID": "be4f47af-6569-497a-9cc1-407795571d1d",
+          "type": "CallActionActionComponent",
+          "left": 14,
+          "top": -9,
+          "width": 96,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "create_tree"
+        },
+        {
+          "objID": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "type": "EvalExprActionComponent",
+          "left": 205,
+          "top": -9,
+          "width": 546,
+          "height": 73,
+          "customInputs": [
+            {
+              "objID": "0784c3e8-1157-4bda-a19a-a1b1d91bdd8d",
+              "name": "left_tree",
+              "type": "struct:Node"
+            },
+            {
+              "objID": "b584e20c-c2c3-4cb1-de1e-71bf7cee8113",
+              "name": "right_tree",
+              "type": "struct:Node"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "Flow.makeValue(\"struct:Node\", { left: left_tree, right: right_tree })"
+        },
+        {
+          "objID": "158dd651-d9db-47ed-9dee-d5be52b3bc7e",
+          "type": "EvalExprActionComponent",
+          "left": 14,
+          "top": 95,
+          "width": 87,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "null"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "b844ecc9-bfe3-481a-ba29-c074ff09218d",
+          "source": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2",
+          "output": "@seqout",
+          "target": "942f3430-6121-499e-9bf2-4d79729b91a2",
+          "input": "value"
+        },
+        {
+          "objID": "7d7d02b6-1751-4e7e-cf93-08a7581c8690",
+          "source": "b4b2f4f3-16a0-42a7-fa4d-3740792d0109",
+          "output": "result",
+          "target": "b58b8c7e-47cc-49e5-c133-17b3630840b6",
+          "input": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2"
+        },
+        {
+          "objID": "64b10769-efff-49b0-f595-6c0464147066",
+          "source": "942f3430-6121-499e-9bf2-4d79729b91a2",
+          "output": "True",
+          "target": "b58b8c7e-47cc-49e5-c133-17b3630840b6",
+          "input": "@seqin"
+        },
+        {
+          "objID": "f86b37b1-d8e0-4ac5-d674-d938124d73dd",
+          "source": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2",
+          "output": "@seqout",
+          "target": "b4b2f4f3-16a0-42a7-fa4d-3740792d0109",
+          "input": "value"
+        },
+        {
+          "objID": "f42db4af-7be3-4cd8-e337-6de8eae87d36",
+          "source": "b4b2f4f3-16a0-42a7-fa4d-3740792d0109",
+          "output": "result",
+          "target": "be4f47af-6569-497a-9cc1-407795571d1d",
+          "input": "93e45ca7-7bfe-46c6-fef1-b56550fbb2c2"
+        },
+        {
+          "objID": "a1476a4a-fec9-4cd3-bfbd-6b9aefff5dbe",
+          "source": "b58b8c7e-47cc-49e5-c133-17b3630840b6",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "input": "left_tree"
+        },
+        {
+          "objID": "1444bd9c-fe00-4e26-bfce-c7a101fa8368",
+          "source": "be4f47af-6569-497a-9cc1-407795571d1d",
+          "output": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "target": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "input": "right_tree"
+        },
+        {
+          "objID": "6151eb0d-c7f0-4c46-e374-43db4535766b",
+          "source": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "output": "result",
+          "target": "f0355d1f-276a-4751-ae4f-6871e6725405",
+          "input": "@seqin"
+        },
+        {
+          "objID": "1b28ef91-d11d-4040-cbf8-c4633d0e2491",
+          "source": "942f3430-6121-499e-9bf2-4d79729b91a2",
+          "output": "True",
+          "target": "be4f47af-6569-497a-9cc1-407795571d1d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "886d462e-b437-41ee-b9b3-b2af128eb233",
+          "source": "942f3430-6121-499e-9bf2-4d79729b91a2",
+          "output": "False",
+          "target": "158dd651-d9db-47ed-9dee-d5be52b3bc7e",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2532a271-b58d-44d8-ef51-71771c011c12",
+          "source": "158dd651-d9db-47ed-9dee-d5be52b3bc7e",
+          "output": "result",
+          "target": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "input": "left_tree"
+        },
+        {
+          "objID": "5f9c88fa-f32f-4d9e-8195-4a82173dca98",
+          "source": "158dd651-d9db-47ed-9dee-d5be52b3bc7e",
+          "output": "result",
+          "target": "eb1c42b3-2774-4420-a582-3c69f4abd332",
+          "input": "right_tree"
+        }
+      ],
+      "localVariables": [],
+      "name": "create_tree",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "1ac782ec-9662-4647-c238-cbd94e9c6d57",
+      "components": [
+        {
+          "objID": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254",
+          "type": "InputActionComponent",
+          "left": -436,
+          "top": -95,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "node",
+          "inputType": "struct:Node"
+        },
+        {
+          "objID": "684647b1-f24a-4405-88b1-1108a1d1a421",
+          "type": "IsTrueActionComponent",
+          "left": -258,
+          "top": -119,
+          "width": 148,
+          "height": 73,
+          "customInputs": [
+            {
+              "objID": "408bc2f0-a803-4b24-9dbf-0637dc00f01e",
+              "name": "node",
+              "type": "struct:Node"
+            }
+          ],
+          "customOutputs": [],
+          "value": "!node.left"
+        },
+        {
+          "objID": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "type": "OutputActionComponent",
+          "left": 305,
+          "top": -121,
+          "width": 90,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "checksum",
+          "outputType": "integer"
+        },
+        {
+          "objID": "753c1ba6-2909-4f39-a3e3-2bdce551f608",
+          "type": "EvalExprActionComponent",
+          "left": -31,
+          "top": -149,
+          "width": 87,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "expression": "1"
+        },
+        {
+          "objID": "523627e7-27bc-440e-8b53-be4434bb3287",
+          "type": "CallActionActionComponent",
+          "left": -9,
+          "top": -14,
+          "width": 104,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "checksum"
+        },
+        {
+          "objID": "3c79f93a-5165-449e-a747-396a9b15ee77",
+          "type": "CallActionActionComponent",
+          "left": -9,
+          "top": 78,
+          "width": 104,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "checksum"
+        },
+        {
+          "objID": "3f8ea48b-bd26-40a8-e5a9-5138ff087a85",
+          "type": "EvalExprActionComponent",
+          "left": -238,
+          "top": 13,
+          "width": 154,
+          "height": 55,
+          "customInputs": [
+            {
+              "objID": "dbc4c1e6-79d7-4be7-d83b-14c84286539e",
+              "name": "node",
+              "type": "struct:Node"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "node.left"
+        },
+        {
+          "objID": "1863bb64-f9ac-4283-fb06-c285b21ed4ee",
+          "type": "EvalExprActionComponent",
+          "left": -238,
+          "top": 94,
+          "width": 160,
+          "height": 55,
+          "customInputs": [
+            {
+              "objID": "2d749cf6-3706-46e2-d120-51669c40e26d",
+              "name": "node",
+              "type": "struct:Node"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "node.right"
+        },
+        {
+          "objID": "1ae5aa09-437a-4214-ab2c-9294dabf971a",
+          "type": "EvalExprActionComponent",
+          "left": 169,
+          "top": 13,
+          "width": 361,
+          "height": 73,
+          "customInputs": [
+            {
+              "objID": "83205a90-d597-49e2-9393-0bcba037155b",
+              "name": "checksum_left",
+              "type": "integer"
+            },
+            {
+              "objID": "c9b0344e-ba9a-40f8-ced5-5eebc80a396d",
+              "name": "checksum_right",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "1 + checksum_left + checksum_right"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "3a12bb70-5ab9-47ba-d2a0-a81be6e67eb2",
+          "source": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254",
+          "output": "@seqout",
+          "target": "684647b1-f24a-4405-88b1-1108a1d1a421",
+          "input": "node"
+        },
+        {
+          "objID": "fae867fc-e165-4542-f08b-9e86b227aa43",
+          "source": "684647b1-f24a-4405-88b1-1108a1d1a421",
+          "output": "True",
+          "target": "753c1ba6-2909-4f39-a3e3-2bdce551f608",
+          "input": "@seqin"
+        },
+        {
+          "objID": "4be26be0-ed41-47b3-9f8a-7f38cf1d92d2",
+          "source": "753c1ba6-2909-4f39-a3e3-2bdce551f608",
+          "output": "result",
+          "target": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7d43bba3-b200-462f-9f41-67657bd43ae0",
+          "source": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254",
+          "output": "@seqout",
+          "target": "3f8ea48b-bd26-40a8-e5a9-5138ff087a85",
+          "input": "node"
+        },
+        {
+          "objID": "ee7e7944-9f1e-4d12-bd4d-dd60ed7e734c",
+          "source": "3f8ea48b-bd26-40a8-e5a9-5138ff087a85",
+          "output": "result",
+          "target": "523627e7-27bc-440e-8b53-be4434bb3287",
+          "input": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254"
+        },
+        {
+          "objID": "259f6463-d990-41b6-c9c3-2b5f8cab94a1",
+          "source": "1863bb64-f9ac-4283-fb06-c285b21ed4ee",
+          "output": "result",
+          "target": "3c79f93a-5165-449e-a747-396a9b15ee77",
+          "input": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254"
+        },
+        {
+          "objID": "fa86427c-c589-470a-a212-0b6a3e2bc9a4",
+          "source": "684647b1-f24a-4405-88b1-1108a1d1a421",
+          "output": "False",
+          "target": "523627e7-27bc-440e-8b53-be4434bb3287",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ed1b4a3d-ff6e-4ee6-c277-75f9be1abc3b",
+          "source": "684647b1-f24a-4405-88b1-1108a1d1a421",
+          "output": "False",
+          "target": "3c79f93a-5165-449e-a747-396a9b15ee77",
+          "input": "@seqin"
+        },
+        {
+          "objID": "bcac111f-2bd3-47e3-aa90-d1ae75bb8fbb",
+          "source": "c76a3a7d-2bed-441a-f07e-0b5b1a04c254",
+          "output": "@seqout",
+          "target": "1863bb64-f9ac-4283-fb06-c285b21ed4ee",
+          "input": "node"
+        },
+        {
+          "objID": "66101b75-e6ca-40a0-fa2a-8d9d0e40d0e2",
+          "source": "523627e7-27bc-440e-8b53-be4434bb3287",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "1ae5aa09-437a-4214-ab2c-9294dabf971a",
+          "input": "checksum_left"
+        },
+        {
+          "objID": "01924a29-4039-44c0-ad58-dc7410e0fb1c",
+          "source": "3c79f93a-5165-449e-a747-396a9b15ee77",
+          "output": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "target": "1ae5aa09-437a-4214-ab2c-9294dabf971a",
+          "input": "checksum_right"
+        },
+        {
+          "objID": "62972751-04e7-49a7-cfe6-f62c159611f5",
+          "source": "1ae5aa09-437a-4214-ab2c-9294dabf971a",
+          "output": "result",
+          "target": "fd996572-4fca-4645-f6be-5d9e746d7093",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "checksum",
+      "implementationType": "flow"
+    }
+  ],
+  "userPages": [
+    {
+      "objID": "f7f15531-2f0d-6247-72af-17ad3967f8e0",
+      "components": [
+        {
+          "objID": "e7346eae-dd2c-4a0a-b674-cca62d069f36",
+          "type": "TextWidget",
+          "left": 10,
+          "top": 10,
+          "width": 117,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Benchmark name:\"",
+          "style": {
+            "objID": "882a56f2-b9ef-4f5f-e7e2-2c47e4e63617",
+            "inheritFrom": "default",
+            "color": "#6a6a6a"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "de7f7134-7c5f-45b5-ab57-33130b41b7b0",
+          "type": "TextWidget",
+          "left": 127,
+          "top": 10,
+          "width": 97,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"binary-trees\"",
+          "style": {
+            "objID": "792b8e6f-f8bc-4062-9809-4269e983d388",
+            "inheritFrom": "default",
+            "fontWeight": "bold"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "d1680a65-480f-4a41-aa89-74159ef1c725",
+          "type": "TextWidget",
+          "left": 10,
+          "top": 42,
+          "width": 116,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Status: \"",
+          "style": {
+            "objID": "1f812710-ae53-4ce8-a8fe-c739053eb9f1",
+            "inheritFrom": "default",
+            "color": "#6a6a6a"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "09447ed3-3c13-434f-95d4-07260bd1993e",
+          "type": "Select",
+          "left": 127,
+          "top": 42,
+          "width": 64,
+          "height": 32,
+          "customInputs": [
+            {
+              "objID": "57b3c770-a918-4e3e-86d3-b9e93bd5586a",
+              "name": "status",
+              "type": "integer"
+            }
+          ],
+          "customOutputs": [],
+          "data": "status",
+          "style": {
+            "objID": "fb6f6e83-2366-48d2-8846-1b86edac0c8e",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [
+            {
+              "objID": "a29e8502-1e0a-4309-a205-a4e4a7a6c06b",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 64,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Running...\"",
+              "style": {
+                "objID": "907047c1-2e72-4e11-ffa3-5bdd1d11a7c5",
+                "inheritFrom": "default",
+                "fontWeight": "bold"
+              },
+              "timeline": [],
+              "eventHandlers": []
+            },
+            {
+              "objID": "3bf1992c-60e2-4406-b6a1-ffdae9cb1e49",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 64,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"SUCCESS\"",
+              "style": {
+                "objID": "682d0fb4-a4c9-4335-8eb6-4a288e975adb",
+                "inheritFrom": "default",
+                "fontWeight": "bold",
+                "color": "#00af00",
+                "blink": true
+              },
+              "timeline": [],
+              "eventHandlers": []
+            },
+            {
+              "objID": "a9549962-a228-448f-ba08-e9588a5e4b78",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 64,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"ERROR\"",
+              "style": {
+                "objID": "9e94a98e-aab9-4874-ac50-6039c7ecf8f3",
+                "inheritFrom": "default",
+                "fontWeight": "bold",
+                "color": "#e10101",
+                "blink": true
+              },
+              "timeline": [],
+              "eventHandlers": []
+            }
+          ]
+        },
+        {
+          "objID": "01a206e4-c05a-464f-d1d4-cd59b841f45e",
+          "type": "TextWidget",
+          "left": 10,
+          "top": 74,
+          "width": 117,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Elapsed time:\"",
+          "style": {
+            "objID": "fc82ad0b-1bc2-4670-9aef-5ed9eb1b808b",
+            "inheritFrom": "default",
+            "color": "#6a6a6a"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "9fb374cf-e50b-4f30-ce6c-f4fdb1c90bef",
+          "type": "TextWidget",
+          "left": 127,
+          "top": 74,
+          "width": 64,
+          "height": 32,
+          "customInputs": [
+            {
+              "objID": "2ce5f21a-30fc-4867-b1e8-4bb58d5b9d91",
+              "name": "data",
+              "type": "any"
+            }
+          ],
+          "customOutputs": [],
+          "data": "data + \" sec\"",
+          "style": {
+            "objID": "076a1c74-49ca-4596-9dce-96ad59373d21",
+            "inheritFrom": "default",
+            "fontWeight": "bold"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "6a846e8b-0927-4979-dd2d-5e3150367f61",
+          "type": "TextWidget",
+          "left": 10,
+          "top": 106,
+          "width": 64,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Log:\"",
+          "style": {
+            "objID": "0939074e-f9b3-4ad7-8372-c8f96939d69b",
+            "inheritFrom": "default",
+            "color": "#6a6a6a"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "1a331409-37d5-13ac-651e-26eb227b18b1",
+          "type": "TextWidget",
+          "left": 126,
+          "top": 114,
+          "width": 503,
+          "height": 226,
+          "customInputs": [
+            {
+              "objID": "1794fb60-ddcb-4da6-9f49-ad2535d03b13",
+              "name": "log",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "data": "log",
+          "style": {
+            "objID": "759e70f7-0da0-ee89-4fb3-c9fe64b200c5",
+            "inheritFrom": "default",
+            "fontFamily": "monospace",
+            "alignHorizontal": "left",
+            "alignVertical": "top",
+            "backgroundColor": "#ffffff",
+            "borderSize": "1",
+            "borderColor": "#636363",
+            "borderStyle": "solid",
+            "padding": "5",
+            "css": "white-space: pre;"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "d73940a2-4269-4f06-e716-34e4d2269575",
+          "type": "StartActionComponent",
+          "left": -133,
+          "top": -107,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "4e70db31-68df-4bd7-f57b-bfa2ac42c8e5",
+          "type": "CallActionActionComponent",
+          "left": -16,
+          "top": -107,
+          "width": 121,
+          "height": 92,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "run_binarytrees"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "fdf7722c-1fbc-4b72-be8e-d8d566d7ad56",
+          "source": "d73940a2-4269-4f06-e716-34e4d2269575",
+          "output": "@seqout",
+          "target": "4e70db31-68df-4bd7-f57b-bfa2ac42c8e5",
+          "input": "@seqin"
+        },
+        {
+          "objID": "6a6a3834-835e-4c50-d142-3bb0f0c84054",
+          "source": "4e70db31-68df-4bd7-f57b-bfa2ac42c8e5",
+          "output": "1f68d9ce-dc03-4f0f-8792-296b371bc222",
+          "target": "1a331409-37d5-13ac-651e-26eb227b18b1",
+          "input": "log"
+        },
+        {
+          "objID": "5dfa658b-3cb4-4147-9c54-553cec308572",
+          "source": "4e70db31-68df-4bd7-f57b-bfa2ac42c8e5",
+          "output": "0604d14f-d45c-4994-9ce6-175b82fb5b7e",
+          "target": "9fb374cf-e50b-4f30-ce6c-f4fdb1c90bef",
+          "input": "data"
+        },
+        {
+          "objID": "d32084f0-54e9-4f30-8799-01df23c5800b",
+          "source": "4e70db31-68df-4bd7-f57b-bfa2ac42c8e5",
+          "output": "0fe9d987-db48-4871-832b-6897dd8f1be6",
+          "target": "09447ed3-3c13-434f-95d4-07260bd1993e",
+          "input": "status"
+        }
+      ],
+      "localVariables": [],
+      "name": "Main",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 640,
+      "height": 350,
+      "lvglLocalStyles": {
+        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
+      }
+    }
+  ],
+  "userWidgets": [],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default"
+    },
+    {
+      "objID": "c49c1adf-a610-28c0-027c-0e452dadb32b",
+      "name": "page",
+      "inheritFrom": "",
+      "backgroundColor": "page_color",
+      "css": "\n"
+    }
+  ],
+  "bitmaps": [],
+  "colors": [
+    {
+      "objID": "e6c28e5a-fe7f-09ed-9223-17769968ebea",
+      "name": "page_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": [
+        "#f0f0f0"
+      ]
+    }
+  ]
+}
