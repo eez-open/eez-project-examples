@@ -1019,8 +1019,8 @@
         {
           "objID": "f0355d1f-276a-4751-ae4f-6871e6725405",
           "type": "OutputActionComponent",
-          "left": 373,
-          "top": -9,
+          "left": 813,
+          "top": -37,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -1042,8 +1042,8 @@
         {
           "objID": "eb1c42b3-2774-4420-a582-3c69f4abd332",
           "type": "EvalExprActionComponent",
-          "left": 205,
-          "top": -9,
+          "left": 212,
+          "top": -37,
           "width": 546,
           "height": 73,
           "customInputs": [
