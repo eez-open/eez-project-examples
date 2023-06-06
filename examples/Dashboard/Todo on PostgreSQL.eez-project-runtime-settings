@@ -1,0 +1,11 @@
+{
+  "__persistentVariables": {
+    "postgres_connection": {
+      "host": "envox.hr",
+      "port": 5432,
+      "user": "test",
+      "password": "test",
+      "database": "test"
+    }
+  }
+}

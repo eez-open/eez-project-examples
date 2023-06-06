@@ -69,3 +69,4 @@ build/*.js
 
 */.~lock.*
 
+!examples/Dashboard/Todo on PostgreSQL.eez-project-runtime-settings
