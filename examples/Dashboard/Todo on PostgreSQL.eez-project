@@ -79,6 +79,13 @@
         "type": "integer",
         "defaultValue": "100",
         "persistent": false
+      },
+      {
+        "objID": "df076f95-b914-4861-c1ec-0d01a57986bc",
+        "name": "error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
       }
     ],
     "structures": [
@@ -146,8 +153,8 @@
         {
           "objID": "496bf665-26ea-4684-e1db-c36164734dd0",
           "type": "StartActionComponent",
-          "left": -542,
-          "top": -111,
+          "left": -429,
+          "top": -59,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -156,8 +163,8 @@
         {
           "objID": "fe02dac6-797c-4c07-bffb-394f3d68a22e",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -80,
-          "top": -163,
+          "left": 176,
+          "top": -111,
           "width": 169,
           "height": 81,
           "customInputs": [],
@@ -174,8 +181,8 @@
         {
           "objID": "c363a77a-2453-44cc-a856-4502416b3d07",
           "type": "SetVariableActionComponent",
-          "left": 408,
-          "top": -23,
+          "left": 664,
+          "top": 29,
           "width": 163,
           "height": 56,
           "customInputs": [
@@ -197,8 +204,8 @@
         {
           "objID": "b94e90a2-dc59-410b-f14d-187534f81709",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": 408,
-          "top": -111,
+          "left": 664,
+          "top": -59,
           "width": 212,
           "height": 68,
           "customInputs": [],
@@ -215,8 +222,8 @@
         {
           "objID": "ad104cb8-9c34-42d6-fb40-0e96eb210c47",
           "type": "SetVariableActionComponent",
-          "left": 660,
-          "top": -111,
+          "left": 916,
+          "top": -59,
           "width": 298,
           "height": 56,
           "customInputs": [
@@ -238,8 +245,8 @@
         {
           "objID": "791a820e-11ef-40a4-c0f3-aeaf8a4c6e30",
           "type": "EndActionComponent",
-          "left": 1001,
-          "top": -111,
+          "left": 1257,
+          "top": -59,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -248,8 +255,8 @@
         {
           "objID": "957a0f17-a1ef-4232-a6fc-942f03740964",
           "type": "SwitchActionComponent",
-          "left": -403,
-          "top": -111,
+          "left": -147,
+          "top": -59,
           "width": 272,
           "height": 93,
           "customInputs": [],
@@ -275,8 +282,8 @@
         {
           "objID": "d935f34f-ce44-4c4b-e2d2-c6a7c3186ff0",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -80,
-          "top": -65,
+          "left": 176,
+          "top": -13,
           "width": 292,
           "height": 81,
           "customInputs": [],
@@ -293,8 +300,8 @@
         {
           "objID": "bbe7592f-50f5-42c6-d567-d98344a83133",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -80,
-          "top": 33,
+          "left": 176,
+          "top": 85,
           "width": 268,
           "height": 81,
           "customInputs": [],
@@ -307,6 +314,23 @@
           ],
           "connection": "postgres_connection",
           "sql": "SELECT * FROM todo WHERE completed\nORDER BY id DESC\nLIMIT {limit}"
+        },
+        {
+          "objID": "95c37602-c4e4-4e5b-f0a5-96e82242707e",
+          "type": "SetVariableActionComponent",
+          "left": -298,
+          "top": -59,
+          "width": 110,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "ba9c1f25-5dfb-4771-e219-936c0b78cba9",
+              "variable": "error",
+              "value": "\"\""
+            }
+          ]
         }
       ],
       "connectionLines": [
@@ -314,7 +338,7 @@
           "objID": "4922b579-75fe-4810-e6a0-f9d794cdd8f4",
           "source": "496bf665-26ea-4684-e1db-c36164734dd0",
           "output": "@seqout",
-          "target": "957a0f17-a1ef-4232-a6fc-942f03740964",
+          "target": "95c37602-c4e4-4e5b-f0a5-96e82242707e",
           "input": "@seqin"
         },
         {
@@ -392,6 +416,13 @@
           "source": "957a0f17-a1ef-4232-a6fc-942f03740964",
           "output": "ALL",
           "target": "fe02dac6-797c-4c07-bffb-394f3d68a22e",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7c1404b1-5d94-4d4e-c3a2-3d550bd9b082",
+          "source": "95c37602-c4e4-4e5b-f0a5-96e82242707e",
+          "output": "@seqout",
+          "target": "957a0f17-a1ef-4232-a6fc-942f03740964",
           "input": "@seqin"
         }
       ],
@@ -867,7 +898,7 @@
           "height": 32,
           "customInputs": [],
           "customOutputs": [],
-          "data": "rows && Array.length(rows) < limit ? 0 : 1",
+          "data": "!rows || Array.length(rows) < limit ? 0 : 1",
           "style": {
             "objID": "eae4408d-94d5-4e57-fcc7-826be9d8084f",
             "inheritFrom": "default"
@@ -928,7 +959,7 @@
           "height": 456,
           "customInputs": [],
           "customOutputs": [],
-          "data": "rows",
+          "data": "rows ? rows : []",
           "style": {
             "objID": "f411e743-9de4-4175-921b-37accf55980b",
             "inheritFrom": "default",
@@ -1377,6 +1408,58 @@
           "customInputs": [],
           "customOutputs": [],
           "action": "set_todo_completed"
+        },
+        {
+          "objID": "b01d5b60-fad7-4ceb-bd1d-7039286a4ec7",
+          "type": "CatchErrorActionComponent",
+          "left": 450,
+          "top": -231,
+          "width": 93,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "b168d689-6b04-4e2e-a782-0148167f1c98",
+          "type": "SetVariableActionComponent",
+          "left": 583,
+          "top": -231,
+          "width": 169,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "413ad7c0-05c0-4398-df03-22a3c59169c3",
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "b988f8f4-142d-4331-9800-b4503af4180c",
+              "variable": "error",
+              "value": "value"
+            }
+          ]
+        },
+        {
+          "objID": "04670683-4117-4655-be44-cfb556ffef99",
+          "type": "TextWidget",
+          "left": 11,
+          "top": 0,
+          "width": 576,
+          "height": 17,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "error",
+          "style": {
+            "objID": "96959266-da46-4d1b-83ae-da0ade56eed1",
+            "inheritFrom": "default",
+            "alignHorizontal": "left",
+            "color": "red"
+          },
+          "timeline": [],
+          "eventHandlers": []
         }
       ],
       "connectionLines": [
@@ -1456,6 +1539,13 @@
           "output": "CLICKED",
           "target": "1f0f2935-3ed6-4432-f4d9-398ac35a5d13",
           "input": "d8bfc732-dc74-4329-be3b-034623690c6a"
+        },
+        {
+          "objID": "4c2d96f6-0bb8-496e-a095-c72fc33a3c5a",
+          "source": "b01d5b60-fad7-4ceb-bd1d-7039286a4ec7",
+          "output": "Message",
+          "target": "b168d689-6b04-4e2e-a782-0148167f1c98",
+          "input": "value"
         }
       ],
       "localVariables": [],
