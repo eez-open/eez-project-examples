@@ -72,6 +72,13 @@
         "type": "string",
         "defaultValue": "\"\"",
         "persistent": false
+      },
+      {
+        "objID": "6d6ad4b4-6561-4adc-d5c2-e84afa319fd9",
+        "name": "limit",
+        "type": "integer",
+        "defaultValue": "100",
+        "persistent": false
       }
     ],
     "structures": [
@@ -139,8 +146,8 @@
         {
           "objID": "496bf665-26ea-4684-e1db-c36164734dd0",
           "type": "StartActionComponent",
-          "left": -538,
-          "top": 13,
+          "left": -542,
+          "top": -111,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -149,10 +156,10 @@
         {
           "objID": "fe02dac6-797c-4c07-bffb-394f3d68a22e",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -74,
-          "top": -24,
+          "left": -80,
+          "top": -163,
           "width": 169,
-          "height": 68,
+          "height": 81,
           "customInputs": [],
           "customOutputs": [
             {
@@ -162,13 +169,13 @@
             }
           ],
           "connection": "postgres_connection",
-          "sql": "SELECT * FROM todo\nORDER BY id DESC"
+          "sql": "SELECT * FROM todo\nORDER BY id DESC\nLIMIT {limit}"
         },
         {
           "objID": "c363a77a-2453-44cc-a856-4502416b3d07",
           "type": "SetVariableActionComponent",
-          "left": 411,
-          "top": 87,
+          "left": 408,
+          "top": -23,
           "width": 163,
           "height": 56,
           "customInputs": [
@@ -190,8 +197,8 @@
         {
           "objID": "b94e90a2-dc59-410b-f14d-187534f81709",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": 411,
-          "top": -1,
+          "left": 408,
+          "top": -111,
           "width": 212,
           "height": 68,
           "customInputs": [],
@@ -208,8 +215,8 @@
         {
           "objID": "ad104cb8-9c34-42d6-fb40-0e96eb210c47",
           "type": "SetVariableActionComponent",
-          "left": 663,
-          "top": -1,
+          "left": 660,
+          "top": -111,
           "width": 298,
           "height": 56,
           "customInputs": [
@@ -231,8 +238,8 @@
         {
           "objID": "791a820e-11ef-40a4-c0f3-aeaf8a4c6e30",
           "type": "EndActionComponent",
-          "left": 1004,
-          "top": -1,
+          "left": 1001,
+          "top": -111,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -241,8 +248,8 @@
         {
           "objID": "957a0f17-a1ef-4232-a6fc-942f03740964",
           "type": "SwitchActionComponent",
-          "left": -392,
-          "top": 13,
+          "left": -403,
+          "top": -111,
           "width": 272,
           "height": 93,
           "customInputs": [],
@@ -268,10 +275,10 @@
         {
           "objID": "d935f34f-ce44-4c4b-e2d2-c6a7c3186ff0",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -74,
-          "top": 59,
+          "left": -80,
+          "top": -65,
           "width": 292,
-          "height": 68,
+          "height": 81,
           "customInputs": [],
           "customOutputs": [
             {
@@ -281,15 +288,15 @@
             }
           ],
           "connection": "postgres_connection",
-          "sql": "SELECT * FROM todo WHERE NOT completed\nORDER BY id DESC"
+          "sql": "SELECT * FROM todo WHERE NOT completed\nORDER BY id DESC\nLIMIT {limit}"
         },
         {
           "objID": "bbe7592f-50f5-42c6-d567-d98344a83133",
           "type": "eez-flow-ext-postgres/Postgres",
-          "left": -74,
-          "top": 139,
+          "left": -80,
+          "top": 33,
           "width": 268,
-          "height": 68,
+          "height": 81,
           "customInputs": [],
           "customOutputs": [
             {
@@ -299,7 +306,7 @@
             }
           ],
           "connection": "postgres_connection",
-          "sql": "SELECT * FROM todo WHERE completed\nORDER BY id DESC"
+          "sql": "SELECT * FROM todo WHERE completed\nORDER BY id DESC\nLIMIT {limit}"
         }
       ],
       "connectionLines": [
@@ -852,29 +859,65 @@
           "eventHandlers": []
         },
         {
-          "objID": "3f1138f4-6740-442f-e9d1-81addc5d4b10",
-          "type": "TextInputWidget",
+          "objID": "d4304718-bd56-41dd-a2fc-eabb56ed7bbc",
+          "type": "Select",
           "left": 10,
           "top": 50,
           "width": 580,
           "height": 32,
           "customInputs": [],
           "customOutputs": [],
-          "data": "new_todo",
+          "data": "rows && Array.length(rows) < limit ? 0 : 1",
           "style": {
-            "objID": "a2aa98c8-b2ff-483a-b17a-10388e92a12e",
+            "objID": "eae4408d-94d5-4e57-fcc7-826be9d8084f",
             "inheritFrom": "default"
           },
           "timeline": [],
-          "eventHandlers": [
+          "eventHandlers": [],
+          "widgets": [
             {
-              "objID": "0077b9f7-6d53-4fdf-c380-7978d939bf10",
-              "eventName": "ON_CHANGE",
-              "handlerType": "flow",
-              "action": "load_todos"
+              "objID": "3f1138f4-6740-442f-e9d1-81addc5d4b10",
+              "type": "TextInputWidget",
+              "left": 0,
+              "top": 0,
+              "width": 580,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "new_todo",
+              "style": {
+                "objID": "a2aa98c8-b2ff-483a-b17a-10388e92a12e",
+                "inheritFrom": "default"
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "0077b9f7-6d53-4fdf-c380-7978d939bf10",
+                  "eventName": "ON_CHANGE",
+                  "handlerType": "flow",
+                  "action": "load_todos"
+                }
+              ],
+              "placehoder": "\"What needs to be done?\""
+            },
+            {
+              "objID": "159f400f-3591-493c-9da3-0385a46a4f73",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 580,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"The limit of 100 TODO's has been reached!\"",
+              "style": {
+                "objID": "667c292a-8ac7-4ee6-adf3-728d1b22ee2d",
+                "inheritFrom": "default"
+              },
+              "timeline": [],
+              "eventHandlers": []
             }
-          ],
-          "placehoder": "\"What needs to be done?\""
+          ]
         },
         {
           "objID": "d723c2b9-81d8-4f80-e314-83257b12b476",
