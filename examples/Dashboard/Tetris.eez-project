@@ -2642,7 +2642,7 @@
           "left": -24,
           "top": -173,
           "width": 276,
-          "height": 169,
+          "height": 188,
           "customInputs": [
             {
               "objID": "071b99ff-cbf5-43bc-caa8-fce0444da26c",
@@ -2686,14 +2686,19 @@
               "objID": "7d96686e-d415-4514-a92f-abd8ea7c1d35",
               "condition": "action == \"end_game\"",
               "outputName": "end_game"
+            },
+            {
+              "objID": "767ead57-558e-4f09-c41c-6560e4713f01",
+              "condition": "true",
+              "outputName": "otherwise"
             }
           ]
         },
         {
           "objID": "bca6fca3-0a95-45a3-b0d9-de0c6ec7c42c",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -212,
+          "left": 355,
+          "top": -311,
           "width": 89,
           "height": 25,
           "customInputs": [],
@@ -2703,8 +2708,8 @@
         {
           "objID": "2659d0b4-c557-4815-d6ac-85091b17d8bb",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -172,
+          "left": 355,
+          "top": -271,
           "width": 97,
           "height": 25,
           "customInputs": [],
@@ -2714,8 +2719,8 @@
         {
           "objID": "e0e3e58f-f584-45ff-fa23-ebaf3391cc8f",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -131,
+          "left": 355,
+          "top": -230,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -2725,8 +2730,8 @@
         {
           "objID": "609ec72c-62dc-4ea1-f98c-fa66003fa0d8",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -90,
+          "left": 355,
+          "top": -189,
           "width": 88,
           "height": 25,
           "customInputs": [],
@@ -2736,8 +2741,8 @@
         {
           "objID": "68fce8ee-eb24-495b-da21-06608bd21f08",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -49,
+          "left": 355,
+          "top": -148,
           "width": 92,
           "height": 25,
           "customInputs": [],
@@ -2747,8 +2752,8 @@
         {
           "objID": "102594d7-4eaa-4f5e-f5b0-a85d62cd78e6",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": -9,
+          "left": 355,
+          "top": -108,
           "width": 102,
           "height": 25,
           "customInputs": [],
@@ -2758,8 +2763,8 @@
         {
           "objID": "686fb865-0956-41cd-ce91-c824da6601e8",
           "type": "SetVariableActionComponent",
-          "left": 795,
-          "top": -103,
+          "left": 837,
+          "top": 35,
           "width": 122,
           "height": 56,
           "customInputs": [],
@@ -2775,8 +2780,8 @@
         {
           "objID": "b2c7a0ac-3fe6-4879-b8ce-b3bb3b5d2731",
           "type": "EndActionComponent",
-          "left": 972,
-          "top": -103,
+          "left": 1014,
+          "top": 35,
           "width": 87,
           "height": 25,
           "customInputs": [],
@@ -2796,8 +2801,8 @@
         {
           "objID": "6ba5c0ce-2583-4928-f1b7-431a032f2101",
           "type": "CallActionActionComponent",
-          "left": 348,
-          "top": 32,
+          "left": 355,
+          "top": -67,
           "width": 93,
           "height": 25,
           "customInputs": [],
@@ -2807,8 +2812,8 @@
         {
           "objID": "bbb31faa-e743-44d4-fbd3-bf3b3fd29240",
           "type": "CallActionActionComponent",
-          "left": 614,
-          "top": -103,
+          "left": 593,
+          "top": -202,
           "width": 122,
           "height": 25,
           "customInputs": [],
@@ -2818,8 +2823,8 @@
         {
           "objID": "586bb1b6-b9f5-48c7-a70b-ac0b0f599040",
           "type": "CallActionActionComponent",
-          "left": 346,
-          "top": 115,
+          "left": 348,
+          "top": 38,
           "width": 94,
           "height": 25,
           "customInputs": [],
@@ -3022,6 +3027,20 @@
           "source": "7457f436-88df-4478-dadf-d005e7f649d5",
           "output": "@seqout",
           "target": "797a1902-54a2-4656-c52a-aaa673ac0417",
+          "input": "@seqin"
+        },
+        {
+          "objID": "dd53ad07-f921-49cc-f6dc-82818a843605",
+          "source": "14fa63f3-5f09-4080-8c35-c08328958d70",
+          "output": "False",
+          "target": "686fb865-0956-41cd-ce91-c824da6601e8",
+          "input": "@seqin"
+        },
+        {
+          "objID": "9cf9470f-98f7-4cc2-c536-c5fc7389f5de",
+          "source": "60aaee80-025d-4b20-96dc-8658ec7c85ff",
+          "output": "otherwise",
+          "target": "686fb865-0956-41cd-ce91-c824da6601e8",
           "input": "@seqin"
         }
       ],
