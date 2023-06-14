@@ -85,6 +85,13 @@
         "persistent": false
       },
       {
+        "objID": "60200b26-dda2-4ed3-ed1f-4a27f1311ca3",
+        "name": "game_over",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false
+      },
+      {
         "objID": "1edd5d07-7d74-48c7-b42f-c2d5e0c9cd68",
         "name": "playfield",
         "type": "array:integer",
@@ -3077,13 +3084,18 @@
           "left": -193,
           "top": -35,
           "width": 165,
-          "height": 76,
+          "height": 96,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
             {
               "objID": "ec31622a-89af-4cf1-b830-04bf44ac41d9",
               "variable": "cleared_lines",
+              "value": "0"
+            },
+            {
+              "objID": "2ba8f0d6-e086-4616-cfbd-655c4aae958c",
+              "variable": "level",
               "value": "0"
             },
             {
@@ -5452,10 +5464,10 @@
         {
           "objID": "63162e14-bc36-43ca-a973-aa6117755b3d",
           "type": "SetVariableActionComponent",
-          "left": -273,
+          "left": -72,
           "top": -27,
           "width": 171,
-          "height": 56,
+          "height": 76,
           "customInputs": [],
           "customOutputs": [],
           "description": "Game over",
@@ -5464,41 +5476,18 @@
               "objID": "21b05413-90ef-4f1a-d2ca-58f387ee7aad",
               "variable": "game_started",
               "value": "false"
-            }
-          ]
-        },
-        {
-          "objID": "3a115ea4-0997-4115-83f8-d3e7feb56b4d",
-          "type": "CallActionActionComponent",
-          "left": -38,
-          "top": -27,
-          "width": 114,
-          "height": 25,
-          "customInputs": [],
-          "customOutputs": [],
-          "action": "clear_playfield"
-        },
-        {
-          "objID": "fdd43fb2-7af0-480f-f080-7c395cd46c03",
-          "type": "SetVariableActionComponent",
-          "left": 107,
-          "top": -27,
-          "width": 147,
-          "height": 56,
-          "customInputs": [],
-          "customOutputs": [],
-          "entries": [
+            },
             {
-              "objID": "ef694e27-515d-4088-9aae-efdc40a54c69",
-              "variable": "tetramino",
-              "value": "null"
+              "objID": "60163453-67c0-479c-a0a7-1440e6eb4096",
+              "variable": "game_over",
+              "value": "true"
             }
           ]
         },
         {
           "objID": "dc9cdae1-1ea4-4f75-825d-7c5ee2688f97",
           "type": "StartActionComponent",
-          "left": -434,
+          "left": -233,
           "top": -27,
           "width": 87,
           "height": 25,
@@ -5508,7 +5497,7 @@
         {
           "objID": "d0db7412-d36f-440f-b582-bc00ce834190",
           "type": "EndActionComponent",
-          "left": 309,
+          "left": 190,
           "top": -27,
           "width": 87,
           "height": 25,
@@ -5518,20 +5507,6 @@
       ],
       "connectionLines": [
         {
-          "objID": "afcbe03a-9b1e-4d44-f21d-5891df4a5eaf",
-          "source": "63162e14-bc36-43ca-a973-aa6117755b3d",
-          "output": "@seqout",
-          "target": "3a115ea4-0997-4115-83f8-d3e7feb56b4d",
-          "input": "@seqin"
-        },
-        {
-          "objID": "f06d7172-f021-4061-a8e8-f8b0e7a8843d",
-          "source": "3a115ea4-0997-4115-83f8-d3e7feb56b4d",
-          "output": "@seqout",
-          "target": "fdd43fb2-7af0-480f-f080-7c395cd46c03",
-          "input": "@seqin"
-        },
-        {
           "objID": "4d713a28-4f2a-4d57-efa9-ea387d23b989",
           "source": "dc9cdae1-1ea4-4f75-825d-7c5ee2688f97",
           "output": "@seqout",
@@ -5539,8 +5514,8 @@
           "input": "@seqin"
         },
         {
-          "objID": "202fa6a6-7daf-4de0-c0ee-9756a825e244",
-          "source": "fdd43fb2-7af0-480f-f080-7c395cd46c03",
+          "objID": "384d58d0-097e-4119-d31d-c631e72fc763",
+          "source": "63162e14-bc36-43ca-a973-aa6117755b3d",
           "output": "@seqout",
           "target": "d0db7412-d36f-440f-b582-bc00ce834190",
           "input": "@seqin"
@@ -5564,7 +5539,7 @@
           "height": 800,
           "customInputs": [],
           "customOutputs": [],
-          "data": "game_started",
+          "data": "game_started || game_over",
           "style": {
             "objID": "15ab9699-223b-40db-9ce2-aaceff0c787d",
             "useStyle": "default",
@@ -6318,6 +6293,40 @@
                     "useStyle": "default",
                     "childStyles": []
                   }
+                },
+                {
+                  "objID": "6b012ca8-71be-479b-dd23-01236d8bf88d",
+                  "type": "ButtonWidget",
+                  "left": 150,
+                  "top": 359,
+                  "width": 360,
+                  "height": 64,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Game Over\"",
+                  "visible": "game_over",
+                  "style": {
+                    "objID": "bb2bc478-a840-4975-ef99-2aa61d2c410f",
+                    "useStyle": "button",
+                    "childStyles": [],
+                    "fontSize": "28",
+                    "fontWeight": "normal",
+                    "css": "box-shadow: 3px 3px 6px 0px #333;\n"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [
+                    {
+                      "objID": "58997139-1ac4-4ddc-c5ae-9add79acc154",
+                      "eventName": "CLICKED",
+                      "handlerType": "flow"
+                    }
+                  ],
+                  "enabled": "",
+                  "disabledStyle": {
+                    "objID": "2f8659a9-4df1-4070-e786-abce7e40ece3",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
                 }
               ],
               "layout": "static"
@@ -6365,8 +6374,8 @@
         {
           "objID": "100cfbf4-5f4b-40a3-ab41-53455669d420",
           "type": "OnEventActionComponent",
-          "left": -1062,
-          "top": 278,
+          "left": -1274,
+          "top": 290,
           "width": 101,
           "height": 55,
           "customInputs": [],
@@ -6545,8 +6554,8 @@
         {
           "objID": "1a9564b3-f4dd-4a2b-f4f6-91411310de55",
           "type": "IsTrueActionComponent",
-          "left": -818,
-          "top": 468,
+          "left": -967,
+          "top": 464,
           "width": 164,
           "height": 73,
           "customInputs": [
@@ -6584,8 +6593,8 @@
         {
           "objID": "816ebb59-28da-4354-d8fc-458637cf8164",
           "type": "CallActionActionComponent",
-          "left": -488,
-          "top": 500,
+          "left": -477,
+          "top": 490,
           "width": 89,
           "height": 54,
           "customInputs": [],
@@ -6602,6 +6611,62 @@
           "customInputs": [],
           "customOutputs": [],
           "value": "\"new_game\""
+        },
+        {
+          "objID": "84997518-2356-44a1-da91-b169ced74309",
+          "type": "SetVariableActionComponent",
+          "left": -641,
+          "top": 700,
+          "width": 153,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "607198dd-5139-4ef9-f4e7-12c76ff49187",
+              "variable": "game_over",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "objID": "9b0671a3-a19e-4812-d09c-6417d2f84826",
+          "type": "CallActionActionComponent",
+          "left": -641,
+          "top": 776,
+          "width": 114,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "clear_playfield"
+        },
+        {
+          "objID": "18b4ca34-84f3-4397-8dac-95931720bd3c",
+          "type": "SetVariableActionComponent",
+          "left": -500,
+          "top": 776,
+          "width": 147,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "720ba7c5-7833-4fcb-8441-c241780275f2",
+              "variable": "tetramino",
+              "value": "null"
+            }
+          ]
+        },
+        {
+          "objID": "a254d25b-ca85-457c-f3e1-28e8d78869a6",
+          "type": "IsTrueActionComponent",
+          "left": -767,
+          "top": 464,
+          "width": 108,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "!game_over"
         }
       ],
       "connectionLines": [
@@ -6728,7 +6793,7 @@
           "objID": "83dfa4c6-2c7c-4051-bea7-0db2db02d755",
           "source": "1a9564b3-f4dd-4a2b-f4f6-91411310de55",
           "output": "True",
-          "target": "816ebb59-28da-4354-d8fc-458637cf8164",
+          "target": "a254d25b-ca85-457c-f3e1-28e8d78869a6",
           "input": "@seqin"
         },
         {
@@ -6758,6 +6823,41 @@
           "output": "value",
           "target": "816ebb59-28da-4354-d8fc-458637cf8164",
           "input": "d5f6b4d6-b857-476e-89a4-382803377fba"
+        },
+        {
+          "objID": "5cbfc251-91a9-4d59-90a4-9875166ca6e3",
+          "source": "6b012ca8-71be-479b-dd23-01236d8bf88d",
+          "output": "CLICKED",
+          "target": "84997518-2356-44a1-da91-b169ced74309",
+          "input": "@seqin"
+        },
+        {
+          "objID": "0ed1d24c-c741-4d61-8901-2cca6b7b68fc",
+          "source": "9b0671a3-a19e-4812-d09c-6417d2f84826",
+          "output": "@seqout",
+          "target": "18b4ca34-84f3-4397-8dac-95931720bd3c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b8b62ae6-21f3-4549-945c-979bcd2aac89",
+          "source": "84997518-2356-44a1-da91-b169ced74309",
+          "output": "@seqout",
+          "target": "9b0671a3-a19e-4812-d09c-6417d2f84826",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b287da79-72ea-4131-8bf7-76e0c6aa8881",
+          "source": "a254d25b-ca85-457c-f3e1-28e8d78869a6",
+          "output": "True",
+          "target": "816ebb59-28da-4354-d8fc-458637cf8164",
+          "input": "@seqin"
+        },
+        {
+          "objID": "0c407dbc-3c17-45f5-db5a-2f83e35b3ee0",
+          "source": "a254d25b-ca85-457c-f3e1-28e8d78869a6",
+          "output": "False",
+          "target": "84997518-2356-44a1-da91-b169ced74309",
+          "input": "@seqin"
         }
       ],
       "localVariables": [
@@ -6799,7 +6899,8 @@
       "objID": "7f13b4d5-07d0-4d4e-92f4-53b16de6d248",
       "name": "button",
       "childStyles": [],
-      "css": "border: none;\n\nbackground-color: #ddd;\n\n&:hover {\n    background-color: #aaa;\n}"
+      "borderRadius": "8",
+      "css": "border: none;\nbackground-color: #ddd;\nbox-shadow: 3px 3px 4px 0px #aaa;\n\n&:hover {\n    background-color: #ccc;\n}\n\n&: active {\n    box-shadow: none;\n    transform: translate(2px, 2px);\n}"
     }
   ],
   "bitmaps": [],
