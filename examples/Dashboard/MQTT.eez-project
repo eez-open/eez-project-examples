@@ -130,7 +130,7 @@
         "objID": "8b14d4e6-02dd-4a92-979b-243b97dba70f",
         "name": "subscriptions",
         "type": "array:struct:Subscription",
-        "defaultValue": "[\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/iset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/iset\"\n  }\n]",
+        "defaultValue": "[\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/umon\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/iset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/imon\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/umon\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/iset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/imon\"\n  }\n]",
         "persistent": true
       },
       {
