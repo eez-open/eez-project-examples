@@ -1,0 +1,3285 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "extensions": [],
+      "imports": [],
+      "description": "Basic example of MQTT usage inside Dashboard projects",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAHCCAYAAAAXY63IAAAgAElEQVR4nOzdP4jsRr43/G+/GO4u3AuzkdU3MAoOrEPD2YUSONAGCwsOulknpetkYJMO57mRFDz4mJcXKboeeJNODJPso0psugPDgU0UGLrAe8DZsnAC4aR1ojuwC9cLC/0E+lf619M9R9Mzc+b7gQGfllSlqvFI+lXVTz25vr7egYiIiIiI6AT+n/s+ASIiIiIiejoYgBARERER0ckwACEiIiIiopNhAEJERERERCfDAISIiIiIiE6GAQgREREREZ0MAxAiIiIiIjoZBiBERERERHQyDECIiIiIiOhkGIAQEREREdHJMAAhIiIiIqKTYQBCREREREQnwwCEiIiIiIhO5sEEIG++/gxnn32NN/d9IkRE9KC8+foznH35/X2fBhERjeQWAcgbfP3ZGc7Ouj+ffX378OH9T/+I6z9+ivdvXQIRET1k3385cJ/4/ksOQBERPSG3CEDex6d/vMb19TWu//oVPsHn+NN1/u8/fsrwgYiI+v3648/x7TffdQKN77/7Ap9fcACKiOipGH0J1puvPzNmRT5DPdj1Pb48+wxff/81Piu3GyNenSn27780yvkSnHwnInrkfv0xPv/2G3xnRiBvvsblF5/j41+37x/91/03X3/WnEV58zU+M2dP3hj3GN47iIgepHEDkO+/xC//8KtqRuT6r7/HN780bwDf4g+XwH8V2//0qz/gl33rer//Eme/RVXOX7/6YNTTJCKi+/BrfPz5t/jGiEDefPcNvv38Y/wab/Ddj7/HX8v7w+df4LdH5318jy9/+Q1+/9fiHvQn4Ldc2kVE9OCMGIC8wdeXX+DzP/0v/Lr86P1PcfH5F/iuuod8gq/+q55m//V/fIVPvviuM0L1/XfNct7/9NO6TCIierR+/R9fAdUyrDf47ptv8fnHvwbwPj79X8b94ePPjy77zdeX+OLzC3xaF4LPv/0RP45y5kRENJaRl2B9gg9akxUffPAJ/vzjwPjT+x/gV50P3+DHP3fLISKid8D7H+P3+AP+z/cA3nyHb/AV/qMcYTKX3v72i9uV/8VvjWVcv8UX+DOGbkFERHQ/Rg5AvsWPraGmH3/8Fr/6YCC18M2P+PMnH6Aba3TLISKid8H7+Pj3n+CL777Hm+++AX7/cT7r8f2XOLv8oFqCdf2n42dAAOCTr/6aH1/9/BF8PwoR0cMyYgBS3FR+a+R8GMmFuW/xh/9Tbn2Dr//zD/XNZ085b77+momERETviPc//j0++eIS//kN8PuP8zvAmx//DPzqg+p+8P13/TMg73/wK+NNWvl95FujXPzhP/EWb4QnIqITGHUG5P1P/4i/fvVn/Lac/v7lj7i4NnJC8Am++uC7Ymr8l/jDr/7U++redjm//AY9syRERPQovf8xfv/Jt/gWv0cRf+D9T/8LX/25Xj71HQZmQH79H/gKf8Avz85wdvafwMVX+KQq91P88U+/wh9+aXxHFb/AkIjowZlcX1/vTlPV9/jy7BIf/JXT4URERERET9Xo3wNCREREREQ0hAEIERERERGdzAmXYBERERER0VPHGRAiIiIiIjoZBiBERERERHQy7x2z8z//+U/87W9/w9///nf84x//uKtzIiIiIiKiB+5f/uVf8K//+q/4t3/7N7z33uFhxcE5IP/85z/x5s0bnJ2d4Re/+AV+/vOf3/pkiYiIiIjocfuf//kf/Pd//zeur6/x/vvvHxyEHByq/O1vf8PZ2Rn+/d///dYnSURERERE74af//zn1aTE3/72N/ziF7846LiDc0D+/ve/H1woERERERE9Db/4xS/w97///eD9Dw5A/vGPf3DZFRERERERNfz85z8/Kj+cb8EiIiIiIqKTYQBCREREREQnwwCEiIiIiIhOhgEIERERERGdDAOQITrCJNL3fRaHyxTmkwijnfHY5RERERER4dYBSAY1n2AyMX7mChmQP7hPmtsi3f95/jP8kJupeX8dAACNqK+e3mOH6tCInuxD9lhtb5dT/F4Gg7en3OdET5153Z5DZTcfQUREd+yHS8wXL5EObE6VhHv5w6hVvsUMyAzxdofdrvhZSVjlpnBTf77bwRcAhN/4bLfbIp4B4caH2FdLvK2O2QgPi8YdK8SmLG8bQzvlg22GBHV9mzCA0/dArBMEobu3/nfWWG03ysmDvgR2PLv7eonokcmg5g6wKa7ZGwFvysEIIqJ799EFrmSCi54gJFUS5+kFXl58NGqV97YEK1MLeGKTBycHsu0Z1ulAfGbZENBIMwCwIGVdsHDDvjOAijTi83I/c2Su56bYmMHJt2dqjkmkoaMDZmGKDTpq7mMu9dpfnkY0mUNphXnvjJDRrnmrjs5yqnbbmzNa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",
+      "keywords": "MQTT",
+      "resourceFiles": []
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [
+      {
+        "objID": "90d77226-45a5-44a5-e3d0-fc6d3141055a",
+        "name": "PROTOCOLS",
+        "type": "array:string",
+        "defaultValue": "[\"mqtt\", \"mqtts\"]",
+        "persistent": false
+      },
+      {
+        "objID": "53d00df4-5996-471e-85ab-3de7c5cc9cb8",
+        "name": "mqtt_connection",
+        "type": "object:MQTTConnection",
+        "defaultValue": "null",
+        "persistent": false
+      },
+      {
+        "objID": "3b4df24d-959a-4336-a7ec-4d32a76dff2d",
+        "name": "protocol_sel",
+        "type": "integer",
+        "defaultValue": "0",
+        "persistent": true
+      },
+      {
+        "objID": "5a3c6f00-14f2-4832-f43d-1a70e0f98863",
+        "name": "protocol",
+        "type": "string",
+        "defaultValue": "\"mqtt://\"",
+        "persistent": false
+      },
+      {
+        "objID": "f20944e2-673c-4206-ae92-640f06f5404f",
+        "name": "protocol_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "301f934d-e8dc-497a-ae03-185e1ddc4803",
+        "name": "host",
+        "type": "string",
+        "defaultValue": "\"envox.hr\"",
+        "persistent": true
+      },
+      {
+        "objID": "d701abf0-b552-4a43-8909-ab39054eced6",
+        "name": "host_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "3a6a4b21-9df1-46f1-b24d-b8a705b87a4f",
+        "name": "port_str",
+        "type": "string",
+        "defaultValue": "\"1883\"",
+        "persistent": true
+      },
+      {
+        "objID": "ffeaabd6-40d9-4475-8aa3-fadcd05bee3f",
+        "name": "port_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "45fa08df-4a3e-4470-f37f-644c6b3f8206",
+        "name": "username",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": true
+      },
+      {
+        "objID": "5e7d3b17-a134-40b4-8e35-dbe561d4d7ce",
+        "name": "username_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "d8d769b0-fd80-47e8-aebc-90495bc28594",
+        "name": "password",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": true
+      },
+      {
+        "objID": "4b090a54-e930-44c1-c286-331aad9906a9",
+        "name": "password_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "6fe67c21-b7a9-4127-c4c3-f05de26ebbba",
+        "name": "port",
+        "type": "integer",
+        "defaultValue": "0",
+        "persistent": false
+      },
+      {
+        "objID": "8b14d4e6-02dd-4a92-979b-243b97dba70f",
+        "name": "subscriptions",
+        "type": "array:struct:Subscription",
+        "defaultValue": "[\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/1/iset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/oe\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/uset\"\n  },\n  {\n    topic: \"EEZ-BB3/dcpsupply/ch/2/iset\"\n  }\n]",
+        "persistent": true
+      },
+      {
+        "objID": "ece0b0fc-00bd-4151-d4b8-7d7baf16ca80",
+        "name": "subscribe_open",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false
+      },
+      {
+        "objID": "22014ed6-4755-441c-808c-26616884f8f7",
+        "name": "publish_open",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false
+      },
+      {
+        "objID": "2268143b-dd45-4a41-cd75-7bfd44b662b3",
+        "name": "connection_params_valid",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false
+      },
+      {
+        "objID": "7774c8ea-e77b-4777-9760-ea91e5a6875b",
+        "name": "publish_topic",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": true
+      },
+      {
+        "objID": "2a656142-507f-4c1f-80ce-3e538ee067ea",
+        "name": "publish_payload",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": true
+      },
+      {
+        "objID": "54658b3e-99f3-4569-9c27-23d6fbbfd2b3",
+        "name": "connect_error",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false
+      },
+      {
+        "objID": "4e17a68f-a9a6-4e9c-c1d5-d335d73a6161",
+        "name": "state",
+        "type": "enum:State",
+        "defaultValue": "State.Disconnected",
+        "persistent": false
+      }
+    ],
+    "structures": [
+      {
+        "objID": "7119133c-e16d-4d81-8dd0-f68b6ac19ae2",
+        "name": "Subscription",
+        "fields": [
+          {
+            "objID": "70544e41-3fd5-4d21-bae4-786fa69c6eef",
+            "name": "topic",
+            "type": "string"
+          },
+          {
+            "objID": "b978ca25-a5e1-45a2-b354-050e3bc39ab0",
+            "name": "value",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "enums": [
+      {
+        "objID": "b798afa3-f8ec-4598-c7a0-910281e35dd2",
+        "name": "State",
+        "members": [
+          {
+            "objID": "c681e5bb-bdce-4669-a84d-e6418d417f96",
+            "name": "Disconnected",
+            "value": 0
+          },
+          {
+            "objID": "fcdd75c8-6d44-4038-b06c-fa51aaf4e167",
+            "name": "Connecting",
+            "value": 1
+          },
+          {
+            "objID": "8b233b22-1b61-4e05-9b55-a5ed00055911",
+            "name": "Reconnecting",
+            "value": 2
+          },
+          {
+            "objID": "c59f99d1-c258-4330-bafd-613315a9c3f3",
+            "name": "Connected",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  "actions": [
+    {
+      "objID": "40a1a4f7-cc85-483b-a505-157241e09787",
+      "components": [
+        {
+          "objID": "e7766330-a7ef-49b6-d2bc-dd3c280614ea",
+          "type": "StartActionComponent",
+          "left": -639,
+          "top": -85,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "64cfd54a-917f-4b3c-e0d8-f5e4c86633c4",
+          "type": "EndActionComponent",
+          "left": 1233,
+          "top": -85,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "8dbb4c7c-6b3b-48c1-80a4-6d45d1d5e1f1",
+          "type": "IsTrueActionComponent",
+          "left": -199,
+          "top": -85,
+          "width": 163,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "String.length(host)"
+        },
+        {
+          "objID": "ec0a3b8e-2ce0-473d-c758-287ef1e3d647",
+          "type": "SetVariableActionComponent",
+          "left": 24,
+          "top": 21,
+          "width": 239,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "c416cdde-046a-44bd-aac0-7df2cd821ed1",
+              "variable": "host_error",
+              "value": "\"Required\""
+            },
+            {
+              "objID": "8229a2bb-aaf2-4883-a24b-b872818281b7",
+              "variable": "connection_params_valid",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "objID": "48539986-d5f5-475c-f5f3-5752076d3da6",
+          "type": "SetVariableActionComponent",
+          "left": 255,
+          "top": -85,
+          "width": 307,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "catchError": true,
+          "entries": [
+            {
+              "objID": "78893b9c-4c4a-45b7-d468-71316244bf15",
+              "variable": "port",
+              "value": "Flow.parseInteger(port_str)"
+            }
+          ]
+        },
+        {
+          "objID": "ad39aade-83be-41fa-c115-86208b2b00a3",
+          "type": "SetVariableActionComponent",
+          "left": 925,
+          "top": 21,
+          "width": 239,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "0a1635fd-987a-439d-c3a5-7a46455bbeb5",
+              "variable": "port_error",
+              "value": "\"Invalid value\""
+            },
+            {
+              "objID": "299cc732-a47d-4437-ea08-56ef7c94e801",
+              "variable": "connection_params_valid",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "objID": "19f0f055-deee-4854-cf65-326e8589a0e5",
+          "type": "IsTrueActionComponent",
+          "left": 645,
+          "top": -121,
+          "width": 194,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "port > 0 && port < 65536"
+        },
+        {
+          "objID": "e06043a8-6161-4fa2-cf86-2b0238af88c9",
+          "type": "SetVariableActionComponent",
+          "left": 24,
+          "top": -85,
+          "width": 140,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "2d3fd48b-cf5f-430c-9f5c-fa7baed2f7a8",
+              "variable": "host_error",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "cb79f46d-7541-4b3f-b269-4ff3e89f9dc6",
+          "type": "SetVariableActionComponent",
+          "left": 925,
+          "top": -85,
+          "width": 140,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "37b76f52-5d54-4f21-ea70-840a8c9b5fbe",
+              "variable": "port_error",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "954ceb2a-e7fc-4b17-f99d-3925d8fa8167",
+          "type": "SetVariableActionComponent",
+          "left": -497,
+          "top": -85,
+          "width": 257,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "65e958b2-a5ea-4ac8-fcf1-51195863224e",
+              "variable": "connection_params_valid",
+              "value": "true"
+            },
+            {
+              "objID": "c79328fd-94df-490d-af81-3e06660e981e",
+              "variable": "protocol",
+              "value": "PROTOCOLS[protocol_sel]"
+            }
+          ]
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "3924a4ed-a4f9-43f4-cc8c-cd7b8602d19b",
+          "source": "e7766330-a7ef-49b6-d2bc-dd3c280614ea",
+          "output": "@seqout",
+          "target": "954ceb2a-e7fc-4b17-f99d-3925d8fa8167",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7ce61410-6f89-4205-f039-805aa172e6b5",
+          "source": "8dbb4c7c-6b3b-48c1-80a4-6d45d1d5e1f1",
+          "output": "False",
+          "target": "ec0a3b8e-2ce0-473d-c758-287ef1e3d647",
+          "input": "@seqin"
+        },
+        {
+          "objID": "205e8b1e-bd7e-4deb-8e18-04a5d646f413",
+          "source": "8dbb4c7c-6b3b-48c1-80a4-6d45d1d5e1f1",
+          "output": "True",
+          "target": "e06043a8-6161-4fa2-cf86-2b0238af88c9",
+          "input": "@seqin"
+        },
+        {
+          "objID": "cf835943-5427-4afc-87f5-e389355e699a",
+          "source": "48539986-d5f5-475c-f5f3-5752076d3da6",
+          "output": "@seqout",
+          "target": "19f0f055-deee-4854-cf65-326e8589a0e5",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ebb7e988-db94-4fe4-9166-b65d7fffd553",
+          "source": "48539986-d5f5-475c-f5f3-5752076d3da6",
+          "output": "@error",
+          "target": "ad39aade-83be-41fa-c115-86208b2b00a3",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e8a26bbe-6de2-47e1-d741-21d5544ea4c8",
+          "source": "ad39aade-83be-41fa-c115-86208b2b00a3",
+          "output": "@seqout",
+          "target": "64cfd54a-917f-4b3c-e0d8-f5e4c86633c4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "c0b27ab8-937e-4ab9-cde0-4a5fd45088cf",
+          "source": "19f0f055-deee-4854-cf65-326e8589a0e5",
+          "output": "True",
+          "target": "cb79f46d-7541-4b3f-b269-4ff3e89f9dc6",
+          "input": "@seqin"
+        },
+        {
+          "objID": "1feb540b-01be-485c-9ebb-e75e75b5457b",
+          "source": "19f0f055-deee-4854-cf65-326e8589a0e5",
+          "output": "False",
+          "target": "ad39aade-83be-41fa-c115-86208b2b00a3",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7db78a4e-ac56-4e75-e478-def39cbee7cc",
+          "source": "e06043a8-6161-4fa2-cf86-2b0238af88c9",
+          "output": "@seqout",
+          "target": "48539986-d5f5-475c-f5f3-5752076d3da6",
+          "input": "@seqin"
+        },
+        {
+          "objID": "8b492aff-34a2-4aec-e478-e9ecbe9a3d49",
+          "source": "cb79f46d-7541-4b3f-b269-4ff3e89f9dc6",
+          "output": "@seqout",
+          "target": "64cfd54a-917f-4b3c-e0d8-f5e4c86633c4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "002c83ed-a2fc-4b78-c40a-69698f33135e",
+          "source": "ec0a3b8e-2ce0-473d-c758-287ef1e3d647",
+          "output": "@seqout",
+          "target": "48539986-d5f5-475c-f5f3-5752076d3da6",
+          "input": "@seqin"
+        },
+        {
+          "objID": "de264e2d-bfc5-4f82-f56b-3258894adeb0",
+          "source": "954ceb2a-e7fc-4b17-f99d-3925d8fa8167",
+          "output": "@seqout",
+          "target": "8dbb4c7c-6b3b-48c1-80a4-6d45d1d5e1f1",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "validate_connection_params",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "92c7c365-66f9-40ac-9b3f-29d92334eba3",
+      "components": [
+        {
+          "objID": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "type": "LoopActionComponent",
+          "left": -155,
+          "top": -41,
+          "width": 390,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "0",
+          "to": "Array.length(subscriptions) - 1",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "e89dc2a4-c58a-4256-9262-caceeea87a7d",
+          "type": "IsTrueActionComponent",
+          "left": 281,
+          "top": -41,
+          "width": 317,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "subscriptions[i].topic == mqtt_message.topic"
+        },
+        {
+          "objID": "afa91158-20f9-4241-9a09-df623d98a836",
+          "type": "SetVariableActionComponent",
+          "left": 652,
+          "top": -28,
+          "width": 325,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "6eccd6a9-a9fb-4d91-8895-6f4e578d2403",
+              "variable": "subscriptions[i].value",
+              "value": "mqtt_message.payload"
+            }
+          ]
+        },
+        {
+          "objID": "01fb478f-1825-418e-c4b7-e9e623975175",
+          "type": "InputActionComponent",
+          "left": -663,
+          "top": -41,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "message",
+          "inputType": "struct:$MQTTMessage"
+        },
+        {
+          "objID": "7dd8120d-341f-4344-d5bb-b7e85ef8e9e5",
+          "type": "SetVariableActionComponent",
+          "left": -517,
+          "top": -41,
+          "width": 242,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "0fd1b54f-bc6b-4a26-8560-920c0a092114",
+              "name": "message",
+              "type": "struct:$MQTTMessage"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "39a66c7d-827f-4474-e0d5-efdc033c7eff",
+              "variable": "mqtt_message",
+              "value": "message"
+            }
+          ]
+        },
+        {
+          "objID": "ee50dd0a-642b-4e12-91af-bffd0514f280",
+          "type": "EndActionComponent",
+          "left": 281,
+          "top": 110,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "6b91e5ad-2909-4700-dd33-4d8830eb2613",
+          "source": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "output": "@seqout",
+          "target": "e89dc2a4-c58a-4256-9262-caceeea87a7d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2952a1e2-6fae-49a1-e206-e2d7246cab54",
+          "source": "e89dc2a4-c58a-4256-9262-caceeea87a7d",
+          "output": "True",
+          "target": "afa91158-20f9-4241-9a09-df623d98a836",
+          "input": "@seqin"
+        },
+        {
+          "objID": "6e88a86d-52b4-4a97-d051-da48617cf45b",
+          "source": "e89dc2a4-c58a-4256-9262-caceeea87a7d",
+          "output": "False",
+          "target": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "input": "next"
+        },
+        {
+          "objID": "9abc6b92-26f8-498c-f5d7-6e3315d699e8",
+          "source": "afa91158-20f9-4241-9a09-df623d98a836",
+          "output": "@seqout",
+          "target": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "input": "next"
+        },
+        {
+          "objID": "9bff23e6-548f-47fc-c23a-c07f40c4f360",
+          "source": "01fb478f-1825-418e-c4b7-e9e623975175",
+          "output": "@seqout",
+          "target": "7dd8120d-341f-4344-d5bb-b7e85ef8e9e5",
+          "input": "message"
+        },
+        {
+          "objID": "6248a6f5-913b-460b-970b-288a537bd078",
+          "source": "7dd8120d-341f-4344-d5bb-b7e85ef8e9e5",
+          "output": "@seqout",
+          "target": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "input": "start"
+        },
+        {
+          "objID": "bdb2fb49-b126-4cf7-a316-efbd38b291ed",
+          "source": "a3a62b1f-7656-4cda-f00e-15f3d47cdc49",
+          "output": "done",
+          "target": "ee50dd0a-642b-4e12-91af-bffd0514f280",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "18330f9b-fa24-48e9-9bca-2f3c7752b9c7",
+          "name": "mqtt_message",
+          "type": "struct:$MQTTMessage",
+          "defaultValue": "null",
+          "persistent": false
+        },
+        {
+          "objID": "b5e5a037-5939-4ae3-ef56-1f456f6d5bf3",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "on_message",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "11a9a2bd-d4d8-45ec-92ba-da90e532bb41",
+      "components": [
+        {
+          "objID": "3fa795f5-0487-4823-9618-00ea4fe1a1d8",
+          "type": "MQTTSubscribeActionComponent",
+          "left": 472,
+          "top": -46,
+          "width": 256,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "topic": "subscriptions[i].topic"
+        },
+        {
+          "objID": "5b648624-064f-4461-a3a0-ec85199b6457",
+          "type": "LoopActionComponent",
+          "left": -206,
+          "top": -64,
+          "width": 390,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "0",
+          "to": "Array.length(subscriptions) - 1",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "dbbf8309-3cbf-4203-df13-d385f8e96332",
+          "type": "SetVariableActionComponent",
+          "left": 217,
+          "top": -64,
+          "width": 214,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "421df08d-360e-4c26-c36a-18cb0ba7ffe9",
+              "variable": "subscriptions[i].value",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "d8f07fbf-f525-4c65-cf7f-9f70d36ed84d",
+          "type": "StartActionComponent",
+          "left": -353,
+          "top": -64,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "40a7c35f-9efb-4800-de67-f36ea30d7e9f",
+          "type": "EndActionComponent",
+          "left": 266,
+          "top": 82,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "a1fc823b-b5da-43b7-9b9d-3e0d0e69acc3",
+          "source": "5b648624-064f-4461-a3a0-ec85199b6457",
+          "output": "@seqout",
+          "target": "dbbf8309-3cbf-4203-df13-d385f8e96332",
+          "input": "@seqin"
+        },
+        {
+          "objID": "516cefb8-3f41-482f-88a6-59799b002675",
+          "source": "3fa795f5-0487-4823-9618-00ea4fe1a1d8",
+          "output": "@seqout",
+          "target": "5b648624-064f-4461-a3a0-ec85199b6457",
+          "input": "next"
+        },
+        {
+          "objID": "95c0bf89-12c0-418d-96ab-b202a5f39272",
+          "source": "dbbf8309-3cbf-4203-df13-d385f8e96332",
+          "output": "@seqout",
+          "target": "3fa795f5-0487-4823-9618-00ea4fe1a1d8",
+          "input": "@seqin"
+        },
+        {
+          "objID": "47dd3d1b-42fb-4b66-a1f7-7c00bacf98bc",
+          "source": "d8f07fbf-f525-4c65-cf7f-9f70d36ed84d",
+          "output": "@seqout",
+          "target": "5b648624-064f-4461-a3a0-ec85199b6457",
+          "input": "start"
+        },
+        {
+          "objID": "9f2d4f37-2bab-4327-b521-a05c17f79cd4",
+          "source": "5b648624-064f-4461-a3a0-ec85199b6457",
+          "output": "done",
+          "target": "40a7c35f-9efb-4800-de67-f36ea30d7e9f",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "b2a84e23-15d3-41a5-bcae-a5a93fd5e5f4",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "subscribe",
+      "implementationType": "flow"
+    }
+  ],
+  "userPages": [
+    {
+      "objID": "f7f15531-2f0d-6247-72af-17ad3967f8e0",
+      "components": [
+        {
+          "objID": "8d4ead0c-bb81-4abb-b586-77a458ac9151",
+          "type": "MQTTInitActionComponent",
+          "left": 496,
+          "top": -215,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "protocol": "protocol",
+          "host": "host",
+          "port": "port",
+          "userName": "username",
+          "password": "password"
+        },
+        {
+          "objID": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "type": "MQTTEventActionComponent",
+          "left": 628,
+          "top": -215,
+          "width": 177,
+          "height": 168,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "eventHandlers": [
+            {
+              "objID": "37a65475-6d06-437d-b348-63c8f98decb9",
+              "eventName": "connect",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "98ecf4b9-5a34-4015-e43b-ba52df73e204",
+              "eventName": "reconnect",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "fbc2e452-00f0-4545-ddfe-b83db7c317cd",
+              "eventName": "close",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "052b54ba-c880-41b7-8437-02a25729bb4b",
+              "eventName": "end",
+              "handlerType": "flow",
+              "action": "validate_connection_params"
+            },
+            {
+              "objID": "ecf19fba-0f22-407b-bac4-93c5504ceadc",
+              "eventName": "error",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "fbc320b8-8ac9-4c72-f06c-b4ca8f8b56f6",
+              "eventName": "message",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "9dde0f7b-cd09-4228-8a14-95897d12e2d4",
+              "eventName": "disconnect",
+              "handlerType": "flow",
+              "action": "validate_connection_params"
+            }
+          ]
+        },
+        {
+          "objID": "7f2862cd-bf4d-44e5-e742-7bdc80983283",
+          "type": "MQTTConnectActionComponent",
+          "left": 917,
+          "top": -318,
+          "width": 115,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection"
+        },
+        {
+          "objID": "33c13693-5147-4ef9-ac95-62e584d771e9",
+          "type": "Select",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 450,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "state",
+          "style": {
+            "objID": "eeffac86-99a3-41b5-f17a-e4c7584bd94a",
+            "useStyle": "default",
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [
+            {
+              "objID": "3231d829-08b3-4706-92ea-0c5d40bab5ff",
+              "type": "Container",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 450,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "78dd50a0-fb69-431d-e4c5-0664f6713817",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "name": "Disconnected",
+              "widgets": [
+                {
+                  "objID": "193d1485-bc71-465f-98b4-651b4a892559",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 61,
+                  "width": 375,
+                  "height": 48,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"MQTT Connection Parameters\"",
+                  "style": {
+                    "objID": "acb3fb53-da39-462c-f628-067cf389dfe9",
+                    "useStyle": "default",
+                    "childStyles": [],
+                    "fontSize": "150%",
+                    "fontWeight": "bold",
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "0565c948-b530-462d-8c3b-1416b0583d09",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "fe9c2859-2120-40c9-b4d1-dd0e23b99def",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 129,
+                  "width": 64,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Protocol:\"",
+                  "style": {
+                    "objID": "439e5a31-f592-42af-e16c-af9845d08069",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "991958d8-1a5f-4dd3-9be2-aeb86c891532",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "fec45c99-adad-4e52-9be9-a48bf53a1fda",
+                  "type": "DropDownListWidget",
+                  "left": 310,
+                  "top": 129,
+                  "width": 98,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "protocol_sel",
+                  "style": {
+                    "objID": "423e0836-4a32-4ead-b22c-672a8578f049",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "options": "PROTOCOLS"
+                },
+                {
+                  "objID": "e19e38f4-5aea-4e7d-a796-bd4ed8768b57",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 134,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "protocol_error",
+                  "style": {
+                    "objID": "eb50d815-2302-4be2-a16e-617c5e5695f8",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "7e11f9b5-eb0b-4d5a-8476-0689943e5314",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "504e74df-d12d-4006-a247-eb39618beb65",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 171,
+                  "width": 64,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Host:\"",
+                  "style": {
+                    "objID": "eb0b7705-2f31-4100-9a68-2d24b7dd06be",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "e166b1e3-69f1-413c-ff2e-a26a61edca89",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "54ed5fb3-0e6d-41ee-eae2-c11b4aa6fa23",
+                  "type": "TextInputWidget",
+                  "left": 310,
+                  "top": 171,
+                  "width": 278,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "host",
+                  "style": {
+                    "objID": "990bada8-6dec-453a-a3f4-7d3859debdf9",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": []
+                },
+                {
+                  "objID": "094607c5-58ed-4d35-b0c0-6efdc4c2f8bc",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 176,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "host_error",
+                  "style": {
+                    "objID": "54b692ec-2523-4624-be69-edca080c8496",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "223f03c3-cdd2-4fcf-a595-f58e060ede01",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "c49663ce-f760-4897-c042-fc26a956217d",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 213,
+                  "width": 64,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Port:\"",
+                  "style": {
+                    "objID": "978d1ac1-b48f-45a6-a0f9-00bac1a6653b",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "b06901b3-b8f9-4329-acfb-841bbed0871c",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "5817dd11-aa6a-4abd-ab30-836b1bbdd35c",
+                  "type": "TextInputWidget",
+                  "left": 310,
+                  "top": 213,
+                  "width": 98,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "port_str",
+                  "style": {
+                    "objID": "3d11a374-9e53-4f3d-9538-898c7444d179",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": []
+                },
+                {
+                  "objID": "2e558f21-1fe7-4cee-fe26-e5bec3eafd2e",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 218,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "port_error",
+                  "style": {
+                    "objID": "50df0a5f-8721-4150-8aeb-67e2148767f0",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "45083c7d-5a3d-463a-ed33-72206759b55c",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "2476a583-7a7e-4ba5-8218-c816ad5d35e9",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 255,
+                  "width": 64,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Username:\"",
+                  "style": {
+                    "objID": "f6e1ca8e-6944-4379-c846-0ec0f40e8175",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "cd7c58fc-24d6-4ab7-e69a-75aebbb29c89",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "12332b4f-237c-4bd0-8d4c-6758f7bde1ab",
+                  "type": "TextInputWidget",
+                  "left": 310,
+                  "top": 255,
+                  "width": 278,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "username",
+                  "style": {
+                    "objID": "be3e1f20-68f4-4aab-882b-65cf9274006f",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": []
+                },
+                {
+                  "objID": "308307cd-14cb-4af2-a20c-4b31cc99d5d6",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 260,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "username_error",
+                  "style": {
+                    "objID": "6cd4d3dc-7bcb-4323-ba3b-2ac99d5c5d81",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "30cffff7-32d7-450f-c842-c207b969a497",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "4614be26-bbe5-4626-9211-90667d2d8ae1",
+                  "type": "TextWidget",
+                  "left": 213,
+                  "top": 297,
+                  "width": 64,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Password:\"",
+                  "style": {
+                    "objID": "cf21bcfd-9bba-405f-9277-2feb1bab8c8c",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "95aaa944-0781-4860-84d0-239dbe3a21c6",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "2bcc6295-fdf7-4e43-e7c1-bc7e90e4f64e",
+                  "type": "TextInputWidget",
+                  "left": 310,
+                  "top": 297,
+                  "width": 278,
+                  "height": 32,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "password",
+                  "style": {
+                    "objID": "afc4a33b-e884-4644-e37f-6ae307bf111b",
+                    "useStyle": "default",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "password": true
+                },
+                {
+                  "objID": "740f03fb-f633-46fc-90a1-26c93d765637",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 302,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "password_error",
+                  "style": {
+                    "objID": "24543454-c075-474d-adea-70442bb5c33b",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "4965fd39-68f4-486a-a6e5-5d9cea073028",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "e913d92f-900d-4370-e394-d1635f05b65c",
+                  "type": "ButtonWidget",
+                  "left": 507,
+                  "top": 349,
+                  "width": 81,
+                  "height": 40,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Connect\"",
+                  "style": {
+                    "objID": "2c0e5fbb-e324-4888-9c63-765aedc5bed4",
+                    "useStyle": "button",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [
+                    {
+                      "objID": "0d9e710d-5645-425c-9c34-e32a70dac59c",
+                      "eventName": "CLICKED",
+                      "handlerType": "flow"
+                    }
+                  ],
+                  "disabledStyle": {
+                    "objID": "a4bbf13c-d148-4837-9043-3ec481f21b2c",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "fe3399a0-46e6-4319-c55f-1f7271874daf",
+                  "type": "TextWidget",
+                  "left": 600,
+                  "top": 358,
+                  "width": 200,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "connect_error",
+                  "style": {
+                    "objID": "75802414-28b4-433c-c799-f6a46f8b8ab2",
+                    "useStyle": "error",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "2964d839-40a0-46b8-e338-7674f123d440",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                }
+              ],
+              "layout": "static"
+            },
+            {
+              "objID": "63963fff-6d17-496c-9b24-7dc076a3afa2",
+              "type": "ContainerWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 450,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "44b49be3-e1af-44a4-c707-f0bab506bf7a",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "name": "Connecting",
+              "widgets": [
+                {
+                  "objID": "8e44255a-16f3-4740-e1e7-6bee663fb648",
+                  "type": "TextWidget",
+                  "left": 0,
+                  "top": 102,
+                  "width": 800,
+                  "height": 36,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"CONNECTING ...\"",
+                  "style": {
+                    "objID": "fb2f7de8-5b78-4083-911f-4ece3a4cf5a5",
+                    "useStyle": "default",
+                    "childStyles": [],
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "ea486707-0e59-4786-8edf-a076753a2614",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "c1a023d8-fb60-462e-e619-2dcd7bd2768e",
+                  "type": "TextWidget",
+                  "left": 261,
+                  "top": 145,
+                  "width": 278,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "connect_error",
+                  "style": {
+                    "objID": "45a105d2-e390-49c6-98c7-a5682441d8a0",
+                    "useStyle": "error",
+                    "childStyles": [],
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "2d8911db-5cff-41cf-fe38-3977b4f584f0",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "9b12dd27-5c4f-44d5-c2d4-170cb2ac7581",
+                  "type": "ButtonWidget",
+                  "left": 316,
+                  "top": 192,
+                  "width": 169,
+                  "height": 40,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Abort\"",
+                  "style": {
+                    "objID": "1ffdd187-00d2-4fc5-9aee-ab071b567cf5",
+                    "useStyle": "button",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [
+                    {
+                      "objID": "f70b0f4c-00fb-4b1c-98e0-2caeb1ea5d86",
+                      "eventName": "CLICKED",
+                      "handlerType": "flow"
+                    }
+                  ],
+                  "disabledStyle": {
+                    "objID": "0aa6b963-c4d7-4954-e424-443157a5ad20",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                }
+              ],
+              "layout": "static"
+            },
+            {
+              "objID": "4ae897b3-1702-4eed-a467-81c297ad2d2a",
+              "type": "ContainerWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 450,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "ac389dbc-d9ed-4cfe-c7e4-f4382dd0c236",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "name": "Reconnecting",
+              "widgets": [
+                {
+                  "objID": "c6f54363-3e67-4bd2-8c89-cf46c38eb101",
+                  "type": "TextWidget",
+                  "left": 0,
+                  "top": 102,
+                  "width": 800,
+                  "height": 36,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"RECONNECTING ...\"",
+                  "style": {
+                    "objID": "62b91706-f8b4-4d63-d7a8-4ad603face0f",
+                    "useStyle": "default",
+                    "childStyles": [],
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "f9d02806-5f6c-4b58-93f2-4550c2b6ea56",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "a29d16f4-c91a-49c2-ffd1-8d5f3ef66bd5",
+                  "type": "TextWidget",
+                  "left": 261,
+                  "top": 145,
+                  "width": 278,
+                  "height": 23,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "connect_error",
+                  "style": {
+                    "objID": "fb3fe11e-9ae8-4a08-d988-853914ad6dab",
+                    "useStyle": "error",
+                    "childStyles": [],
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "1c410262-a858-4276-e591-91b7c6101de1",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                },
+                {
+                  "objID": "64e26194-b9ce-4681-d8ba-bf944d0edfcf",
+                  "type": "ButtonWidget",
+                  "left": 316,
+                  "top": 192,
+                  "width": 169,
+                  "height": 40,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"Abort\"",
+                  "style": {
+                    "objID": "e39c3666-b9ec-492b-c317-69586a83ac6c",
+                    "useStyle": "button",
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [
+                    {
+                      "objID": "8e64146a-e5f8-47c3-fd34-f152b7cf66cc",
+                      "eventName": "CLICKED",
+                      "handlerType": "flow"
+                    }
+                  ],
+                  "disabledStyle": {
+                    "objID": "ee6d5ee2-0c86-4163-85a6-53cd10926804",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                }
+              ],
+              "layout": "static"
+            },
+            {
+              "objID": "184428c8-c158-4b63-a0df-f6f264ae5aac",
+              "type": "ContainerWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 450,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "1d222003-e715-4374-b775-ac028b3581ee",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "name": "Connected",
+              "widgets": [
+                {
+                  "objID": "8eca1ddf-43c3-4aae-bc9d-0a7a57fe9aff",
+                  "type": "TextWidget",
+                  "left": 0,
+                  "top": 102,
+                  "width": 800,
+                  "height": 36,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "data": "\"\"",
+                  "style": {
+                    "objID": "af406a8b-7190-46be-db8d-a23485695c06",
+                    "useStyle": "default",
+                    "childStyles": [],
+                    "alignHorizontal": "center"
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "b75b27b8-98c6-4da2-954c-37d8ae13c34f",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
+                }
+              ],
+              "layout": "static"
+            }
+          ]
+        },
+        {
+          "objID": "2e11e9f0-cc72-48f8-c2af-f638ea2ba4d8",
+          "type": "CallActionActionComponent",
+          "left": 20,
+          "top": -215,
+          "width": 193,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "validate_connection_params"
+        },
+        {
+          "objID": "fc0143ef-2faa-4d58-faaf-eb24b0e69a9e",
+          "type": "IsTrueActionComponent",
+          "left": 261,
+          "top": -215,
+          "width": 188,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "connection_params_valid"
+        },
+        {
+          "objID": "803c2ee9-4a45-4200-8c76-235a8844a9a4",
+          "type": "ShowPageActionComponent",
+          "left": 1140,
+          "top": -187,
+          "width": 92,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Connected"
+        },
+        {
+          "objID": "271a2d67-607b-4dfb-90da-277fd7c51630",
+          "type": "ShowPageActionComponent",
+          "left": 917,
+          "top": 5,
+          "width": 92,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "page": "Main"
+        },
+        {
+          "objID": "6b95e2e2-a333-4540-c840-1ec98fe27730",
+          "type": "CallActionActionComponent",
+          "left": 917,
+          "top": 253,
+          "width": 103,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "on_message"
+        },
+        {
+          "objID": "283e3f17-b17d-403f-c8e7-17625178889d",
+          "type": "SetVariableActionComponent",
+          "left": 917,
+          "top": 160,
+          "width": 315,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "254db013-d342-47d8-ea2d-fb7151d11d07",
+              "name": "error_message",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "94c32347-47ae-414d-ff12-5b8904aa5ab9",
+              "variable": "connect_error",
+              "value": "error_message"
+            }
+          ]
+        },
+        {
+          "objID": "231b4f57-4726-4634-80d9-cf8b8ad07bcf",
+          "type": "SetVariableActionComponent",
+          "left": 917,
+          "top": -187,
+          "width": 190,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "034932f0-fa46-40f6-942e-d9b6074d51f5",
+              "variable": "connect_error",
+              "value": "\"\""
+            },
+            {
+              "objID": "a1549906-46a2-4201-b289-a2d9c6bc8009",
+              "variable": "state",
+              "value": "State.Connected"
+            }
+          ]
+        },
+        {
+          "objID": "6acbfaba-c0fe-4980-bac8-d32078c1ca62",
+          "type": "MQTTDisconnectActionComponent",
+          "left": 669,
+          "top": 468,
+          "width": 131,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection"
+        },
+        {
+          "objID": "cd26986d-6acf-44ba-fba2-2a0677b01704",
+          "type": "SetVariableActionComponent",
+          "left": 1075,
+          "top": -318,
+          "width": 196,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "4224f435-4b17-4a33-dbf2-5d2c29e6ef52",
+              "variable": "state",
+              "value": "State.Connecting"
+            }
+          ]
+        },
+        {
+          "objID": "04e394ee-00a8-4d9f-9400-3070c65167cb",
+          "type": "SetVariableActionComponent",
+          "left": 917,
+          "top": -89,
+          "width": 208,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "dc364865-7931-4d2e-99dc-40848aabe8dd",
+              "variable": "connect_error",
+              "value": "\"\""
+            },
+            {
+              "objID": "93ff3f3c-21ef-40ad-9bff-79e6fdeaa88a",
+              "variable": "state",
+              "value": "State.Reconnecting"
+            }
+          ]
+        },
+        {
+          "objID": "fca34fc8-b761-43d2-90a3-97397e01a481",
+          "type": "SetVariableActionComponent",
+          "left": 917,
+          "top": 83,
+          "width": 208,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "7232c3d3-9d90-4678-e76c-38fe37a2185e",
+              "variable": "state",
+              "value": "State.Disconnected"
+            }
+          ]
+        },
+        {
+          "objID": "f490e366-b550-4651-c4bb-f0209d58138b",
+          "type": "LogActionComponent",
+          "left": 917,
+          "top": 336,
+          "width": 127,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"EVENT disconnect\""
+        },
+        {
+          "objID": "1858ebbe-f5c0-431c-fc55-72e19fdc0397",
+          "type": "CallActionActionComponent",
+          "left": 1271,
+          "top": -187,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "subscribe"
+        },
+        {
+          "objID": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "type": "NoopActionComponent",
+          "left": 1450,
+          "top": -187,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "MQTT event handling is done, get a next event.",
+          "name": ""
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "bdc5b02c-8919-463a-8c18-91e415f8371b",
+          "source": "8d4ead0c-bb81-4abb-b586-77a458ac9151",
+          "output": "@seqout",
+          "target": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "input": "@seqin"
+        },
+        {
+          "objID": "3875e426-684b-4741-9d49-850f2a0554a2",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "@seqout",
+          "target": "7f2862cd-bf4d-44e5-e742-7bdc80983283",
+          "input": "@seqin"
+        },
+        {
+          "objID": "5d03e134-daab-45a5-be1a-7741d61fac36",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "connect",
+          "target": "231b4f57-4726-4634-80d9-cf8b8ad07bcf",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e3ae4ed0-f5c3-4d23-9cbe-d452c940f6a8",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "reconnect",
+          "target": "04e394ee-00a8-4d9f-9400-3070c65167cb",
+          "input": "@seqin"
+        },
+        {
+          "objID": "aa3b88d3-8010-40d7-ebca-6a7d18bd4751",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "close",
+          "target": "271a2d67-607b-4dfb-90da-277fd7c51630",
+          "input": "@seqin"
+        },
+        {
+          "objID": "84fc72e4-6b54-424f-9f7c-13b566d4432b",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "error",
+          "target": "283e3f17-b17d-403f-c8e7-17625178889d",
+          "input": "error_message"
+        },
+        {
+          "objID": "5b2bbf11-371d-4d08-dee5-ae7958f12157",
+          "source": "e913d92f-900d-4370-e394-d1635f05b65c",
+          "output": "CLICKED",
+          "target": "2e11e9f0-cc72-48f8-c2af-f638ea2ba4d8",
+          "input": "@seqin"
+        },
+        {
+          "objID": "d10547a4-7bb1-4605-84a7-778ef94af980",
+          "source": "2e11e9f0-cc72-48f8-c2af-f638ea2ba4d8",
+          "output": "@seqout",
+          "target": "fc0143ef-2faa-4d58-faaf-eb24b0e69a9e",
+          "input": "@seqin"
+        },
+        {
+          "objID": "874da744-4b0e-4a91-ec51-d32b8518f1a0",
+          "source": "fc0143ef-2faa-4d58-faaf-eb24b0e69a9e",
+          "output": "True",
+          "target": "8d4ead0c-bb81-4abb-b586-77a458ac9151",
+          "input": "@seqin"
+        },
+        {
+          "objID": "c467a526-89a9-43b0-f228-59bbd1489dbc",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "message",
+          "target": "6b95e2e2-a333-4540-c840-1ec98fe27730",
+          "input": "01fb478f-1825-418e-c4b7-e9e623975175"
+        },
+        {
+          "objID": "80d70a2e-eabb-484c-fe21-31667ab3da81",
+          "source": "9b12dd27-5c4f-44d5-c2d4-170cb2ac7581",
+          "output": "CLICKED",
+          "target": "6acbfaba-c0fe-4980-bac8-d32078c1ca62",
+          "input": "@seqin"
+        },
+        {
+          "objID": "94a53034-450c-4616-9b40-6c7214bc08dd",
+          "source": "64e26194-b9ce-4681-d8ba-bf944d0edfcf",
+          "output": "CLICKED",
+          "target": "6acbfaba-c0fe-4980-bac8-d32078c1ca62",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7086a546-9ece-4f7f-fc82-2d363321bcd0",
+          "source": "7f2862cd-bf4d-44e5-e742-7bdc80983283",
+          "output": "@seqout",
+          "target": "cd26986d-6acf-44ba-fba2-2a0677b01704",
+          "input": "@seqin"
+        },
+        {
+          "objID": "68c6f9de-fd9a-43e6-fd63-ddb49f63ff9f",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "end",
+          "target": "fca34fc8-b761-43d2-90a3-97397e01a481",
+          "input": "@seqin"
+        },
+        {
+          "objID": "aaa2e150-e294-4dbb-d035-b3b2c6cb1a9a",
+          "source": "231b4f57-4726-4634-80d9-cf8b8ad07bcf",
+          "output": "@seqout",
+          "target": "803c2ee9-4a45-4200-8c76-235a8844a9a4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "9284016e-3917-46ec-e8f1-1caea9bf56b3",
+          "source": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "output": "disconnect",
+          "target": "f490e366-b550-4651-c4bb-f0209d58138b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "4d1fd43c-2292-48aa-9e55-9a9e401e71ec",
+          "source": "803c2ee9-4a45-4200-8c76-235a8844a9a4",
+          "output": "@seqout",
+          "target": "1858ebbe-f5c0-431c-fc55-72e19fdc0397",
+          "input": "@seqin"
+        },
+        {
+          "objID": "200420b5-b3e8-4c52-ad77-026dcdb3eff2",
+          "source": "1858ebbe-f5c0-431c-fc55-72e19fdc0397",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "4cd21643-760a-4e77-f3ca-7e3e97b65b85",
+          "source": "04e394ee-00a8-4d9f-9400-3070c65167cb",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "f6c2a20b-7390-496d-fdf6-55cb9465961e",
+          "source": "271a2d67-607b-4dfb-90da-277fd7c51630",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "8f6ef4d2-3a47-44b0-fb90-b68038faebd1",
+          "source": "fca34fc8-b761-43d2-90a3-97397e01a481",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "4a51321f-04dd-4af0-ac2f-99082487a05b",
+          "source": "283e3f17-b17d-403f-c8e7-17625178889d",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "15543e14-7e11-4c5e-d60e-9d5fbee3ffb3",
+          "source": "6b95e2e2-a333-4540-c840-1ec98fe27730",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "242c1ee6-bebb-4923-c27f-ca9e10271432",
+          "source": "f490e366-b550-4651-c4bb-f0209d58138b",
+          "output": "@seqout",
+          "target": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "b760aa50-c289-437a-a2cd-a21889796b5d",
+          "source": "98bc053a-9adc-4d96-cfb1-e0eb16cfcfd4",
+          "output": "@seqout",
+          "target": "77d2fc3f-749f-4a5d-e2b0-7f6cb58f2b44",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "Main",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 450,
+      "lvglLocalStyles": {
+        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
+      }
+    },
+    {
+      "objID": "a388c053-f52e-402c-f95d-edbb44cec17c",
+      "components": [
+        {
+          "objID": "0deb3c6b-ae14-44e3-b732-eec692bbdd25",
+          "type": "Container",
+          "left": 10,
+          "top": 10,
+          "width": 780,
+          "height": 380,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "0ce652ee-ee54-46d6-ca8b-410a0b0ddb47",
+            "useStyle": "default",
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [
+            {
+              "objID": "bb00dde2-909a-4240-8694-a05cceadfe8b",
+              "type": "TextWidget",
+              "left": 3,
+              "top": 0,
+              "width": 64,
+              "height": 16,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Topic\"",
+              "style": {
+                "objID": "246a9617-7d5a-4eec-a561-8f7d2a32b96e",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "fe21d8cb-86c2-4197-ab0e-cd60ede5345c",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "d21a8811-19e9-4765-ef75-e397d8c2f198",
+              "type": "TextWidget",
+              "left": 402,
+              "top": 0,
+              "width": 64,
+              "height": 16,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Value\"",
+              "style": {
+                "objID": "c282856d-6287-4c55-91b5-9621c24b493e",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "2df11f28-5fe6-42bb-83ba-f91757b2b7c3",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "5665c59f-6656-4143-c67c-301126658c9b",
+              "type": "ListWidget",
+              "left": 0,
+              "top": 20,
+              "width": 780,
+              "height": 360,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "subscriptions",
+              "style": {
+                "objID": "cec3e202-5c2c-4d1d-b9d5-c42d00746863",
+                "useStyle": "default",
+                "childStyles": [],
+                "backgroundColor": "white",
+                "borderSize": "1",
+                "borderRadius": "4",
+                "borderColor": "#cccccc",
+                "borderStyle": "solid"
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "itemWidget": {
+                "objID": "127c839f-2b76-49e1-f45f-d14ffc856a54",
+                "type": "Container",
+                "left": 0,
+                "top": 0,
+                "width": 778,
+                "height": 24,
+                "customInputs": [],
+                "customOutputs": [],
+                "style": {
+                  "objID": "6c0e4c8d-66d1-4687-8adf-2542ee784964",
+                  "useStyle": "default",
+                  "childStyles": []
+                },
+                "timeline": [],
+                "eventHandlers": [],
+                "widgets": [
+                  {
+                    "objID": "eabad3f3-10c3-4181-ff4d-f2dcff4d0487",
+                    "type": "TextWidget",
+                    "left": 2,
+                    "top": 1,
+                    "width": 398,
+                    "height": 22,
+                    "customInputs": [],
+                    "customOutputs": [],
+                    "data": "subscriptions[$index].topic",
+                    "style": {
+                      "objID": "56927ab0-661e-48cd-97d8-f45d941e1fca",
+                      "useStyle": "default",
+                      "childStyles": []
+                    },
+                    "timeline": [],
+                    "eventHandlers": [],
+                    "focusStyle": {
+                      "objID": "44230bc7-9238-40de-dc24-2c20e992920b",
+                      "useStyle": "default",
+                      "childStyles": []
+                    }
+                  },
+                  {
+                    "objID": "dc1686a6-5ff6-4e9b-f01c-2b528fb386fe",
+                    "type": "TextWidget",
+                    "left": 400,
+                    "top": 1,
+                    "width": 353,
+                    "height": 22,
+                    "customInputs": [],
+                    "customOutputs": [],
+                    "data": "subscriptions[$index].value",
+                    "style": {
+                      "objID": "3e2fa7d2-0a15-4303-c84b-8ae612bad8cd",
+                      "useStyle": "default",
+                      "childStyles": []
+                    },
+                    "timeline": [],
+                    "eventHandlers": [],
+                    "focusStyle": {
+                      "objID": "099433b0-e2ea-4b60-c6c2-74d2b1102d3a",
+                      "useStyle": "default",
+                      "childStyles": []
+                    }
+                  },
+                  {
+                    "objID": "17da9b09-780b-4ca9-dde7-a92ac90dfdd4",
+                    "type": "ButtonWidget",
+                    "left": 753,
+                    "top": 1,
+                    "width": 24,
+                    "height": 22,
+                    "customInputs": [],
+                    "customOutputs": [],
+                    "data": "\"\\u2715\"",
+                    "style": {
+                      "objID": "917e0e25-998d-47de-a767-e8089840648c",
+                      "useStyle": "icon_button",
+                      "childStyles": []
+                    },
+                    "timeline": [],
+                    "eventHandlers": [
+                      {
+                        "objID": "802cd0e2-c18c-46b8-fe18-7b1037028a47",
+                        "eventName": "CLICKED",
+                        "handlerType": "flow"
+                      }
+                    ],
+                    "disabledStyle": {
+                      "objID": "962d774e-b475-4293-9dea-a0bc4c9b2b24",
+                      "useStyle": "default",
+                      "childStyles": []
+                    }
+                  }
+                ],
+                "layout": "static"
+              },
+              "listType": "vertical",
+              "gap": 0
+            }
+          ],
+          "layout": "static"
+        },
+        {
+          "objID": "8e1b3b4f-8eb0-4283-e0e1-6b967ceefa90",
+          "type": "ButtonWidget",
+          "left": 10,
+          "top": 400,
+          "width": 90,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Subscribe\"",
+          "style": {
+            "objID": "112acc71-d5e7-4d7f-d7d4-22491e8af5d9",
+            "useStyle": "button",
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "91c3fa33-d6ca-4f12-8e3d-63fa48f59fd7",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
+          "disabledStyle": {
+            "objID": "96f8631d-ef6e-4387-9267-7e086a4fb62c",
+            "useStyle": "default",
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "4f444995-3aef-4a81-993b-7e6c24bdc549",
+          "type": "ButtonWidget",
+          "left": 120,
+          "top": 400,
+          "width": 90,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Publish\"",
+          "style": {
+            "objID": "c5e377e2-a98a-4f52-a2b7-141886e747fc",
+            "useStyle": "button",
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "f0aa7b09-e619-44c2-a21f-55eead163361",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
+          "disabledStyle": {
+            "objID": "95f7cd7a-0f3e-4a46-ad47-d6028903ccbb",
+            "useStyle": "default",
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "3ca2b191-afe8-4ad1-cf5f-17318f4bf96f",
+          "type": "ButtonWidget",
+          "left": 670,
+          "top": 400,
+          "width": 120,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Disconnect\"",
+          "style": {
+            "objID": "d38dc36b-1ecf-46cb-f03a-b75d156660a9",
+            "useStyle": "button",
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "ede3fc68-3839-4388-ffc5-55ee84cd8d8a",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
+          "disabledStyle": {
+            "objID": "cd97b2f8-2ab4-46ee-8dc5-10a3a5833a27",
+            "useStyle": "default",
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "295f193e-f750-4809-d2d3-c7a4f22cfbf4",
+          "type": "UserWidgetWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 450,
+          "customInputs": [],
+          "customOutputs": [],
+          "visible": "subscribe_open",
+          "resizing": {
+            "pinToEdge": 0,
+            "fixSize": 3
+          },
+          "style": {
+            "objID": "8a676599-1deb-4019-c162-966ebf49ed41",
+            "useStyle": "default",
+            "childStyles": []
+          },
+          "hiddenInEditor": true,
+          "timeline": [],
+          "eventHandlers": [],
+          "userWidgetPageName": "Subscribe"
+        },
+        {
+          "objID": "1e5e87e9-3697-43f3-cc31-17881ad942f5",
+          "type": "UserWidgetWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 450,
+          "customInputs": [],
+          "customOutputs": [],
+          "visible": "publish_open",
+          "resizing": {
+            "pinToEdge": 0,
+            "fixSize": 3
+          },
+          "style": {
+            "objID": "4e67593f-b388-4453-da48-0fc36f879672",
+            "useStyle": "default",
+            "childStyles": []
+          },
+          "hiddenInEditor": true,
+          "timeline": [],
+          "eventHandlers": [],
+          "userWidgetPageName": "Publish"
+        },
+        {
+          "objID": "775c5175-be69-4641-fff7-a838fd915166",
+          "type": "SetVariableActionComponent",
+          "left": 458,
+          "top": 496,
+          "width": 165,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "e8262320-a71d-43ed-a244-ec19e179075c",
+              "variable": "publish_open",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "objID": "ba162cc2-d3c0-4757-af7e-ebd3f56b49ae",
+          "type": "SetVariableActionComponent",
+          "left": 195,
+          "top": 496,
+          "width": 177,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "4fa4ce34-cf14-47f0-e2da-ed88c846780e",
+              "variable": "subscribe_open",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "objID": "864b2fdd-f09f-4c11-92f7-ced0076b3404",
+          "type": "MQTTDisconnectActionComponent",
+          "left": 840,
+          "top": 400,
+          "width": 131,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection"
+        },
+        {
+          "objID": "14566fba-ee12-478e-b2e4-e7d537478ba7",
+          "type": "SetVariableActionComponent",
+          "left": 922,
+          "top": 42,
+          "width": 435,
+          "height": 56,
+          "customInputs": [
+            {
+              "objID": "285c179b-82c5-4167-c92b-baf8b7e03f25",
+              "name": "event",
+              "type": "struct:$ClickEvent"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "00081cd6-a1ac-4671-eb43-3fc2f43e48b2",
+              "variable": "subscriptions",
+              "value": "Array.remove(subscriptions, event.index)"
+            }
+          ]
+        },
+        {
+          "objID": "a47605cf-6ee4-406d-dbf8-62eec255b04e",
+          "type": "MQTTUnsubscribeActionComponent",
+          "left": 857,
+          "top": -45,
+          "width": 360,
+          "height": 55,
+          "customInputs": [
+            {
+              "objID": "2471b54d-35f1-4fd8-d659-5a1685096627",
+              "name": "event",
+              "type": "struct:$ClickEvent"
+            }
+          ],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "topic": "subscriptions[event.index].topic"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "653d63d6-7b08-44dc-af3f-e6e812ee1844",
+          "source": "8e1b3b4f-8eb0-4283-e0e1-6b967ceefa90",
+          "output": "CLICKED",
+          "target": "ba162cc2-d3c0-4757-af7e-ebd3f56b49ae",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2215bc64-6f35-47c0-cf08-85909f2c36f7",
+          "source": "3ca2b191-afe8-4ad1-cf5f-17318f4bf96f",
+          "output": "CLICKED",
+          "target": "864b2fdd-f09f-4c11-92f7-ced0076b3404",
+          "input": "@seqin"
+        },
+        {
+          "objID": "bdd2be1a-0c0b-4f50-9658-82ac57eeb73e",
+          "source": "17da9b09-780b-4ca9-dde7-a92ac90dfdd4",
+          "output": "CLICKED",
+          "target": "14566fba-ee12-478e-b2e4-e7d537478ba7",
+          "input": "event"
+        },
+        {
+          "objID": "30b4fbb8-7ada-446f-cb50-2a1353bf1c91",
+          "source": "a47605cf-6ee4-406d-dbf8-62eec255b04e",
+          "output": "@seqout",
+          "target": "14566fba-ee12-478e-b2e4-e7d537478ba7",
+          "input": "@seqin"
+        },
+        {
+          "objID": "de4761f1-0967-4034-de6b-7545850cb60b",
+          "source": "17da9b09-780b-4ca9-dde7-a92ac90dfdd4",
+          "output": "CLICKED",
+          "target": "a47605cf-6ee4-406d-dbf8-62eec255b04e",
+          "input": "event"
+        },
+        {
+          "objID": "b377ffec-cc78-46b4-a4a0-33804b726581",
+          "source": "4f444995-3aef-4a81-993b-7e6c24bdc549",
+          "output": "CLICKED",
+          "target": "775c5175-be69-4641-fff7-a838fd915166",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "Connected",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 450,
+      "isUsedAsUserWidget": false,
+      "lvglLocalStyles": {
+        "objID": "6ae6e875-bb7e-474b-8b66-bc07f1bffddc"
+      }
+    }
+  ],
+  "userWidgets": [
+    {
+      "objID": "165f0d99-8ea5-432c-a111-f49ee6b0a7df",
+      "components": [
+        {
+          "objID": "48a22a9e-dfab-4a42-a159-153d910102c4",
+          "type": "ContainerWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 450,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "3933592f-b53a-4f02-c579-e546bba52099",
+            "useStyle": "default",
+            "childStyles": [],
+            "backgroundColor": "#000000",
+            "opacity": 0
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [],
+          "layout": "static"
+        },
+        {
+          "objID": "fde07a70-6133-4148-b877-f974810e2a9c",
+          "type": "Container",
+          "left": 100,
+          "top": 145,
+          "width": 600,
+          "height": 160,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "a8b27efc-26a4-4442-c263-7e5a42c6dc12",
+            "useStyle": "default",
+            "childStyles": [],
+            "boxShadow": "4px 4px 32px rgb(133 133 133 / 80%)"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [
+            {
+              "objID": "0756c20d-c750-4e55-85ad-4f075f6f48b0",
+              "type": "RectangleWidget",
+              "left": 0,
+              "top": 0,
+              "width": 600,
+              "height": 160,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "1ce8aff9-50d2-4287-feff-da3af2c0dc48",
+                "useStyle": "default",
+                "childStyles": [],
+                "backgroundColor": "#ffffff"
+              },
+              "timeline": [],
+              "eventHandlers": []
+            },
+            {
+              "objID": "05bef73e-e141-480d-c03e-e91ee5a61f30",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 600,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Subscribe\"",
+              "style": {
+                "objID": "18008647-948c-4311-a3d5-921cef35ac32",
+                "useStyle": "default",
+                "childStyles": [],
+                "fontSize": "16",
+                "fontWeight": "bold",
+                "alignHorizontal": "center",
+                "backgroundColor": "#f0f0f0",
+                "css": ""
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "514b6f15-fe50-4f14-eeee-1356546a24c6",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "5f6bc0b3-1c6b-43b8-9132-fbfce066923f",
+              "type": "TextWidget",
+              "left": 10,
+              "top": 55,
+              "width": 47,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Topic:\"",
+              "style": {
+                "objID": "1e02fa9a-dae8-44f1-9e3f-4136a631fc85",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "1292b3b2-edc2-40f3-9b11-a5f84c7280f4",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "e72da057-c63f-4990-ea76-8c86948f6f7b",
+              "type": "TextInputWidget",
+              "left": 57,
+              "top": 55,
+              "width": 533,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "topic",
+              "style": {
+                "objID": "a8d13dff-28ed-4251-c6fd-ef966ab02ea7",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "placehoder": ""
+            },
+            {
+              "objID": "2672bb92-3327-4eb3-cd9e-3544d0efd76f",
+              "type": "TextWidget",
+              "left": 57,
+              "top": 87,
+              "width": 533,
+              "height": 23,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "topic_err",
+              "style": {
+                "objID": "83baeba7-5c74-4a1b-a3b6-0cd8e283aa88",
+                "useStyle": "error",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "26215e13-a035-4e49-eb21-b0c62ef2810b",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "3578f35e-3a66-4e94-feb5-28fb28cbbcde",
+              "type": "ButtonWidget",
+              "left": 160,
+              "top": 110,
+              "width": 105,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"OK\"",
+              "style": {
+                "objID": "176c3ae5-bda9-4d9e-80dc-dc0975320f41",
+                "useStyle": "button",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "a6ed3b51-c2a9-45ee-dc88-b9dcd2035469",
+                  "eventName": "CLICKED",
+                  "handlerType": "flow"
+                }
+              ],
+              "disabledStyle": {
+                "objID": "4bc067e8-1e78-4bd9-a4e0-7154c6b7f8e1",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "cefce983-f418-421f-e6a8-52d5cbedd36e",
+              "type": "ButtonWidget",
+              "left": 335,
+              "top": 110,
+              "width": 105,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Cancel\"",
+              "style": {
+                "objID": "a05b5a59-664d-4505-bffd-f2b74a143127",
+                "useStyle": "button",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "91672bb4-1c13-41e5-bec4-81a269d8228e",
+                  "eventName": "CLICKED",
+                  "handlerType": "flow"
+                }
+              ],
+              "disabledStyle": {
+                "objID": "65fc5f90-5b6f-4ff5-f04e-9d0d7e87855d",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            }
+          ],
+          "layout": "static"
+        },
+        {
+          "objID": "6de9edae-8867-4e8c-ede4-cd98b21d6fe2",
+          "type": "SetVariableActionComponent",
+          "left": 1104,
+          "top": 485,
+          "width": 184,
+          "height": 96,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "64bfeaa7-1f06-4714-dd23-4fb44dca6571",
+              "variable": "subscribe_open",
+              "value": "false"
+            },
+            {
+              "objID": "356ef580-b6b0-482a-bf2d-d24f2b6a9178",
+              "variable": "topic",
+              "value": "\"\""
+            },
+            {
+              "objID": "1b6a23f9-6eb2-4a9d-9e2c-0ce94d35a438",
+              "variable": "topic_err",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "648aaa80-e111-4ac3-c340-37495c4ae5c4",
+          "type": "IsTrueActionComponent",
+          "left": -251,
+          "top": 484,
+          "width": 194,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "String.length(topic) > 0"
+        },
+        {
+          "objID": "59a9a3d3-5e56-4a80-8b43-75139970ade0",
+          "type": "SetVariableActionComponent",
+          "left": -139,
+          "top": 595,
+          "width": 183,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "fe78610b-60eb-404b-bda1-3a8421530d3c",
+              "variable": "topic_err",
+              "value": "\"Required\""
+            }
+          ]
+        },
+        {
+          "objID": "4f32f461-54c5-4a13-ddf1-0e997a518388",
+          "type": "LoopActionComponent",
+          "left": 26,
+          "top": 476,
+          "width": 390,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "0",
+          "to": "Array.length(subscriptions) - 1",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "14f640b1-0d25-46eb-f8ff-3daf3f976cad",
+          "type": "SetVariableActionComponent",
+          "left": 520,
+          "top": 623,
+          "width": 307,
+          "height": 172,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "6025ac85-f907-4b7b-b044-a2a3c01e062b",
+              "variable": "subscriptions",
+              "value": "Array.append(\n  subscriptions, \n  Flow.makeValue(\n    \"struct:Subscription\",\n    {\n      topic: topic,\n      value: \"\"\n    }\n  )\n)"
+            }
+          ]
+        },
+        {
+          "objID": "2832a51f-97dc-4d15-aea7-e2f1a723a42c",
+          "type": "MQTTSubscribeActionComponent",
+          "left": 887,
+          "top": 623,
+          "width": 152,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "topic": "topic"
+        },
+        {
+          "objID": "97298b3f-eacf-41d3-b439-47970ab40dd1",
+          "type": "IsTrueActionComponent",
+          "left": 520,
+          "top": 476,
+          "width": 237,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "subscriptions[i].topic == topic"
+        },
+        {
+          "objID": "37141fe4-63ea-4269-ac70-801ac00deb2e",
+          "type": "SetVariableActionComponent",
+          "left": 792,
+          "top": 476,
+          "width": 190,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "71cbf438-efb0-4fee-830f-975974a51dd8",
+              "variable": "topic_err",
+              "value": "\"Duplicate\""
+            }
+          ]
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "b9250e7b-03e1-4db7-e016-7a2a1ab5e0ff",
+          "source": "3578f35e-3a66-4e94-feb5-28fb28cbbcde",
+          "output": "CLICKED",
+          "target": "648aaa80-e111-4ac3-c340-37495c4ae5c4",
+          "input": "@seqin"
+        },
+        {
+          "objID": "72fb556b-093a-45fc-8cab-7ac6f316b771",
+          "source": "cefce983-f418-421f-e6a8-52d5cbedd36e",
+          "output": "CLICKED",
+          "target": "6de9edae-8867-4e8c-ede4-cd98b21d6fe2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "13a1d312-1d4e-4238-f473-b323a6f20e5b",
+          "source": "648aaa80-e111-4ac3-c340-37495c4ae5c4",
+          "output": "False",
+          "target": "59a9a3d3-5e56-4a80-8b43-75139970ade0",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2470e743-27c1-4727-8b92-fa16e42cf122",
+          "source": "648aaa80-e111-4ac3-c340-37495c4ae5c4",
+          "output": "True",
+          "target": "4f32f461-54c5-4a13-ddf1-0e997a518388",
+          "input": "start"
+        },
+        {
+          "objID": "3cc0938f-18b6-403c-e696-3733d69bb99a",
+          "source": "4f32f461-54c5-4a13-ddf1-0e997a518388",
+          "output": "done",
+          "target": "14f640b1-0d25-46eb-f8ff-3daf3f976cad",
+          "input": "@seqin"
+        },
+        {
+          "objID": "8eca66c4-0c1e-4649-cbc9-64c78958faaf",
+          "source": "14f640b1-0d25-46eb-f8ff-3daf3f976cad",
+          "output": "@seqout",
+          "target": "2832a51f-97dc-4d15-aea7-e2f1a723a42c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "57b701a2-47ef-44c5-c92f-44714f7fb1f6",
+          "source": "2832a51f-97dc-4d15-aea7-e2f1a723a42c",
+          "output": "@seqout",
+          "target": "6de9edae-8867-4e8c-ede4-cd98b21d6fe2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "c4965e17-6696-4c85-edc2-2a0548ed5210",
+          "source": "97298b3f-eacf-41d3-b439-47970ab40dd1",
+          "output": "False",
+          "target": "4f32f461-54c5-4a13-ddf1-0e997a518388",
+          "input": "next"
+        },
+        {
+          "objID": "08e1f05f-148e-442b-e5b1-b2413a14c17b",
+          "source": "97298b3f-eacf-41d3-b439-47970ab40dd1",
+          "output": "True",
+          "target": "37141fe4-63ea-4269-ac70-801ac00deb2e",
+          "input": "@seqin"
+        },
+        {
+          "objID": "c7166209-8b97-483b-f443-070b3e46f9a3",
+          "source": "4f32f461-54c5-4a13-ddf1-0e997a518388",
+          "output": "@seqout",
+          "target": "97298b3f-eacf-41d3-b439-47970ab40dd1",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "756cd273-744f-463f-fb66-4c7a76ad6e07",
+          "name": "topic",
+          "type": "string",
+          "defaultValue": "\"\"",
+          "persistent": false
+        },
+        {
+          "objID": "bbe14f68-f971-46f7-f999-34f0ae103e01",
+          "name": "topic_err",
+          "type": "string",
+          "defaultValue": "\"\"",
+          "persistent": false
+        },
+        {
+          "objID": "e6de9069-6fb7-4579-c9d6-e664a5cd70ba",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "Subscribe",
+      "style": "",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 450,
+      "isUsedAsUserWidget": true,
+      "lvglLocalStyles": {
+        "objID": "0a16b999-7706-41b9-8a02-658fc78de63f"
+      }
+    },
+    {
+      "objID": "7722c177-26d9-4625-fe64-e270f8a6b20d",
+      "components": [
+        {
+          "objID": "23ec00df-ebbd-4cb6-c0da-3da8e41092dc",
+          "type": "ContainerWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 450,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "a201d96e-7cd6-4566-b9a4-5a257dd2c9d3",
+            "useStyle": "default",
+            "childStyles": [],
+            "backgroundColor": "#000000",
+            "opacity": 0
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [],
+          "layout": "static"
+        },
+        {
+          "objID": "a4edcc9c-e063-41b8-e65d-31bf508f8064",
+          "type": "Container",
+          "left": 100,
+          "top": 125,
+          "width": 600,
+          "height": 200,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "0bbd33fc-b7fd-45f0-8851-34f4ef48fc93",
+            "useStyle": "default",
+            "childStyles": [],
+            "boxShadow": "4px 4px 32px rgb(133 133 133 / 80%)"
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "widgets": [
+            {
+              "objID": "5d7385fc-2e0e-4308-b543-d36298f2b7b7",
+              "type": "RectangleWidget",
+              "left": 0,
+              "top": 0,
+              "width": 600,
+              "height": 200,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "0883e729-91fa-4a03-8e15-6ac3218c7c8f",
+                "useStyle": "default",
+                "childStyles": [],
+                "backgroundColor": "#ffffff"
+              },
+              "timeline": [],
+              "eventHandlers": []
+            },
+            {
+              "objID": "eb03ce15-c7aa-4488-ee26-0a56e74be3f1",
+              "type": "TextWidget",
+              "left": 0,
+              "top": 0,
+              "width": 600,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Publish\"",
+              "style": {
+                "objID": "9d8328dd-c90b-4457-86ef-1ca5c5d2d40c",
+                "useStyle": "default",
+                "childStyles": [],
+                "fontSize": "16",
+                "fontWeight": "bold",
+                "alignHorizontal": "center",
+                "backgroundColor": "#f0f0f0",
+                "css": ""
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "a3d3308d-e0f4-4102-f0ad-2a8c5ee631f2",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "8a1ab4e6-c9bc-4df8-f1d1-83e38ac8f8dc",
+              "type": "TextWidget",
+              "left": 10,
+              "top": 56,
+              "width": 55,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Topic:\"",
+              "style": {
+                "objID": "983c2a15-20ff-4f9d-fec9-ad32e5c4384e",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "ccfe0995-437e-42b4-ddd1-a70fa740831b",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "9e374838-181f-4724-93e2-4dda06628c94",
+              "type": "TextInputWidget",
+              "left": 65,
+              "top": 56,
+              "width": 525,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "publish_topic",
+              "style": {
+                "objID": "e8c8d627-8da7-4a1d-9957-98e0e73130c5",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "placehoder": ""
+            },
+            {
+              "objID": "459e81d7-ee3c-49ac-c00b-6ab6d60704eb",
+              "type": "TextWidget",
+              "left": 65,
+              "top": 88,
+              "width": 513,
+              "height": 16,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "topic_err",
+              "style": {
+                "objID": "ec9b33e5-27d6-4ea8-fda7-c8b04a94b896",
+                "useStyle": "error",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "dae2d6b2-9804-4eeb-bad0-ea2ce7f032dd",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "dc827f4d-efaa-4918-af47-2b0defc836cb",
+              "type": "TextWidget",
+              "left": 10,
+              "top": 104,
+              "width": 55,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Payload:\"",
+              "style": {
+                "objID": "9ac41d95-4b83-4abe-eaf4-935bfdf871e1",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "focusStyle": {
+                "objID": "e3e91026-3ea4-417a-bae9-ac73f634e4bc",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "b294eb1c-0048-4470-b4f3-405f7710bbd0",
+              "type": "TextInputWidget",
+              "left": 65,
+              "top": 104,
+              "width": 525,
+              "height": 32,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "publish_payload",
+              "style": {
+                "objID": "76988910-89df-4f62-d9c7-7dd97f843ed5",
+                "useStyle": "default",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "placehoder": ""
+            },
+            {
+              "objID": "a7d1e0bc-943f-4df3-b234-1700a3a1c701",
+              "type": "ButtonWidget",
+              "left": 160,
+              "top": 150,
+              "width": 105,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"OK\"",
+              "style": {
+                "objID": "db8fe740-d0e4-485c-8d92-0ed1f9f20603",
+                "useStyle": "button",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "d3e152d1-0833-4fae-ea24-b42d0d12da71",
+                  "eventName": "CLICKED",
+                  "handlerType": "flow"
+                }
+              ],
+              "disabledStyle": {
+                "objID": "24c89481-9432-4dd1-aca3-5ddc5d00eb58",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            },
+            {
+              "objID": "a86daa04-5c5e-41e4-eadd-eb69dabd75fd",
+              "type": "ButtonWidget",
+              "left": 335,
+              "top": 150,
+              "width": 105,
+              "height": 40,
+              "customInputs": [],
+              "customOutputs": [],
+              "data": "\"Cancel\"",
+              "style": {
+                "objID": "239d43c7-d83b-4f47-f15b-f0bb1954790b",
+                "useStyle": "button",
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "c8375001-12a7-42e5-c3c0-887275e12399",
+                  "eventName": "CLICKED",
+                  "handlerType": "flow"
+                }
+              ],
+              "disabledStyle": {
+                "objID": "b16740f1-e11d-44c9-c332-803c52e2f87f",
+                "useStyle": "default",
+                "childStyles": []
+              }
+            }
+          ],
+          "layout": "static"
+        },
+        {
+          "objID": "55851480-1126-4130-a28c-a03d89e618b2",
+          "type": "SetVariableActionComponent",
+          "left": 653,
+          "top": 473,
+          "width": 171,
+          "height": 76,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "003ef6f8-0c64-4016-ab39-7660e2925442",
+              "variable": "publish_open",
+              "value": "false"
+            },
+            {
+              "objID": "da292df5-da87-4b5f-decb-3199c6b60843",
+              "variable": "topic_err",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "0612cd53-4791-408e-cf68-7054b98ad541",
+          "type": "IsTrueActionComponent",
+          "left": -24,
+          "top": 473,
+          "width": 243,
+          "height": 73,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "String.length(publish_topic) > 0"
+        },
+        {
+          "objID": "d22adfa2-55c3-47d5-840f-8aa7ee0d8f9a",
+          "type": "SetVariableActionComponent",
+          "left": 297,
+          "top": 589,
+          "width": 183,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "d7ee1b05-1048-4425-f248-6b7a65bee715",
+              "variable": "topic_err",
+              "value": "\"Required\""
+            }
+          ]
+        },
+        {
+          "objID": "445d88e6-c870-4c87-dee0-86035369bb90",
+          "type": "MQTTPublishActionComponent",
+          "left": 297,
+          "top": 473,
+          "width": 305,
+          "height": 55,
+          "customInputs": [],
+          "customOutputs": [],
+          "connection": "mqtt_connection",
+          "topic": "publish_topic",
+          "payload": "publish_payload"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "fad5b319-e08a-45b7-fae6-10738574e6e1",
+          "source": "0612cd53-4791-408e-cf68-7054b98ad541",
+          "output": "False",
+          "target": "d22adfa2-55c3-47d5-840f-8aa7ee0d8f9a",
+          "input": "@seqin"
+        },
+        {
+          "objID": "34513a2a-d89d-40ec-e33f-37955c83c104",
+          "source": "a86daa04-5c5e-41e4-eadd-eb69dabd75fd",
+          "output": "CLICKED",
+          "target": "55851480-1126-4130-a28c-a03d89e618b2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "7270371b-3d0c-4c1c-c070-0f5d88009576",
+          "source": "a7d1e0bc-943f-4df3-b234-1700a3a1c701",
+          "output": "CLICKED",
+          "target": "0612cd53-4791-408e-cf68-7054b98ad541",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e9c5a9c1-8c2f-4eb0-bca1-e2fad187e7c0",
+          "source": "0612cd53-4791-408e-cf68-7054b98ad541",
+          "output": "@seqout",
+          "target": "445d88e6-c870-4c87-dee0-86035369bb90",
+          "input": "@seqin"
+        },
+        {
+          "objID": "3d6d3095-2aec-41a0-d295-e3643faaa5c0",
+          "source": "445d88e6-c870-4c87-dee0-86035369bb90",
+          "output": "@seqout",
+          "target": "55851480-1126-4130-a28c-a03d89e618b2",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "3ae34f64-f2bf-4e3c-cee9-108bcc25aebc",
+          "name": "topic_err",
+          "type": "string",
+          "defaultValue": "\"\"",
+          "persistent": false
+        },
+        {
+          "objID": "28cf1393-2070-4ad4-a1cb-ff03ede9f4ba",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "Publish",
+      "style": "",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 450,
+      "isUsedAsUserWidget": true,
+      "lvglLocalStyles": {
+        "objID": "6116d8cf-b607-4407-9d59-c4307bfd595f"
+      }
+    }
+  ],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default",
+      "childStyles": []
+    },
+    {
+      "objID": "c49c1adf-a610-28c0-027c-0e452dadb32b",
+      "name": "page",
+      "childStyles": [],
+      "backgroundColor": "page_color",
+      "css": "\n"
+    },
+    {
+      "objID": "e165f5ca-b0ca-4b48-eeb7-48c35bfb4c57",
+      "name": "error",
+      "childStyles": [],
+      "fontSize": "80%",
+      "color": "error"
+    },
+    {
+      "objID": "24bca1b0-97ff-44ca-c179-118eb45f29c7",
+      "name": "section_title",
+      "childStyles": [],
+      "fontSize": "120%",
+      "fontWeight": "bold"
+    },
+    {
+      "objID": "cb1bef11-c4e0-4e56-83cf-7f52a39b23d3",
+      "name": "icon_button",
+      "childStyles": [],
+      "css": "border: none;\npadding: 0;\nmargin: 0;\nbackground: white;\n&:hover {\n    background: #ddd;\n}"
+    },
+    {
+      "objID": "a208690d-ecd9-4903-8986-c88b0b51c0c6",
+      "name": "button",
+      "childStyles": [],
+      "borderRadius": "8",
+      "css": "border: none;\nbackground-color: #ddd;\nbox-shadow: 1px 1px 2px 0px #aaa;\n\n&:hover {\n    background-color: #ccc;\n}\n\n&: active {\n    box-shadow: none;\n    transform: translate(1px, 1px);\n}"
+    }
+  ],
+  "bitmaps": [],
+  "colors": [
+    {
+      "objID": "e6c28e5a-fe7f-09ed-9223-17769968ebea",
+      "name": "page_color"
+    },
+    {
+      "objID": "bf5da25d-cdfc-46cc-9047-9a3d14aa76b7",
+      "name": "error"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": [
+        "#f0f0f0",
+        "#c00c0c"
+      ]
+    }
+  ]
+}
