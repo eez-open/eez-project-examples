@@ -148,6 +148,13 @@
         "persistent": false
       },
       {
+        "objID": "7a4444a7-a6f9-4d16-fdcc-b9265e75cb93",
+        "name": "subscribe_topic",
+        "type": "string",
+        "defaultValue": "\"EEZ-BB3/dcpsupply/ch/1/temp\"",
+        "persistent": true
+      },
+      {
         "objID": "2268143b-dd45-4a41-cd75-7bfd44b662b3",
         "name": "connection_params_valid",
         "type": "boolean",
@@ -158,14 +165,14 @@
         "objID": "7774c8ea-e77b-4777-9760-ea91e5a6875b",
         "name": "publish_topic",
         "type": "string",
-        "defaultValue": "\"\"",
+        "defaultValue": "\"EEZ-BB3/dcpsupply/ch/1/set/oe\"",
         "persistent": true
       },
       {
         "objID": "2a656142-507f-4c1f-80ce-3e538ee067ea",
         "name": "publish_payload",
         "type": "string",
-        "defaultValue": "\"\"",
+        "defaultValue": "\"1\"",
         "persistent": true
       },
       {
@@ -2507,7 +2514,7 @@
               "height": 32,
               "customInputs": [],
               "customOutputs": [],
-              "data": "topic",
+              "data": "subscribe_topic",
               "style": {
                 "objID": "a8d13dff-28ed-4251-c6fd-ef966ab02ea7",
                 "useStyle": "default",
@@ -2607,7 +2614,7 @@
           "left": 1104,
           "top": 485,
           "width": 184,
-          "height": 96,
+          "height": 76,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2615,11 +2622,6 @@
               "objID": "64bfeaa7-1f06-4714-dd23-4fb44dca6571",
               "variable": "subscribe_open",
               "value": "false"
-            },
-            {
-              "objID": "356ef580-b6b0-482a-bf2d-d24f2b6a9178",
-              "variable": "topic",
-              "value": "\"\""
             },
             {
               "objID": "1b6a23f9-6eb2-4a9d-9e2c-0ce94d35a438",
@@ -2631,13 +2633,13 @@
         {
           "objID": "648aaa80-e111-4ac3-c340-37495c4ae5c4",
           "type": "IsTrueActionComponent",
-          "left": -251,
-          "top": 484,
-          "width": 194,
+          "left": -335,
+          "top": 476,
+          "width": 256,
           "height": 73,
           "customInputs": [],
           "customOutputs": [],
-          "value": "String.length(topic) > 0"
+          "value": "String.length(subscribe_topic) > 0"
         },
         {
           "objID": "59a9a3d3-5e56-4a80-8b43-75139970ade0",
@@ -2676,7 +2678,7 @@
           "type": "SetVariableActionComponent",
           "left": 520,
           "top": 623,
-          "width": 307,
+          "width": 325,
           "height": 172,
           "customInputs": [],
           "customOutputs": [],
@@ -2684,7 +2686,7 @@
             {
               "objID": "6025ac85-f907-4b7b-b044-a2a3c01e062b",
               "variable": "subscriptions",
-              "value": "Array.append(\n  subscriptions, \n  Flow.makeValue(\n    \"struct:Subscription\",\n    {\n      topic: topic,\n      value: \"\"\n    }\n  )\n)"
+              "value": "Array.append(\n  subscriptions, \n  Flow.makeValue(\n    \"struct:Subscription\",\n    {\n      topic: subscribe_topic,\n      value: \"\"\n    }\n  )\n)"
             }
           ]
         },
@@ -2693,28 +2695,28 @@
           "type": "MQTTSubscribeActionComponent",
           "left": 887,
           "top": 623,
-          "width": 152,
+          "width": 213,
           "height": 55,
           "customInputs": [],
           "customOutputs": [],
           "connection": "mqtt_connection",
-          "topic": "topic"
+          "topic": "subscribe_topic"
         },
         {
           "objID": "97298b3f-eacf-41d3-b439-47970ab40dd1",
           "type": "IsTrueActionComponent",
           "left": 520,
           "top": 476,
-          "width": 237,
+          "width": 299,
           "height": 73,
           "customInputs": [],
           "customOutputs": [],
-          "value": "subscriptions[i].topic == topic"
+          "value": "subscriptions[i].topic == subscribe_topic"
         },
         {
           "objID": "37141fe4-63ea-4269-ac70-801ac00deb2e",
           "type": "SetVariableActionComponent",
-          "left": 792,
+          "left": 861,
           "top": 476,
           "width": 190,
           "height": 56,
@@ -2802,13 +2804,6 @@
         }
       ],
       "localVariables": [
-        {
-          "objID": "756cd273-744f-463f-fb66-4c7a76ad6e07",
-          "name": "topic",
-          "type": "string",
-          "defaultValue": "\"\"",
-          "persistent": false
-        },
         {
           "objID": "bbe14f68-f971-46f7-f999-34f0ae103e01",
           "name": "topic_err",
