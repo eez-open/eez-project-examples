@@ -119,7 +119,7 @@
         {
           "objID": "aff93829-5a59-42ed-9313-325147d2b391",
           "type": "SetVariableActionComponent",
-          "left": 165,
+          "left": 90,
           "top": -126,
           "width": 134,
           "height": 55,
@@ -136,7 +136,7 @@
         {
           "objID": "e5e03aa6-36fd-47b0-f180-be2c9db7ae69",
           "type": "SetVariableActionComponent",
-          "left": 333,
+          "left": 321,
           "top": -126,
           "width": 134,
           "height": 55,
@@ -153,7 +153,7 @@
         {
           "objID": "734d6446-dfd1-4cd5-95dd-8a35a1ac53cb",
           "type": "SetVariableActionComponent",
-          "left": 502,
+          "left": 597,
           "top": -126,
           "width": 134,
           "height": 55,
