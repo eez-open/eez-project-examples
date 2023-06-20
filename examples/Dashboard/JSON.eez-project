@@ -279,7 +279,7 @@
               "height": 32,
               "customInputs": [],
               "customOutputs": [],
-              "data": "\"JSON Stringify:\"",
+              "data": "\"JSON Stringify\"",
               "style": {
                 "objID": "fc4ac1b9-e114-492c-c058-c83ccca4e08d",
                 "useStyle": "default",
