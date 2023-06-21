@@ -340,8 +340,8 @@
         {
           "objID": "d51062c7-8461-4f79-9bbe-7dcae307a3e0",
           "type": "JSONParse",
-          "left": 470,
-          "top": -164,
+          "left": 444,
+          "top": -77,
           "width": 99,
           "height": 52,
           "customInputs": [
@@ -363,8 +363,8 @@
         {
           "objID": "9c3ea910-b604-44d3-d4a6-e64066161586",
           "type": "JSONStringify",
-          "left": 668,
-          "top": -164,
+          "left": 600,
+          "top": -77,
           "width": 114,
           "height": 54,
           "customInputs": [
@@ -381,8 +381,8 @@
         {
           "objID": "62302bc0-9336-44be-b755-6323f9c50890",
           "type": "FileRead",
-          "left": -77,
-          "top": -164,
+          "left": 0,
+          "top": -77,
           "width": 401,
           "height": 54,
           "customInputs": [],
@@ -393,8 +393,8 @@
         {
           "objID": "06c86aa9-3d3d-4ddb-ade5-70bca6ac4e61",
           "type": "SetVariableActionComponent",
-          "left": 76,
-          "top": -78,
+          "left": 600,
+          "top": -163,
           "width": 248,
           "height": 55,
           "customInputs": [
