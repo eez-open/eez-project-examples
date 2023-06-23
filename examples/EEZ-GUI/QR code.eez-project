@@ -28,7 +28,7 @@
         {
           "objID": "aff564fb-7760-21b3-77eb-25a9ffc7ca8e",
           "fileName": "src/gui/document.h",
-          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_FONTS_ENUM}\n\n//${eez-studio GUI_BITMAPS_ENUM}\n\n//${eez-studio GUI_STYLES_ENUM}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_PAGES_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
+          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\n#define EEZ_GUI_DOCUMENT_API_VERSION 1\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_FONTS_ENUM}\n\n//${eez-studio GUI_BITMAPS_ENUM}\n\n//${eez-studio GUI_STYLES_ENUM}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_PAGES_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
         },
         {
           "objID": "1cc9aae6-a588-d56b-2532-8bc0f671da17",
@@ -399,174 +399,7 @@
       "description": "",
       "childStyles": [
         {
-          "objID": "93164a36-9895-4b54-e3d3-938f04362c07",
-          "id": 2,
-          "name": "info_alert",
-          "childStyles": [],
-          "alwaysBuild": true,
-          "padding": "20",
-          "margin": "20"
-        },
-        {
-          "objID": "d9a9af27-7c0a-4eb3-cdd3-2a0a6d145dba",
-          "id": 3,
-          "name": "error_alert",
-          "childStyles": [],
-          "alwaysBuild": true,
-          "color": "dark_text",
-          "backgroundColor": "error",
-          "activeColor": "error",
-          "activeBackgroundColor": "dark_text",
-          "padding": "20",
-          "margin": "20"
-        },
-        {
-          "objID": "ca5b4fe3-97f2-409a-a0c4-760e3298ff0d",
-          "id": 5,
-          "name": "select_enum_item_popup_container",
-          "childStyles": [
-            {
-              "objID": "24316f5a-c03f-486d-d9f8-147b1cfb6828",
-              "id": 6,
-              "name": "select_enum_item_popup_container_S",
-              "childStyles": [
-                {
-                  "objID": "76af0606-73f1-4ccb-cbda-f14c4c703d1e",
-                  "id": 8,
-                  "name": "select_enum_item_popup_item_S",
-                  "childStyles": [
-                    {
-                      "objID": "d435346e-9968-42b5-c98c-256db71b4d57",
-                      "id": 10,
-                      "name": "select_enum_item_popup_disabled_item_S",
-                      "childStyles": [],
-                      "alwaysBuild": true,
-                      "color": "drop_down_list_color_disabled"
-                    }
-                  ],
-                  "alwaysBuild": true,
-                  "alignHorizontal": "left",
-                  "padding": "6"
-                }
-              ],
-              "alwaysBuild": true
-            },
-            {
-              "objID": "398e0798-dcc8-4589-f409-b862caedd8bc",
-              "id": 7,
-              "name": "select_enum_item_popup_item",
-              "childStyles": [
-                {
-                  "objID": "a4f7c5e4-6e5b-47c7-a9d0-9593296cc4e9",
-                  "id": 9,
-                  "name": "select_enum_item_popup_disabled_item",
-                  "childStyles": [],
-                  "alwaysBuild": true,
-                  "color": "drop_down_list_color_disabled"
-                }
-              ],
-              "alwaysBuild": true,
-              "padding": "6"
-            }
-          ],
-          "alwaysBuild": true,
-          "color": "drop_down_list_color",
-          "backgroundColor": "drop_down_list_background",
-          "activeColor": "drop_down_list_background",
-          "activeBackgroundColor": "drop_down_list_color",
-          "padding": "12"
-        },
-        {
-          "objID": "ba3d830e-4951-4652-ad74-3deeb7342e46",
-          "id": 11,
-          "name": "menu_with_buttons_message",
-          "childStyles": [],
-          "alwaysBuild": true,
-          "alignVertical": "top",
-          "color": "text",
-          "backgroundColor": "background",
-          "activeColor": "background",
-          "activeBackgroundColor": "text",
-          "padding": "0 0 10 0",
-          "margin": "0"
-        },
-        {
-          "objID": "f681cada-f126-4b61-abc1-4f213d152c39",
-          "id": 12,
-          "name": "menu_with_buttons_container",
-          "childStyles": [],
-          "alwaysBuild": true,
-          "padding": "20",
-          "margin": "20"
-        },
-        {
-          "objID": "fd7cda65-e91c-486f-b8d9-dce3ff1c1b8e",
-          "id": 14,
-          "name": "fps_graph",
-          "childStyles": [],
-          "alwaysBuild": true,
-          "color": "#00ff1e",
-          "backgroundColor": "#000000",
-          "borderSize": "1",
-          "borderColor": "backdrop"
-        },
-        {
-          "objID": "b4fddb24-f3e1-43d1-93f5-89e77a172250",
-          "id": 15,
-          "name": "slider_widget",
-          "childStyles": [],
-          "color": "slider_widget_color",
-          "backgroundColor": "slider_widget_background"
-        },
-        {
-          "objID": "0ebff531-bb65-476d-f255-2034ca01bf25",
-          "id": 16,
-          "name": "switch_widget",
-          "childStyles": [],
-          "color": "switch_widget_color",
-          "backgroundColor": "switch_widget_background_off",
-          "activeColor": "switch_widget_color",
-          "activeBackgroundColor": "switch_widget_background_on",
-          "focusColor": "switch_widget_color",
-          "borderSize": "2",
-          "borderColor": "switch_widget_border",
-          "padding": "3 0"
-        },
-        {
-          "objID": "f20bd010-de25-43b1-fb41-0ffbab8f277c",
-          "id": 17,
-          "name": "drop_down_list",
-          "childStyles": [],
-          "color": "drop_down_list_color",
-          "backgroundColor": "drop_down_list_background",
-          "activeColor": "drop_down_list_color",
-          "activeBackgroundColor": "drop_down_list_active_background",
-          "borderColor": "drop_down_list_border"
-        },
-        {
-          "objID": "ba8d7ae0-d77a-46c0-8091-69074a319417",
-          "id": 18,
-          "name": "roller_widget",
-          "childStyles": []
-        },
-        {
-          "objID": "90da25cb-1ac2-4686-ad29-8f08d1482c76",
-          "id": 19,
-          "name": "roller_widget_selected_value",
-          "childStyles": [],
-          "borderSize": "2",
-          "borderRadius": "4",
-          "borderColor": "#c0c0c0"
-        },
-        {
-          "objID": "3919ccaa-2fcf-4d8b-8277-1f98d6f67ddf",
-          "id": 20,
-          "name": "roller_widget_unselected_value",
-          "childStyles": [],
-          "color": "#808080"
-        },
-        {
-          "objID": "d3767816-079c-47ed-9530-a514b765553b",
+          "objID": "28539e9b-1425-468e-c77c-346abe42a73a",
           "id": 21,
           "name": "background",
           "childStyles": [],
@@ -574,29 +407,12 @@
           "backgroundImage": ""
         },
         {
-          "objID": "129b2c0a-ce25-4934-df82-907dec85162b",
+          "objID": "d52d1f6e-9449-42ca-de11-3d14bf2df33c",
           "id": 22,
           "name": "button",
           "childStyles": [
             {
-              "objID": "ef17a20d-90f1-4744-f9e8-03a23ef2c237",
-              "id": 4,
-              "name": "error_alert_button",
-              "childStyles": [],
-              "alwaysBuild": true,
-              "padding": "8 16 8 16"
-            },
-            {
-              "objID": "de1d343d-b98f-4aae-e2f3-34299543ec85",
-              "id": 13,
-              "name": "menu_with_buttons_button",
-              "childStyles": [],
-              "alwaysBuild": true,
-              "padding": "0 4",
-              "margin": "0"
-            },
-            {
-              "objID": "79ad3385-f083-47d1-d104-49c8e4a40a65",
+              "objID": "82d6340a-2ee5-4f20-ad5f-8720c8ea80aa",
               "id": 23,
               "name": "button_disabled",
               "childStyles": [],
@@ -605,6 +421,31 @@
               "activeColor": "button_disabled_text",
               "activeBackgroundColor": "button_disabled_background",
               "borderColor": "button_disabled_border"
+            },
+            {
+              "objID": "4c566ed3-3aad-48ea-eb8e-65411b8ea3c6",
+              "id": 25,
+              "name": "message_box_info_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "8 16 8 16"
+            },
+            {
+              "objID": "2016d429-ea95-44ce-befd-6146509c44ce",
+              "id": 4,
+              "name": "message_box_error_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "8 16 8 16"
+            },
+            {
+              "objID": "ad0a9257-98c8-4911-c583-08210fe037f9",
+              "id": 13,
+              "name": "message_box_question_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "0 4",
+              "margin": "0"
             }
           ],
           "color": "button_text",
@@ -616,12 +457,138 @@
           "borderColor": "button_border"
         },
         {
-          "objID": "4545ac1e-08ad-461b-bb15-2d84ec6004e6",
-          "id": 24,
-          "name": "note_M",
+          "objID": "8d4793ec-9313-4cd9-b77c-8980c00fadb0",
+          "id": 17,
+          "name": "drop_down_list",
+          "childStyles": [
+            {
+              "objID": "e6a35af8-dcc3-4def-98e8-1b8928a02416",
+              "id": 5,
+              "name": "drop_down_list_popup_container",
+              "childStyles": [
+                {
+                  "objID": "71e56cfc-aa07-44de-9a96-dd9e3743a075",
+                  "id": 7,
+                  "name": "drop_down_list_popup_item",
+                  "childStyles": [
+                    {
+                      "objID": "b50bdba4-1ae7-4d16-d0ad-c1a60472e4d7",
+                      "id": 9,
+                      "name": "drop_down_list_disabled_popup_item",
+                      "childStyles": [],
+                      "alwaysBuild": true,
+                      "color": "drop_down_list_color_disabled"
+                    }
+                  ],
+                  "alwaysBuild": true,
+                  "padding": "6"
+                }
+              ],
+              "alwaysBuild": true,
+              "color": "drop_down_list_color",
+              "backgroundColor": "drop_down_list_background",
+              "activeColor": "drop_down_list_background",
+              "activeBackgroundColor": "drop_down_list_color",
+              "borderColor": "drop_down_list_border",
+              "padding": "12"
+            }
+          ],
+          "color": "drop_down_list_color",
+          "backgroundColor": "drop_down_list_background",
+          "activeColor": "drop_down_list_color",
+          "activeBackgroundColor": "drop_down_list_active_background",
+          "borderColor": "drop_down_list_border"
+        },
+        {
+          "objID": "bf3c6798-42a7-436c-d266-dab4e54a6c23",
+          "id": 18,
+          "name": "roller",
+          "childStyles": [
+            {
+              "objID": "a9fc8f45-6667-430b-f04d-2ac49784a820",
+              "id": 19,
+              "name": "roller_selected_value",
+              "childStyles": [],
+              "borderSize": "2",
+              "borderRadius": "4",
+              "borderColor": "#c0c0c0"
+            },
+            {
+              "objID": "c0e9cafa-f0bb-4a2c-ada8-a1dc53e4ee22",
+              "id": 20,
+              "name": "roller_unselected_value",
+              "childStyles": [],
+              "color": "#808080"
+            }
+          ]
+        },
+        {
+          "objID": "7fde5094-f8c6-4f14-9b65-21ab1070c8f2",
+          "id": 15,
+          "name": "slider",
           "childStyles": [],
+          "color": "slider_widget_color",
+          "backgroundColor": "slider_widget_background"
+        },
+        {
+          "objID": "a255eded-c364-4d78-9818-89ecc463db56",
+          "id": 16,
+          "name": "switch",
+          "childStyles": [],
+          "color": "switch_widget_color",
+          "backgroundColor": "switch_widget_background_off",
+          "activeColor": "switch_widget_color",
+          "activeBackgroundColor": "switch_widget_background_on",
+          "focusColor": "switch_widget_color",
+          "borderSize": "2",
+          "borderColor": "switch_widget_border",
+          "padding": "3 0"
+        },
+        {
+          "objID": "423386b5-0bf9-436a-abd8-a7510a5343a1",
+          "id": 2,
+          "name": "message_box_info",
+          "childStyles": [],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "cfbeaa70-eaa2-4304-cb54-f98da5d964c0",
+          "id": 3,
+          "name": "message_box_error",
+          "childStyles": [],
+          "alwaysBuild": true,
           "color": "dark_text",
-          "backgroundColor": "note"
+          "backgroundColor": "error",
+          "activeColor": "error",
+          "activeBackgroundColor": "dark_text",
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "d1875281-df6b-40f8-ebe2-fbe2cacccadd",
+          "id": 12,
+          "name": "message_box_question_container",
+          "childStyles": [
+            {
+              "objID": "57babfdd-b118-44c1-f914-c20cc22dc6df",
+              "id": 11,
+              "name": "message_box_question_message",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "alignVertical": "top",
+              "color": "text",
+              "backgroundColor": "background",
+              "activeColor": "background",
+              "activeBackgroundColor": "text",
+              "padding": "0 0 10 0",
+              "margin": "0"
+            }
+          ],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
         }
       ],
       "font": "medium",
@@ -2769,10 +2736,6 @@
       "name": "error"
     },
     {
-      "objID": "d7415fa8-de06-41cf-baef-39cb19c879e3",
-      "name": "note"
-    },
-    {
       "objID": "fd1d3927-8215-fff3-e85c-e67b16910e20",
       "name": "switch_widget_color"
     },
@@ -2815,26 +2778,6 @@
     {
       "objID": "ec09e8d8-3a03-dbc0-a0c7-81dcc2fbabbf",
       "name": "drop_down_list_active_background"
-    },
-    {
-      "objID": "faf9f894-9b12-582e-4734-d7a88a4598b0",
-      "name": "text_input_color"
-    },
-    {
-      "objID": "5051e432-4dab-7d88-7d60-ed247b3b372f",
-      "name": "text_input_color_disabled"
-    },
-    {
-      "objID": "0f6f5174-39ad-a284-213d-d3a6c244e635",
-      "name": "text_input_background"
-    },
-    {
-      "objID": "baab95e4-de93-5c06-07b7-5d5fd4f10d32",
-      "name": "text_input_active_background"
-    },
-    {
-      "objID": "25ca2245-85fc-3052-6ab3-8635921ba053",
-      "name": "text_input_border"
     }
   ],
   "themes": [
@@ -2857,7 +2800,6 @@
         "#202020",
         "#808080",
         "#ffa3a3",
-        "#fce440",
         "#ffffff",
         "#0080ff",
         "#808080",
@@ -2868,12 +2810,7 @@
         "#808080",
         "#ffffff",
         "#404040",
-        "#c0c0c0",
-        "#404040",
-        "#808080",
-        "#ffffff",
-        "#c0c0c0",
-        "#404040"
+        "#c0c0c0"
       ]
     }
   ]

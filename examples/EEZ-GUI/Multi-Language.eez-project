@@ -6,13 +6,15 @@
       "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
       "projectVersion": "v3",
       "projectType": "firmware",
+      "extensions": [],
       "imports": [],
       "flowSupport": true,
       "displayWidth": 480,
       "displayHeight": 272,
       "description": "Example of multi language project",
       "image": "data:image/png;base64,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",
-      "keywords": "multi-language"
+      "keywords": "multi-language",
+      "resourceFiles": []
     },
     "build": {
       "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
@@ -26,7 +28,7 @@
         {
           "objID": "aff564fb-7760-21b3-77eb-25a9ffc7ca8e",
           "fileName": "src/gui/document.h",
-          "template": "#pragma once\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_FONTS_ENUM}\n\n//${eez-studio GUI_BITMAPS_ENUM}\n\n//${eez-studio GUI_STYLES_ENUM}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_PAGES_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
+          "template": "#pragma once\n\n#define EEZ_GUI_DOCUMENT_API_VERSION 1\n\n#include <eez/gui/data.h>\n#include <eez/gui/widget.h>\n\nnamespace eez {\nnamespace gui {\n\n//${eez-studio DATA_ENUM}\n\n//${eez-studio DATA_FUNCS_DECL}\n\n//${eez-studio DATA_ARRAY_DECL}\n\n//${eez-studio ACTIONS_ENUM}\n\n//${eez-studio ACTIONS_FUNCS_DECL}\n\n//${eez-studio ACTIONS_ARRAY_DECL}\n\n//${eez-studio GUI_FONTS_ENUM}\n\n//${eez-studio GUI_BITMAPS_ENUM}\n\n//${eez-studio GUI_STYLES_ENUM}\n\n//${eez-studio GUI_THEMES_ENUM}\n\n//${eez-studio GUI_COLORS_ENUM}\n\n//${eez-studio GUI_PAGES_ENUM}\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n} // namespace gui\n} // namespace eez\n"
         },
         {
           "objID": "1cc9aae6-a588-d56b-2532-8bc0f671da17",
@@ -366,7 +368,7 @@
           "left": 512,
           "top": 206,
           "width": 87,
-          "height": 25,
+          "height": 24,
           "customInputs": [],
           "customOutputs": [],
           "name": "Ignore"
@@ -377,7 +379,7 @@
           "left": -21,
           "top": -62,
           "width": 87,
-          "height": 25,
+          "height": 24,
           "customInputs": [],
           "customOutputs": []
         },
@@ -386,8 +388,8 @@
           "type": "SelectLanguageActionComponent",
           "left": 175,
           "top": -62,
-          "width": 131,
-          "height": 25,
+          "width": 133,
+          "height": 24,
           "customInputs": [],
           "customOutputs": [],
           "language": "Flow.languages()[selected_language_index]"
@@ -397,8 +399,8 @@
           "type": "SelectLanguageActionComponent",
           "left": 401,
           "top": -71,
-          "width": 131,
-          "height": 54,
+          "width": 133,
+          "height": 52,
           "customInputs": [
             {
               "objID": "76c63454-9680-0eb7-5f94-0db547eb9771",
@@ -421,10 +423,16 @@
           "data": "T\"Hello, world!\"",
           "style": {
             "objID": "72862002-7fbd-278c-4a47-f5102d88d446",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "childStyles": []
           },
           "timeline": [],
-          "eventHandlers": []
+          "eventHandlers": [],
+          "focusStyle": {
+            "objID": "9bc894cb-beef-806f-6d3a-35f90b9b047a",
+            "useStyle": "default",
+            "childStyles": []
+          }
         },
         {
           "objID": "fb4b3fa1-d53b-75a6-c45d-c41ad06c4923",
@@ -438,7 +446,8 @@
           "data": "selected_language_index",
           "style": {
             "objID": "9770ac8c-3842-2571-d0a9-dfe61d2abbc7",
-            "inheritFrom": "drop_down_list"
+            "useStyle": "drop_down_list",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [
@@ -462,11 +471,17 @@
           "data": "T\"Select language:\"",
           "style": {
             "objID": "f8322731-da0e-c354-7dfe-25934a164257",
-            "inheritFrom": "default",
+            "useStyle": "default",
+            "childStyles": [],
             "alignHorizontal": "right"
           },
           "timeline": [],
-          "eventHandlers": []
+          "eventHandlers": [],
+          "focusStyle": {
+            "objID": "2a83a657-6a4d-0d16-3c4e-3fa36bd0bf5f",
+            "useStyle": "default",
+            "childStyles": []
+          }
         },
         {
           "objID": "65ed2992-be4b-7a4c-f423-578e05f582f3",
@@ -480,11 +495,17 @@
           "data": "Flow.languages()[selected_language_index]",
           "style": {
             "objID": "78b3006b-a456-de9a-dccc-1ae4c3fea106",
-            "inheritFrom": "default",
+            "useStyle": "default",
+            "childStyles": [],
             "alignHorizontal": "left"
           },
           "timeline": [],
-          "eventHandlers": []
+          "eventHandlers": [],
+          "focusStyle": {
+            "objID": "cf9974f1-b24d-e25d-4c7f-7e090625f328",
+            "useStyle": "default",
+            "childStyles": []
+          }
         },
         {
           "objID": "3328b57f-35e8-5239-09f8-bcc795169cb9",
@@ -498,7 +519,8 @@
           "data": "T\"Execute\"",
           "style": {
             "objID": "64f56a8a-f576-a4a1-f1f4-0f06bb21dbc6",
-            "inheritFrom": "button"
+            "useStyle": "button",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [
@@ -510,7 +532,8 @@
           ],
           "disabledStyle": {
             "objID": "aa523f0a-1d6c-dd49-86cf-481ca499a5b2",
-            "inheritFrom": "button_disabled"
+            "useStyle": "button_disabled",
+            "childStyles": []
           }
         }
       ],
@@ -572,7 +595,8 @@
           "data": "touch_calibration_point",
           "style": {
             "objID": "d459b352-01bd-4672-ee5f-d9d45a3c0575",
-            "inheritFrom": "touch_calibration"
+            "useStyle": "touch_calibration",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [],
@@ -588,7 +612,8 @@
               "customOutputs": [],
               "style": {
                 "objID": "17012716-9f8f-47d7-b6d3-c94e2cb6a05a",
-                "inheritFrom": "touch_calibration"
+                "useStyle": "touch_calibration",
+                "childStyles": []
               },
               "timeline": [],
               "eventHandlers": [],
@@ -605,7 +630,8 @@
                   "data": "\"Touch top-left cross in the center until change color\"",
                   "style": {
                     "objID": "b2a8f03e-fd02-41cf-97a1-be1cd1d3d79e",
-                    "inheritFrom": "note_M"
+                    "useStyle": "note_M",
+                    "childStyles": []
                   },
                   "timeline": [],
                   "eventHandlers": []
@@ -622,11 +648,17 @@
                   "data": "\"+\"",
                   "style": {
                     "objID": "67199564-a19e-4907-9ada-2b4f2c8b2a66",
-                    "inheritFrom": "touch_calibration_point",
+                    "useStyle": "touch_calibration_point",
+                    "childStyles": [],
                     "activeBackgroundColor": "#000000"
                   },
                   "timeline": [],
-                  "eventHandlers": []
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "44fe93df-98c9-5c4a-585b-771e22eb1d6c",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
                 }
               ],
               "layout": "static"
@@ -642,7 +674,8 @@
               "customOutputs": [],
               "style": {
                 "objID": "a5f77b59-b63b-4e17-8214-1e7986a9c7dd",
-                "inheritFrom": "touch_calibration"
+                "useStyle": "touch_calibration",
+                "childStyles": []
               },
               "timeline": [],
               "eventHandlers": [],
@@ -659,7 +692,8 @@
                   "data": "\"Touch bottom-right cross in the center until change color\"",
                   "style": {
                     "objID": "53c745f1-98ee-42a3-8042-9045eb62b22e",
-                    "inheritFrom": "note_M"
+                    "useStyle": "note_M",
+                    "childStyles": []
                   },
                   "timeline": [],
                   "eventHandlers": []
@@ -676,10 +710,16 @@
                   "data": "\"+\"",
                   "style": {
                     "objID": "61f37e40-1fb1-41cc-c945-508e8d322a76",
-                    "inheritFrom": "touch_calibration_point"
+                    "useStyle": "touch_calibration_point",
+                    "childStyles": []
                   },
                   "timeline": [],
-                  "eventHandlers": []
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "092bea5f-9f57-3ed6-d20c-ae9a9b54b488",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
                 }
               ],
               "layout": "static"
@@ -695,7 +735,8 @@
               "customOutputs": [],
               "style": {
                 "objID": "f3f4d7f9-b804-43b8-d7c3-6de072575af9",
-                "inheritFrom": "touch_calibration"
+                "useStyle": "touch_calibration",
+                "childStyles": []
               },
               "timeline": [],
               "eventHandlers": [],
@@ -712,7 +753,8 @@
                   "data": "\"Touch top-right cross in the center until change color\"",
                   "style": {
                     "objID": "81358ea9-31f1-4a5b-fd90-6229efd4f683",
-                    "inheritFrom": "note_M"
+                    "useStyle": "note_M",
+                    "childStyles": []
                   },
                   "timeline": [],
                   "eventHandlers": []
@@ -729,10 +771,16 @@
                   "data": "\"+\"",
                   "style": {
                     "objID": "b84e8a9c-1a8a-428e-de1c-9f347c3274b2",
-                    "inheritFrom": "touch_calibration_point"
+                    "useStyle": "touch_calibration_point",
+                    "childStyles": []
                   },
                   "timeline": [],
-                  "eventHandlers": []
+                  "eventHandlers": [],
+                  "focusStyle": {
+                    "objID": "b8a89ea6-20ce-3587-2e71-d039556d3f20",
+                    "useStyle": "default",
+                    "childStyles": []
+                  }
                 }
               ],
               "layout": "static"
@@ -768,10 +816,16 @@
           "data": "alert_message",
           "style": {
             "objID": "9932e8d7-a9d1-4b14-8647-a7dc4db85edd",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [],
+          "focusStyle": {
+            "objID": "391fddf3-4c9f-f31f-e4ba-9f3b7f0835e3",
+            "useStyle": "default",
+            "childStyles": []
+          },
           "displayOption": 0
         },
         {
@@ -786,7 +840,8 @@
           "data": "\"Yes\"",
           "style": {
             "objID": "604beb2b-2aa6-4e84-9fdb-41345fb4209d",
-            "inheritFrom": "button"
+            "useStyle": "button",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [
@@ -802,7 +857,12 @@
               "handlerType": "action",
               "action": "yes"
             }
-          ]
+          ],
+          "focusStyle": {
+            "objID": "f70d18a6-0929-d238-9cd4-6089e7191fc8",
+            "useStyle": "default",
+            "childStyles": []
+          }
         },
         {
           "objID": "87d405ee-d187-4010-f4bb-3bc0a2ebd06e",
@@ -816,7 +876,8 @@
           "data": "\"Start again\"",
           "style": {
             "objID": "506704e5-aced-4d05-f035-70978c71eb69",
-            "inheritFrom": "button"
+            "useStyle": "button",
+            "childStyles": []
           },
           "timeline": [],
           "eventHandlers": [
@@ -832,7 +893,12 @@
               "handlerType": "action",
               "action": "no"
             }
-          ]
+          ],
+          "focusStyle": {
+            "objID": "ad9ceaa1-2dc2-874b-b9f7-1055c06e13f4",
+            "useStyle": "default",
+            "childStyles": []
+          }
         }
       ],
       "connectionLines": [],
@@ -857,7 +923,200 @@
       "id": 1,
       "name": "default",
       "description": "",
-      "inheritFrom": "",
+      "childStyles": [
+        {
+          "objID": "d0c600f0-478a-4475-8b3c-c18d1a6560d5",
+          "id": 21,
+          "name": "background",
+          "childStyles": [],
+          "backgroundColor": "background",
+          "backgroundImage": ""
+        },
+        {
+          "objID": "c57a6ef0-fdfc-4f8d-db62-cb0be5b0b9c9",
+          "id": 22,
+          "name": "button",
+          "childStyles": [
+            {
+              "objID": "14454f17-d617-486f-a3cd-3b940d198210",
+              "id": 23,
+              "name": "button_disabled",
+              "childStyles": [],
+              "color": "button_disabled_text",
+              "backgroundColor": "button_disabled_background",
+              "activeColor": "button_disabled_text",
+              "activeBackgroundColor": "button_disabled_background",
+              "borderColor": "button_disabled_border"
+            },
+            {
+              "objID": "d667ead8-f389-4ffd-f1ce-6978512432e8",
+              "id": 25,
+              "name": "message_box_info_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "8 16 8 16"
+            },
+            {
+              "objID": "3308d8c6-b33e-4389-9015-76cb027cc7cd",
+              "id": 4,
+              "name": "message_box_error_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "8 16 8 16"
+            },
+            {
+              "objID": "ed20a01c-896c-4d70-b02c-63ae22cb1a09",
+              "id": 13,
+              "name": "message_box_question_button",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "padding": "0 4",
+              "margin": "0"
+            }
+          ],
+          "color": "button_text",
+          "backgroundColor": "button_background",
+          "activeColor": "button_text",
+          "activeBackgroundColor": "button_active_background",
+          "borderSize": "2",
+          "borderRadius": "8",
+          "borderColor": "button_border"
+        },
+        {
+          "objID": "79cff569-585a-497c-eefb-5edf8d71da7e",
+          "id": 17,
+          "name": "drop_down_list",
+          "childStyles": [
+            {
+              "objID": "065482ee-7060-4e17-ac20-589fdc86e44b",
+              "id": 5,
+              "name": "drop_down_list_popup_container",
+              "childStyles": [
+                {
+                  "objID": "af03be73-8908-47eb-9658-d4af9701335d",
+                  "id": 7,
+                  "name": "drop_down_list_popup_item",
+                  "childStyles": [
+                    {
+                      "objID": "efc10b56-078f-497a-f134-98788b8f6374",
+                      "id": 9,
+                      "name": "drop_down_list_disabled_popup_item",
+                      "childStyles": [],
+                      "alwaysBuild": true,
+                      "color": "drop_down_list_color_disabled"
+                    }
+                  ],
+                  "alwaysBuild": true,
+                  "padding": "6"
+                }
+              ],
+              "alwaysBuild": true,
+              "color": "drop_down_list_color",
+              "backgroundColor": "drop_down_list_background",
+              "activeColor": "drop_down_list_background",
+              "activeBackgroundColor": "drop_down_list_color",
+              "borderColor": "drop_down_list_border",
+              "padding": "12"
+            }
+          ],
+          "color": "drop_down_list_color",
+          "backgroundColor": "drop_down_list_background",
+          "activeColor": "drop_down_list_color",
+          "activeBackgroundColor": "drop_down_list_active_background",
+          "borderColor": "drop_down_list_border"
+        },
+        {
+          "objID": "8758f3f2-e6ab-4c2f-ac7f-6240524cfba4",
+          "id": 18,
+          "name": "roller",
+          "childStyles": [
+            {
+              "objID": "8679e399-6ffb-445c-bc80-df6a69cc0f88",
+              "id": 19,
+              "name": "roller_selected_value",
+              "childStyles": [],
+              "borderSize": "2",
+              "borderRadius": "4",
+              "borderColor": "#c0c0c0"
+            },
+            {
+              "objID": "cefb5b17-03e1-4241-afe0-af406fa6f518",
+              "id": 20,
+              "name": "roller_unselected_value",
+              "childStyles": [],
+              "color": "#808080"
+            }
+          ]
+        },
+        {
+          "objID": "5aaffb22-f1ef-47b5-9553-ada55804a9fd",
+          "id": 15,
+          "name": "slider",
+          "childStyles": [],
+          "color": "slider_widget_color",
+          "backgroundColor": "slider_widget_background"
+        },
+        {
+          "objID": "74844039-2a0a-4c1b-b447-b4addeb73311",
+          "id": 16,
+          "name": "switch",
+          "childStyles": [],
+          "color": "switch_widget_color",
+          "backgroundColor": "switch_widget_background_off",
+          "activeColor": "switch_widget_color",
+          "activeBackgroundColor": "switch_widget_background_on",
+          "focusColor": "switch_widget_color",
+          "borderSize": "2",
+          "borderColor": "switch_widget_border",
+          "padding": "3 0"
+        },
+        {
+          "objID": "b37d6931-1e9d-4ec3-96b1-e053b3f4d0ce",
+          "id": 2,
+          "name": "message_box_info",
+          "childStyles": [],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "4b9511eb-d5c2-400f-a2e1-ea9504811f42",
+          "id": 3,
+          "name": "message_box_error",
+          "childStyles": [],
+          "alwaysBuild": true,
+          "color": "dark_text",
+          "backgroundColor": "error",
+          "activeColor": "error",
+          "activeBackgroundColor": "dark_text",
+          "padding": "20",
+          "margin": "20"
+        },
+        {
+          "objID": "b0491326-de36-4d24-8185-4a9ad6429866",
+          "id": 12,
+          "name": "message_box_question_container",
+          "childStyles": [
+            {
+              "objID": "2dec4943-0d1e-49ea-d281-befab55d3262",
+              "id": 11,
+              "name": "message_box_question_message",
+              "childStyles": [],
+              "alwaysBuild": true,
+              "alignVertical": "top",
+              "color": "text",
+              "backgroundColor": "background",
+              "activeColor": "background",
+              "activeBackgroundColor": "text",
+              "padding": "0 0 10 0",
+              "margin": "0"
+            }
+          ],
+          "alwaysBuild": true,
+          "padding": "20",
+          "margin": "20"
+        }
+      ],
       "font": "medium",
       "alignHorizontal": "center",
       "alignVertical": "center",
@@ -869,170 +1128,17 @@
       "padding": "0"
     },
     {
-      "objID": "e4ebe4ea-0717-4799-87cd-90e1811c197c",
-      "id": 2,
-      "name": "info_alert",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "c6b908c7-65d0-4684-eef5-e5be65d8abb6",
-      "id": 3,
-      "name": "error_alert",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "dark_text",
-      "backgroundColor": "error",
-      "activeColor": "error",
-      "activeBackgroundColor": "dark_text",
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "cabb8111-f6a9-4ff4-fe9e-74d6edce3b7b",
-      "id": 4,
-      "name": "error_alert_button",
-      "inheritFrom": "button",
-      "alwaysBuild": true,
-      "padding": "8 16 8 16"
-    },
-    {
-      "objID": "1848cf67-7ca4-45ee-eaff-9ffe2e21c109",
-      "id": 5,
-      "name": "select_enum_item_popup_container",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color",
-      "backgroundColor": "drop_down_list_background",
-      "activeColor": "drop_down_list_background",
-      "activeBackgroundColor": "drop_down_list_color",
-      "padding": "12"
-    },
-    {
-      "objID": "68db5d21-6a18-4085-fcff-353bf9bd95ea",
-      "id": 6,
-      "name": "select_enum_item_popup_container_S",
-      "inheritFrom": "select_enum_item_popup_container",
-      "alwaysBuild": true
-    },
-    {
-      "objID": "fb1af2cb-f0b8-424d-fe3e-cc992d1fa1b5",
-      "id": 7,
-      "name": "select_enum_item_popup_item",
-      "inheritFrom": "select_enum_item_popup_container",
-      "alwaysBuild": true,
-      "padding": "6"
-    },
-    {
-      "objID": "1a13c98a-bd05-4a6c-9b6d-95bc02ed6a3a",
-      "id": 8,
-      "name": "select_enum_item_popup_item_S",
-      "inheritFrom": "select_enum_item_popup_container_S",
-      "alwaysBuild": true,
-      "alignHorizontal": "left",
-      "padding": "6"
-    },
-    {
-      "objID": "7b221e01-4da6-44be-d102-d7d18ab81c2a",
-      "id": 9,
-      "name": "select_enum_item_popup_disabled_item",
-      "inheritFrom": "select_enum_item_popup_item",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color_disabled"
-    },
-    {
-      "objID": "39bcb3ed-a93a-4c04-be5d-04370a944487",
-      "id": 10,
-      "name": "select_enum_item_popup_disabled_item_S",
-      "inheritFrom": "select_enum_item_popup_item_S",
-      "alwaysBuild": true,
-      "color": "drop_down_list_color_disabled"
-    },
-    {
-      "objID": "28904e37-aec2-4071-e1c6-1b9381846d4a",
-      "id": 11,
-      "name": "menu_with_buttons_message",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "alignVertical": "top",
-      "color": "text",
-      "backgroundColor": "background",
-      "activeColor": "background",
-      "activeBackgroundColor": "text",
-      "padding": "0 0 10 0",
-      "margin": "0"
-    },
-    {
-      "objID": "95deab8c-dd1a-4f30-a3b0-2a508569db22",
-      "id": 12,
-      "name": "menu_with_buttons_container",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "padding": "20",
-      "margin": "20"
-    },
-    {
-      "objID": "cbc56ca9-2fbd-4f78-c0f1-9f8f1570c183",
-      "id": 13,
-      "name": "menu_with_buttons_button",
-      "inheritFrom": "button",
-      "alwaysBuild": true,
-      "padding": "0 4",
-      "margin": "0"
-    },
-    {
-      "objID": "5eb88165-d78d-40d3-83e9-e80b3d065cab",
-      "id": 14,
-      "name": "fps_graph",
-      "inheritFrom": "default",
-      "alwaysBuild": true,
-      "color": "#00ff1e",
-      "backgroundColor": "#000000",
-      "borderSize": "1",
-      "borderColor": "backdrop"
-    },
-    {
-      "objID": "4227eb31-4eb7-4378-ef00-b6ca019c8741",
-      "name": "slider_widget",
-      "inheritFrom": "default",
-      "color": "slider_widget_color",
-      "backgroundColor": "slider_widget_background"
-    },
-    {
-      "objID": "748b493b-9401-4f89-be8b-0449e3abe81e",
-      "name": "background",
-      "inheritFrom": "default",
-      "backgroundColor": "background",
-      "backgroundImage": ""
-    },
-    {
-      "objID": "76965218-a283-4b63-9c67-2a382a1209e7",
-      "name": "button",
-      "inheritFrom": "default",
-      "color": "button_text",
-      "backgroundColor": "button_background",
-      "activeColor": "button_text",
-      "activeBackgroundColor": "button_active_background",
-      "borderSize": "2",
-      "borderRadius": "8",
-      "borderColor": "button_border"
-    },
-    {
-      "objID": "cdc4cc9b-0a4e-462d-bba9-6e0e5755592f",
-      "name": "button_disabled",
-      "inheritFrom": "button",
-      "color": "button_disabled_text",
-      "backgroundColor": "button_disabled_background",
-      "activeColor": "button_disabled_text",
-      "activeBackgroundColor": "button_disabled_background",
-      "borderColor": "button_disabled_border"
-    },
-    {
       "objID": "36b1d3c5-654e-4a64-90e0-2f159df79eb5",
       "name": "touch_calibration",
-      "inheritFrom": "default",
+      "childStyles": [
+        {
+          "objID": "38828d44-bfc8-43fa-b2b1-9c21b0d28def",
+          "name": "touch_calibration_point",
+          "childStyles": [],
+          "activeColor": "#00ff00",
+          "activeBackgroundColor": "#000000"
+        }
+      ],
       "font": "gui_icons",
       "color": "#ffffff",
       "backgroundColor": "#000000",
@@ -1040,35 +1146,18 @@
       "activeBackgroundColor": "#ffffff"
     },
     {
-      "objID": "38828d44-bfc8-43fa-b2b1-9c21b0d28def",
-      "name": "touch_calibration_point",
-      "inheritFrom": "touch_calibration",
-      "activeColor": "#00ff00",
-      "activeBackgroundColor": "#000000"
-    },
-    {
       "objID": "9a542ad6-674e-4cf5-a1ba-711f5510fe34",
       "name": "note_M",
-      "inheritFrom": "default",
+      "childStyles": [],
+      "font": "medium",
       "color": "dark_text",
       "backgroundColor": "note"
-    },
-    {
-      "objID": "98dcd9cd-01f1-45ee-8d20-d9c8d817a249",
-      "name": "drop_down_list",
-      "inheritFrom": "default",
-      "color": "drop_down_list_color",
-      "backgroundColor": "drop_down_list_background",
-      "activeColor": "drop_down_list_color",
-      "activeBackgroundColor": "drop_down_list_active_background",
-      "borderSize": "2",
-      "borderRadius": "8",
-      "borderColor": "drop_down_list_border"
     }
   ],
   "fonts": [
     {
       "objID": "d6d210fa-2e1e-cb43-348a-9ee0e89bec7c",
+      "id": 1,
       "name": "medium",
       "renderingEngine": "opentype",
       "source": {
@@ -7467,26 +7556,6 @@
     {
       "objID": "ec09e8d8-3a03-dbc0-a0c7-81dcc2fbabbf",
       "name": "drop_down_list_active_background"
-    },
-    {
-      "objID": "faf9f894-9b12-582e-4734-d7a88a4598b0",
-      "name": "text_input_color"
-    },
-    {
-      "objID": "5051e432-4dab-7d88-7d60-ed247b3b372f",
-      "name": "text_input_color_disabled"
-    },
-    {
-      "objID": "0f6f5174-39ad-a284-213d-d3a6c244e635",
-      "name": "text_input_background"
-    },
-    {
-      "objID": "baab95e4-de93-5c06-07b7-5d5fd4f10d32",
-      "name": "text_input_active_background"
-    },
-    {
-      "objID": "25ca2245-85fc-3052-6ab3-8635921ba053",
-      "name": "text_input_border"
     }
   ],
   "themes": [
@@ -7520,12 +7589,7 @@
         "#808080",
         "#ffffff",
         "#404040",
-        "#c0c0c0",
-        "#404040",
-        "#808080",
-        "#ffffff",
-        "#c0c0c0",
-        "#404040"
+        "#c0c0c0"
       ]
     }
   ]
