@@ -62,7 +62,9 @@
         "keywords": "Style",
         "displayWidth": 800,
         "displayHeight": 480,
-        "resourceFiles": []
+        "resourceFiles": [
+            "Oswald-Medium.ttf"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
@@ -75,7 +77,9 @@
         "keywords": "QR-code",
         "displayWidth": 480,
         "displayHeight": 272,
-        "resourceFiles": []
+        "resourceFiles": [
+            "Oswald-Medium.ttf"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
@@ -88,7 +92,9 @@
         "keywords": "multi-language",
         "displayWidth": 480,
         "displayHeight": 272,
-        "resourceFiles": []
+        "resourceFiles": [
+            "Oswald-Medium.ttf"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
@@ -101,7 +107,9 @@
         "keywords": "LineChart",
         "displayWidth": 480,
         "displayHeight": 272,
-        "resourceFiles": []
+        "resourceFiles": [
+            "Oswald-Medium.ttf"
+        ]
     },
     {
         "repository": "https://github.com/eez-open/eez-project-examples",
