@@ -16,8 +16,8 @@
         "folder": "EEZ-GUI"
     },
     {
-        "url": "https://github.com/eez-open/binarytrees-banchmark-sdl",
-        "projectPath": "binarytrees-banchmark-sdl.eez-project",
+        "url": "https://github.com/eez-open/binarytrees-benchmark-sdl",
+        "projectPath": "binarytrees-benchmark-sdl.eez-project",
         "folder": "EEZ-GUI"
     },
 
