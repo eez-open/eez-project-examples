@@ -1,0 +1,395 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "imports": [],
+      "description": "Example of multi language project",
+      "image": "data:image/png;base64,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",
+      "keywords": "multi-language"
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h"
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [
+      {
+        "objID": "04895e99-ca4c-5e71-535c-8f3485316650",
+        "name": "selected_language_index",
+        "type": "integer",
+        "defaultValue": "0",
+        "persistent": true
+      }
+    ],
+    "structures": [
+      {
+        "objID": "8267b941-55a6-4782-4b3f-8da11c886eec",
+        "name": "Result",
+        "fields": [
+          {
+            "objID": "64a5ade5-2946-e5d3-93bf-cf57f0047496",
+            "name": "a",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "enums": []
+  },
+  "actions": [],
+  "userPages": [
+    {
+      "objID": "f7f15531-2f0d-6247-72af-17ad3967f8e0",
+      "components": [
+        {
+          "objID": "1a331409-37d5-13ac-651e-26eb227b18b1",
+          "type": "TextWidget",
+          "left": 0,
+          "top": 182,
+          "width": 800,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "T\"Hello, world!\"",
+          "style": {
+            "objID": "759e70f7-0da0-ee89-4fb3-c9fe64b200c5",
+            "inheritFrom": "default",
+            "alignHorizontal": "center"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "b1d5a0ef-dd40-0055-2de1-a16cf1b7597e",
+          "type": "ButtonWidget",
+          "left": 331,
+          "top": 333,
+          "width": 145,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "T\"Execute\"",
+          "style": {
+            "objID": "f9a6ee82-e3c1-75b8-043a-a2ee56bd7bdc",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "2d0cbcad-d6ad-eada-8d0a-0ef0eedf25a6",
+              "eventName": "CLICKED",
+              "handlerType": "flow"
+            }
+          ],
+          "disabledStyle": {
+            "objID": "11291a1e-8f0a-c99f-7cd6-c9460a5c4656",
+            "inheritFrom": "default"
+          }
+        },
+        {
+          "objID": "58d84e03-0aa1-9a55-2f99-b308ea38dba0",
+          "type": "NoopActionComponent",
+          "left": 569,
+          "top": 463,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "Ignore"
+        },
+        {
+          "objID": "ad6d7962-be1f-dc32-3dac-0c8c6052db45",
+          "type": "DropDownListWidget",
+          "left": 391,
+          "top": 37,
+          "width": 71,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "selected_language_index",
+          "style": {
+            "objID": "ba5a759e-2822-af12-0dfa-0a34816facd6",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "8759476e-3ba7-026d-795f-37c0743da694",
+              "eventName": "ON_CHANGE",
+              "handlerType": "flow"
+            }
+          ],
+          "options": "Flow.languages()"
+        },
+        {
+          "objID": "c489d6a8-f950-d778-2e3e-90bd3017c953",
+          "type": "TextWidget",
+          "left": 234,
+          "top": 37,
+          "width": 144,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "T\"Select language:\"",
+          "style": {
+            "objID": "72862002-7fbd-278c-4a47-f5102d88d446",
+            "inheritFrom": "default",
+            "alignHorizontal": "right"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "fb4b3fa1-d53b-75a6-c45d-c41ad06c4923",
+          "type": "SelectLanguageActionComponent",
+          "left": 547,
+          "top": -76,
+          "width": 131,
+          "height": 54,
+          "customInputs": [
+            {
+              "objID": "e82ec246-d8cf-94de-037a-851c8f8e01d5",
+              "name": "params",
+              "type": "struct:$DropDownListChangeEvent"
+            }
+          ],
+          "customOutputs": [],
+          "language": "Flow.languages()[params.selectedIndex]"
+        },
+        {
+          "objID": "da721dd5-7a45-4d91-0d3f-bb4336957e03",
+          "type": "StartActionComponent",
+          "left": 0,
+          "top": -76,
+          "width": 87,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "65ed2992-be4b-7a4c-f423-578e05f582f3",
+          "type": "SelectLanguageActionComponent",
+          "left": 141,
+          "top": -76,
+          "width": 131,
+          "height": 25,
+          "customInputs": [],
+          "customOutputs": [],
+          "language": "Flow.languages()[selected_language_index]"
+        },
+        {
+          "objID": "3328b57f-35e8-5239-09f8-bcc795169cb9",
+          "type": "TextWidget",
+          "left": 476,
+          "top": 37,
+          "width": 230,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "Flow.languages()[selected_language_index]",
+          "style": {
+            "objID": "64f56a8a-f576-a4a1-f1f4-0f06bb21dbc6",
+            "inheritFrom": "default"
+          },
+          "timeline": [],
+          "eventHandlers": []
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "e01fb943-1840-a801-55ed-ff0cc445981d",
+          "source": "b1d5a0ef-dd40-0055-2de1-a16cf1b7597e",
+          "output": "CLICKED",
+          "target": "58d84e03-0aa1-9a55-2f99-b308ea38dba0",
+          "input": "@seqin"
+        },
+        {
+          "objID": "27777050-79d0-0a5f-9fa1-ee264738518b",
+          "source": "ad6d7962-be1f-dc32-3dac-0c8c6052db45",
+          "output": "ON_CHANGE",
+          "target": "fb4b3fa1-d53b-75a6-c45d-c41ad06c4923",
+          "input": "params"
+        },
+        {
+          "objID": "b8f91348-5463-3225-833b-8aad757d9d9f",
+          "source": "da721dd5-7a45-4d91-0d3f-bb4336957e03",
+          "output": "@seqout",
+          "target": "65ed2992-be4b-7a4c-f423-578e05f582f3",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "Main",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 450,
+      "lvglLocalStyles": {
+        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
+      }
+    }
+  ],
+  "userWidgets": [],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default"
+    },
+    {
+      "objID": "c49c1adf-a610-28c0-027c-0e452dadb32b",
+      "name": "page",
+      "inheritFrom": "",
+      "backgroundColor": "page_color",
+      "css": "\n"
+    }
+  ],
+  "texts": {
+    "objID": "a38b6ee6-7e14-0520-aa5d-c32249081c9a",
+    "languages": [
+      {
+        "objID": "b2caba68-2630-3896-a704-662e7dbb828b",
+        "languageID": "GB"
+      },
+      {
+        "objID": "a5ac2659-bd52-2668-5256-009d5fc8c44f",
+        "languageID": "FR"
+      },
+      {
+        "objID": "5f37be4a-edc4-05de-1404-97522d5477b6",
+        "languageID": "HR"
+      },
+      {
+        "objID": "0ff03597-229f-00a8-4c98-a59f33fb3c0a",
+        "languageID": "CN"
+      },
+      {
+        "objID": "bb4a79eb-f71d-484e-d90f-ad7fd0a791df",
+        "languageID": "DE"
+      }
+    ],
+    "resources": [
+      {
+        "objID": "2610994e-5e07-8073-2b1d-1c950da34f63",
+        "resourceID": "Execute",
+        "translations": [
+          {
+            "objID": "7f3080ef-51d7-7984-6917-fe62e344c3a0",
+            "languageID": "GB",
+            "text": "Execute"
+          },
+          {
+            "objID": "67790cd2-136b-e864-5b8f-de7e7df5dd64",
+            "languageID": "HR",
+            "text": "Izvrši"
+          },
+          {
+            "objID": "3dc70337-ca9e-4fdf-7bfa-9847d1ddc3e8",
+            "languageID": "FR",
+            "text": "Exécuter"
+          },
+          {
+            "objID": "c9abcc41-887b-8a21-3ddf-4bef433412e2",
+            "languageID": "CN",
+            "text": "执行"
+          },
+          {
+            "objID": "4197d720-a878-4126-aeaa-7de69f96f39d",
+            "languageID": "DE",
+            "text": "Ausführen"
+          }
+        ]
+      },
+      {
+        "objID": "86c4beb9-8b67-8aea-90aa-f238ec47d617",
+        "resourceID": "Hello, world!",
+        "translations": [
+          {
+            "objID": "99735397-5467-b152-4a22-348b14ed2234",
+            "languageID": "GB",
+            "text": "Hello, world!"
+          },
+          {
+            "objID": "3c4210b8-f8f7-9104-2cc2-7771a1ee3934",
+            "languageID": "HR",
+            "text": "Pozdrav svijete!"
+          },
+          {
+            "objID": "6f789f83-5c23-3c4c-7d01-4d72f448c2d2",
+            "languageID": "FR",
+            "text": "Bonjour le monde!"
+          },
+          {
+            "objID": "1111a5c0-406b-ba96-fb27-5b2d7557d16e",
+            "languageID": "CN",
+            "text": "你好世界"
+          },
+          {
+            "objID": "d1fd8b8b-46c4-471f-8fa4-9c7c0658613c",
+            "languageID": "DE",
+            "text": "Hallo Welt!"
+          }
+        ]
+      },
+      {
+        "objID": "5457403f-86f8-3f5b-e896-4a0496b386a5",
+        "resourceID": "Select language:",
+        "translations": [
+          {
+            "objID": "beb993fd-b3af-a88d-668a-6053514e6c53",
+            "languageID": "GB",
+            "text": "Select language:"
+          },
+          {
+            "objID": "a048efd5-891e-0b02-a075-62285080d988",
+            "languageID": "HR",
+            "text": "Odaberi jezik:"
+          },
+          {
+            "objID": "fb3d17d3-6ca4-fc78-536b-ad196eca3735",
+            "languageID": "FR",
+            "text": "Choisir la langue:"
+          },
+          {
+            "objID": "91f12109-76f7-2fcd-918f-b19a55a49513",
+            "languageID": "CN",
+            "text": "选择语言"
+          },
+          {
+            "objID": "d9e0bd90-c588-45d4-c6d3-b5e5175e2a48",
+            "languageID": "DE",
+            "text": "Sprache auswählen:"
+          }
+        ]
+      }
+    ]
+  },
+  "colors": [
+    {
+      "objID": "e6c28e5a-fe7f-09ed-9223-17769968ebea",
+      "name": "page_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": [
+        "#f0f0f0"
+      ]
+    }
+  ]
+}
