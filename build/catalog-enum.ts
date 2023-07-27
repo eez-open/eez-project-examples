@@ -1,6 +1,6 @@
 import { glob } from "glob";
 import { promises as fsPromises } from "fs";
-import { basename, dirname } from "path";
+import * as path from "path";
 
 var request = require("request-promise-native");
 
@@ -24,13 +24,13 @@ interface ExampleProject {
     resourceFiles: string[];
 }
 
-function getDescription(
+async function getDescription(
     repository: string,
     eezProjectPath: string,
     folder: string,
     json: any
-): ExampleProject | undefined {
-    const projectName = basename(eezProjectPath, ".eez-project");
+): Promise<ExampleProject | undefined> {
+    const projectName = path.basename(eezProjectPath, ".eez-project");
 
     const projectType = json.settings?.general?.projectType;
     const description = json.settings?.general?.description;
@@ -59,6 +59,14 @@ function getDescription(
     if (json.readme?.readmeFile) {
         resourceFiles.push(json.readme?.readmeFile);
     }
+    if (projectType == "iext" && json.settings?.general?.scpiDocFolder) {
+        resourceFiles.push(
+            ...(await getAllFiles(
+                __dirname + "/../" + path.dirname(eezProjectPath) + "/" +
+                    json.settings.general.scpiDocFolder, json.settings.general.scpiDocFolder + "/"
+            ))
+        );
+    }
 
     if (description && image && keywords) {
         return {
@@ -82,6 +90,22 @@ function getDescription(
     return undefined;
 }
 
+async function getAllFiles(dirPath: string, prefix: string): Promise<string[]> {
+    const files = await fsPromises.readdir(dirPath);
+
+    const arrayOfFiles: string[] = [];
+
+    for (const file of files) {
+        if ((await fsPromises.stat(dirPath + "/" + file)).isDirectory()) {
+            arrayOfFiles.push(...(await getAllFiles(dirPath + "/" + file, prefix + file + "/")));
+        } else {
+            arrayOfFiles.push(prefix + file);
+        }
+    }
+
+    return arrayOfFiles;
+}
+
 export async function getCatalog() {
     const eezProjectfiles = await glob("../examples/**/*.eez-project");
 
@@ -96,10 +120,10 @@ export async function getCatalog() {
                 .replace(/\\/g, "/")
                 .substring("../".length);
 
-            const description = getDescription(
+            const description = await getDescription(
                 EEZ_PROJECT_EXAMPLES_REPOSITORY,
                 projectPath,
-                dirname(projectPath).substring("examples/".length),
+                path.dirname(projectPath).substring("examples/".length),
                 json
             );
 
@@ -135,7 +159,7 @@ export async function getCatalog() {
             const jsonStr = projectFile.toString("utf-8");
             const json = JSON.parse(jsonStr);
 
-            const description = getDescription(
+            const description = await getDescription(
                 exampleRepository.url,
                 exampleRepository.projectPath,
                 exampleRepository.folder,
