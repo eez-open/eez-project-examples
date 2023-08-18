@@ -50,5 +50,10 @@
         "url": "https://github.com/eez-open/lvgl-web-demo",
         "projectPath": "lvgl-web-demo.eez-project",
         "folder": "LVGL"
+    },
+    {
+        "url": "https://github.com/eez-open/eez-gui-widgets-demo",
+        "projectPath": "eez-gui-widgets-demo.eez-project",
+        "folder": "EEZ-GUI"
     }
 ]
