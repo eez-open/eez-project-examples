@@ -1157,9 +1157,15 @@
           "top": 238,
           "width": 654,
           "height": 377,
-          "customInputs": [],
+          "customInputs": [
+            {
+              "objID": "947f14c4-7e68-4c8a-9fed-fa730913640e",
+              "name": "onData",
+              "type": "string"
+            }
+          ],
           "customOutputs": [],
-          "data": "terminal_value",
+          "data": "onData",
           "style": {
             "objID": "202ed02b-ecf4-492e-9113-7f579b3d306f",
             "useStyle": "default",
@@ -1253,29 +1259,6 @@
           },
           "timeline": [],
           "eventHandlers": []
-        },
-        {
-          "objID": "feaa4cfb-97a9-4846-eb1d-61410d8782de",
-          "type": "SetVariableActionComponent",
-          "left": 1214,
-          "top": 852,
-          "width": 232,
-          "height": 55,
-          "customInputs": [
-            {
-              "objID": "b7c23ea2-f2d3-46f5-c76d-2550c6036ce1",
-              "name": "result",
-              "type": "string"
-            }
-          ],
-          "customOutputs": [],
-          "entries": [
-            {
-              "objID": "74fda64b-99f4-41a3-beef-7f2ce0bad64e",
-              "variable": "terminal_value",
-              "value": "result"
-            }
-          ]
         }
       ],
       "connectionLines": [
@@ -1315,11 +1298,11 @@
           "input": "@seqin"
         },
         {
-          "objID": "76f4c5bd-4c25-4d07-9980-7c0a348554ae",
+          "objID": "06c22b6e-1181-4458-90bd-92bf2fe3e027",
           "source": "8e18ce7c-43e2-46c1-b925-552bc6a61b11",
           "output": "result",
-          "target": "feaa4cfb-97a9-4846-eb1d-61410d8782de",
-          "input": "@seqin"
+          "target": "4afadd71-ccbb-45d3-8dd2-5fe895122ee5",
+          "input": "onData"
         }
       ],
       "localVariables": [
@@ -1361,13 +1344,6 @@
         {
           "objID": "586f58e3-d126-485c-850b-76ebeda31c1d",
           "name": "cmd",
-          "type": "string",
-          "defaultValue": "\"\"",
-          "persistent": false
-        },
-        {
-          "objID": "ca350441-8083-43d9-9c29-43b4978318a3",
-          "name": "terminal_value",
           "type": "string",
           "defaultValue": "\"\"",
           "persistent": false
