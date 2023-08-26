@@ -1588,12 +1588,13 @@
           "title": "Voltage",
           "minRange": "0",
           "maxRange": "5",
+          "color": "#008000",
           "margin": {
             "objID": "aa7030a7-cad4-4ed3-fc6e-6e441aabbe11",
-            "top": 50,
-            "right": 0,
+            "top": 35,
+            "right": 20,
             "bottom": 0,
-            "left": 0
+            "left": 20
           }
         },
         {
