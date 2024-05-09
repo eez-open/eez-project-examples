@@ -1,5 +1,4 @@
 {
-  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
   "lvglStyles": {
     "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
     "styles": [
@@ -79,12 +78,14 @@
     ],
     "defaultStyles": {}
   },
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
   "settings": {
     "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
     "general": {
       "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
       "projectVersion": "v3",
       "projectType": "lvgl",
+      "lvglVersion": "8.3",
       "extensions": [],
       "imports": [],
       "flowSupport": true,
@@ -106,72 +107,72 @@
       ],
       "files": [
         {
-          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
+          "objID": "17aca6cf-8b3e-49b5-8cfb-d69356034a40",
           "fileName": "screens.h",
           "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
         },
         {
-          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
+          "objID": "6f538415-6137-4385-ad72-12ba1a8145a8",
           "fileName": "screens.c",
           "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
         },
         {
-          "objID": "19d3d573-88a3-4550-f4da-753b61d7f0c4",
+          "objID": "78000feb-6fba-4d1e-e811-99d8fb997319",
           "fileName": "actions.h",
-          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
         },
         {
-          "objID": "ddb840d3-2cd4-4c24-897d-1e367e2df75f",
+          "objID": "66efccda-7142-4e92-c864-f7260c27d42f",
           "fileName": "vars.h",
-          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n// enum declarations\r\n\r\n//${eez-studio FLOW_ENUMS}\r\n\r\n// Flow global variables\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n// Native global variables\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n// enum declarations\r\n\r\n//${eez-studio FLOW_ENUMS}\r\n\r\n// Flow global variables\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n// Native global variables\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
         },
         {
-          "objID": "f08533f7-4b1b-4d55-a50d-8807db4bc6e2",
+          "objID": "c7974834-8fc8-4fa9-c73e-d09365077f2c",
           "fileName": "structs.h",
           "template": "#ifndef EEZ_LVGL_UI_STRUCTS_H\n#define EEZ_LVGL_UI_STRUCTS_H\n\n#include <eez/flow/flow.h>\n#include <stdint.h>\n#include <stdbool.h>\n\n#include \"vars.h\"\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n\n#endif /*EEZ_LVGL_UI_STRUCTS_H*/\n"
         },
         {
-          "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
+          "objID": "8c8d18b2-b5b5-4d2c-c2f8-1190a9b9712c",
           "fileName": "flow_def.h",
-          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
         },
         {
-          "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
+          "objID": "41c06e2e-40fc-4252-eb06-f6cfbd9394e7",
           "fileName": "flow_def.c",
           "template": "#include <eez/core/vars.h>\n\n#include \"flow_def.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n"
         },
         {
-          "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
+          "objID": "1efcfee5-5422-4020-9e2e-5fe1b7d47c3d",
           "fileName": "images.h",
-          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
         },
         {
-          "objID": "5844b3a8-54b7-4bdf-ff04-d052e689328c",
+          "objID": "b21e1043-6011-49a0-9431-a0179f6a6625",
           "fileName": "images.c",
           "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
         },
         {
-          "objID": "bad0addd-10de-48f7-e57e-b40fce3e7c45",
+          "objID": "da0d46fc-7063-4d90-b21e-6899c6bd2b72",
           "fileName": "fonts.h",
-          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
         },
         {
-          "objID": "605027e4-beef-4847-ab09-e1d6a4d47496",
+          "objID": "d0bcd5a9-303a-493b-c142-1ff5a17408d7",
           "fileName": "styles.h",
           "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
         },
         {
-          "objID": "81ccb629-7e73-4128-a31a-c5131af1d13d",
+          "objID": "e8b20187-b2b6-4462-c7ce-7e516344027b",
           "fileName": "styles.c",
           "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
         },
         {
-          "objID": "ed7d0205-b564-4fe8-da13-3510801d23f2",
+          "objID": "3af0b579-e370-42c7-d183-47df5a6bd55a",
           "fileName": "ui.h",
           "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\nvoid ui_init();\nvoid ui_tick();\n\n#ifdef __cplusplus\n}\n#endif\n\n\n#endif // EEZ_LVGL_UI_GUI_H"
         },
         {
-          "objID": "292907a7-7032-4814-e210-405def21551e",
+          "objID": "56eb9860-3054-4a85-b670-79b8707697c6",
           "fileName": "ui.c",
           "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
         }
@@ -203,6 +204,7 @@
           "style": {
             "objID": "c3776a7a-26e6-4155-ba9a-44071f6df63c",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -224,6 +226,7 @@
               "style": {
                 "objID": "86d9783b-f9cd-42c5-ded4-395ddd2b3f0b",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -269,6 +272,7 @@
               "style": {
                 "objID": "60694f9c-0945-4df5-b721-6c9684fccb69",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -296,6 +300,7 @@
                   "style": {
                     "objID": "744abcce-f1a6-4316-d73d-72aab2124a75",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -358,6 +363,7 @@
               "style": {
                 "objID": "ad097948-2b17-4fbf-800d-1c880361bf2e",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -385,6 +391,7 @@
                   "style": {
                     "objID": "17f6917d-48af-4b10-d382-6e1c9f18d4d9",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -447,6 +454,7 @@
               "style": {
                 "objID": "ee0b309f-ca67-4eae-ef49-1d56b8e4f93d",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -474,6 +482,7 @@
                   "style": {
                     "objID": "f80b7d1d-24f3-4915-98d5-78dd58d2a43e",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -593,6 +602,7 @@
           "style": {
             "objID": "b4786024-f8c5-4ab9-80a7-5d733880f676",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -631,6 +641,7 @@
           "style": {
             "objID": "8b98101d-7710-4efa-c457-397fa02ccdee",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -673,6 +684,7 @@
           "style": {
             "objID": "24d12752-6cfd-4b9d-e31a-0d3f80d25e4a",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -711,6 +723,7 @@
           "style": {
             "objID": "95e97a06-f351-4cd9-c41b-9f310fe858c4",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -745,6 +758,7 @@
           "style": {
             "objID": "751c7fbe-af1f-4a69-da2f-fc1096f69a04",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -783,6 +797,7 @@
           "style": {
             "objID": "dce43a75-eee2-41b1-e684-bb5a4e42466b",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -821,6 +836,7 @@
           "style": {
             "objID": "d8f33ce1-17ce-4de8-938b-e2f57e398650",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -859,6 +875,7 @@
           "style": {
             "objID": "56d97939-c41f-4b27-afff-bdaf8ef4a6da",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -893,6 +910,7 @@
           "style": {
             "objID": "e3b23b4d-1a94-432f-85af-4f0bdd41f9c7",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -931,6 +949,7 @@
           "style": {
             "objID": "af9f502d-3d4e-476b-9fc4-44aa0dbf3227",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1051,6 +1070,7 @@
           "style": {
             "objID": "869a45b7-5ee3-4b57-e31f-6632b13b6e79",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1072,6 +1092,7 @@
               "style": {
                 "objID": "c29b53ec-0cd4-40c2-a8c7-154d81cda6cd",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -1099,6 +1120,7 @@
                   "style": {
                     "objID": "b27b0be1-1cc0-45c5-f797-b7431f0a1672",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -1161,6 +1183,7 @@
               "style": {
                 "objID": "d54e4aa9-2fa7-44ab-e737-b434586d3c7c",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -1206,6 +1229,7 @@
               "style": {
                 "objID": "ae74dee4-d67e-4b2b-d86b-d5c529dc6af4",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -1233,6 +1257,7 @@
                   "style": {
                     "objID": "f3b69fb1-cf35-4a69-9b99-806cc0ef81c1",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -1295,6 +1320,7 @@
               "style": {
                 "objID": "f6b8986e-fe2b-467d-c7ab-a7569a77b10b",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -1322,6 +1348,7 @@
                   "style": {
                     "objID": "1ee6e4b8-2021-4850-b836-6793317df19e",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -1420,6 +1447,7 @@
           "style": {
             "objID": "93b868c9-39b3-4f99-af3e-73638fbeeca7",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1458,6 +1486,7 @@
           "style": {
             "objID": "71ecd986-55fc-455c-dd9a-486ab78715e7",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1494,6 +1523,7 @@
           "style": {
             "objID": "1af6c2fd-2570-4449-c16d-a5d470568179",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1532,6 +1562,7 @@
           "style": {
             "objID": "19fcba77-a64a-41c3-e521-79dfec5bd4ac",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1567,6 +1598,7 @@
           "style": {
             "objID": "033acaa1-93a4-430c-a2da-28e26d4f00c3",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1605,6 +1637,7 @@
           "style": {
             "objID": "065c9fdd-c1b2-4dc3-b6ed-c35acd858e73",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1643,6 +1676,7 @@
           "style": {
             "objID": "b3f0ff6f-8c49-4ef6-bc3b-f88cd1eb0df6",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1681,6 +1715,7 @@
           "style": {
             "objID": "9d849c9b-2c61-4a80-f309-9d530fc41339",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1720,6 +1755,7 @@
           "style": {
             "objID": "88adf040-b9e7-4846-beee-e84bf8487c89",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1761,6 +1797,7 @@
           "style": {
             "objID": "2caef610-e25a-4c2a-88c2-34af78786215",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1799,6 +1836,7 @@
           "style": {
             "objID": "cb4dfbc1-b983-4eb8-bdda-9d4207906428",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1837,6 +1875,7 @@
           "style": {
             "objID": "b5d39c7c-29ab-4828-d32f-b02cca6c8a61",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1873,6 +1912,7 @@
           "style": {
             "objID": "39517ae9-c66f-41ba-b617-db16a374fe63",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -1911,6 +1951,7 @@
           "style": {
             "objID": "5446736a-5277-4374-9747-710143b6861a",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2047,6 +2088,7 @@
           "style": {
             "objID": "3af56432-9ef8-4cd4-8d85-934108c601f2",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2068,6 +2110,7 @@
               "style": {
                 "objID": "763680d0-ae3b-4ed2-af37-c9036ba7b512",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2095,6 +2138,7 @@
                   "style": {
                     "objID": "c2eb20f8-2faf-455a-a8de-9b78cb94dc22",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2157,6 +2201,7 @@
               "style": {
                 "objID": "11dc5204-ec89-4575-a274-bfb28864d129",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2184,6 +2229,7 @@
                   "style": {
                     "objID": "f064994f-d736-493d-b55d-e16770d90e4b",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2246,6 +2292,7 @@
               "style": {
                 "objID": "edd6c456-33e9-41c7-c93d-9a9c0f3c917d",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2291,6 +2338,7 @@
               "style": {
                 "objID": "d1356f8f-ff9e-4cee-8fc7-90a109c813c4",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2318,6 +2366,7 @@
                   "style": {
                     "objID": "f45b5f10-7016-4a94-de76-67c203fab289",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2416,6 +2465,7 @@
           "style": {
             "objID": "625793eb-edd3-47e9-bdcb-ab47dd2a1077",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2454,6 +2504,7 @@
           "style": {
             "objID": "e045f2ee-5b6e-4c7e-fa4b-dad2e6c0487d",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "locked": false,
@@ -2493,6 +2544,7 @@
           "style": {
             "objID": "8fdea271-20c3-4cf6-d7d0-f63c72215635",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2531,6 +2583,7 @@
           "style": {
             "objID": "fee8ba21-04b8-4f5e-a433-9d6c1d08d277",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2600,6 +2653,7 @@
           "style": {
             "objID": "0ab718c8-7dc2-4329-f625-a80f6d9699c3",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2709,6 +2763,7 @@
           "style": {
             "objID": "94390bd1-e51b-4c38-f03f-16f26f82c5d0",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -2730,6 +2785,7 @@
               "style": {
                 "objID": "0b2732fc-c65a-469c-c09a-c66d44b38dda",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2757,6 +2813,7 @@
                   "style": {
                     "objID": "72691c33-5f1f-4c80-da7a-59d93a184aad",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2819,6 +2876,7 @@
               "style": {
                 "objID": "d9268380-facf-47ec-ef60-3d57ae4af079",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2846,6 +2904,7 @@
                   "style": {
                     "objID": "2b53021b-235b-4f95-d057-0c2fc2f871c0",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2908,6 +2967,7 @@
               "style": {
                 "objID": "247c8460-34e6-4695-8149-762b0d535f3d",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -2935,6 +2995,7 @@
                   "style": {
                     "objID": "f48f384a-ca5d-49df-e732-00f5d94463b4",
                     "useStyle": "default",
+                    "conditionalStyles": [],
                     "childStyles": []
                   },
                   "timeline": [],
@@ -2997,6 +3058,7 @@
               "style": {
                 "objID": "cf1febe7-dd98-4a75-c8c2-ff2be46aea86",
                 "useStyle": "default",
+                "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
@@ -3078,6 +3140,7 @@
           "style": {
             "objID": "817a5259-aa86-45b9-bc82-32967ec20ec1",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3116,6 +3179,7 @@
           "style": {
             "objID": "6674526f-98c7-4ff3-ca4d-e9399426bda5",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3157,6 +3221,7 @@
           "style": {
             "objID": "cd2ee1dd-9817-4f41-f979-7cd15bdbb8d9",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3195,6 +3260,7 @@
           "style": {
             "objID": "3ffa993c-f188-4c33-e6a2-979d46fb65ef",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3229,6 +3295,7 @@
           "style": {
             "objID": "2166c79b-292f-4a90-dc96-1241f2aabfdc",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3267,6 +3334,7 @@
           "style": {
             "objID": "d0698ab2-6294-4942-dc5d-d2b66222ac54",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3290,7 +3358,6 @@
           },
           "scales": [
             {
-              "objID": "820fb9be-3f9e-4382-abcd-44041968b81d",
               "indicators": [
                 {
                   "objID": "10291202-ee7f-41df-e69b-f7f773a3801e",
@@ -3302,6 +3369,7 @@
                   "valueType": "expression"
                 }
               ],
+              "objID": "820fb9be-3f9e-4382-abcd-44041968b81d",
               "minorTickCount": 41,
               "minorTickLineWidth": 1,
               "minorTickLength": 5,
@@ -3330,6 +3398,7 @@
           "style": {
             "objID": "671aaa49-efb8-40ad-eb22-59302272761a",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
@@ -3368,6 +3437,7 @@
           "style": {
             "objID": "457e8813-2706-4a3a-a172-6f7ea63d3b3f",
             "useStyle": "default",
+            "conditionalStyles": [],
             "childStyles": []
           },
           "timeline": [],
