@@ -60,5 +60,11 @@
         "url": "https://github.com/eez-open/native-interface-lvgl-no-flow",
         "projectPath": "native-interface-lvgl-no-flow.eez-project",
         "folder": "LVGL"
+    },
+
+    {
+        "url": "https://github.com/eez-open/studio-extensions",
+        "projectPath": "org/tinysa/tinySA/TinySA_Dashboard.eez-project",
+        "folder": "Dashboard"
     }
 ]

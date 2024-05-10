@@ -170,7 +170,7 @@ export async function getCatalog() {
                 catalog.push(description);
             } else {
                 console.warn(
-                    `Missing description, image or keywords in ${exampleRepository.url}`
+                    `Missing description, image or keywords in ${downloadUrl}`
                 );
             }
         } catch (err) {
