@@ -56,9 +56,16 @@
         "projectPath": "eez-gui-widgets-demo.eez-project",
         "folder": "EEZ-GUI"
     },
+ 
     {
         "url": "https://github.com/eez-open/native-interface-lvgl-no-flow",
         "projectPath": "native-interface-lvgl-no-flow.eez-project",
+        "folder": "LVGL"
+    },
+
+    {
+        "url": "https://github.com/eez-open/native-interface-lvgl-with-flow",
+        "projectPath": "native-interface-lvgl-with-flow.eez-project",
         "folder": "LVGL"
     },
 
