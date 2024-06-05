@@ -193,91 +193,117 @@
                 "title": "Brand",
                 "field": "brand",
                 "formatter": "plaintext",
-                "advanced": "{ \"frozen\": true,\n    \"editor\": \"input\",\n    \"headerVertical\":true\n}"
+                "editor": "input",
+                "advanced": "{ \"frozen\": true,\n  \"headerVertical\":true\n}"
               },
               {
                 "objID": "f242a075-cffd-4864-a1f6-ab88a2c96a3f",
                 "title": "Part",
                 "field": "part",
                 "formatter": "plaintext",
-                "advanced": "{ \"frozen\": true,\n \"editor\": \"input\",\n \"headerVertical\":true\n}"
+                "editor": "input",
+                "advanced": "{ \"frozen\": true,\n \"headerVertical\":true\n}"
               },
               {
                 "objID": "363e8cac-aa01-469b-8449-1f589ba91a10",
                 "title": "Chemistry",
                 "field": "type",
                 "formatter": "plaintext",
-                "advanced": "{\"editor\": \"input\",\n \"headerVertical\":true,\n \"hozAlign\":\"center\"\n}"
+                "editor": "input",
+                "advanced": "{ \"headerVertical\":true,\n \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "c9982321-dd10-4fa8-d185-510a66cc03d8",
                 "title": "Physical",
                 "field": "physical",
                 "formatter": "plaintext",
-                "advanced": "{\"editor\": \"input\",\n \"headerVertical\":true,\n \"hozAlign\":\"center\"\n}"
+                "editor": "input",
+                "advanced": "{ \"headerVertical\":true,\n \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "b21aadf8-3cb6-4387-d78d-90cb6e4246c0",
                 "title": "Capacity",
                 "field": "capacityAh",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"Ah\",\n    \"symbolAfter\" : true,\n    \"precision\": 3\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"Ah\",\n    \"symbolAfter\" : true,\n    \"precision\": 3\n  }",
+                "editor": "number",
+                "advanced": "{ \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "e1428c49-98cc-4e5d-dca2-d9e3efdd63a7",
                 "title": "Charge Method",
                 "field": "chargeMethod",
                 "formatter": "lookup",
-                "advanced": "{ \"editor\" : \"list\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"editorParams\": {\n       \"values\":{\n        \"0\":\"CCCV\",\n        \"1\":\"CCdV\"\n  },\n        \"autocomplete\":true, \n        \"allowEmpty\":false,\n        \"listOnEmpty\":true, \n        \"valuesLookup\":true\n  },\n  \"formatterParams\":{ \n        \"0\":\"CCCV\",\n        \"1\":\"CCdV\"\n  }\n}"
+                "formatterParams": "{ \"0\":\"CCCV\",\n\"1\":\"CCdV\" }",
+                "editor": "list",
+                "editorParams": "\"values\":{\n        \"0\":\"CCCV\",\n        \"1\":\"CCdV\"\n}",
+                "advanced": "{ \"editor\" : \"list\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "58a4248e-0e68-44fe-8aa3-af13c8a7c888",
                 "title": "Charge Rate",
                 "field": "chargeRate",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"C\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"C\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }",
+                "editor": "number",
+                "advanced": "{\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "9d739b44-abd3-4287-b687-49bf3e0661e6",
                 "title": "Stop Charge Volt",
                 "field": "stopVoltageCharge",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"V\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"V\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }",
+                "editor": "number",
+                "advanced": "{ \n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "2808bd31-4ce8-4e9a-9fc2-a65714767f32",
                 "title": "Charge CV stop",
                 "field": "chargeCVCurrentStop",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"A\",\n    \"symbolAfter\" : true,\n    \"precision\": 3\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"A\",\n    \"symbolAfter\" : true,\n    \"precision\": 3\n }",
+                "editor": "number",
+                "advanced": "{ \n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "57c3ac86-949a-4f6c-e7b8-521016648033",
                 "title": "Max Charge Time",
                 "field": "chargeTimeMax",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"thousand\": false,\n    \"symbol\": \"s\",\n    \"symbolAfter\" : true,\n    \"precision\": 0\n  }\n}"
+                "formatterParams": "{\n    \"thousand\": false,\n    \"symbol\": \"s\",\n    \"symbolAfter\" : true,\n    \"precision\": 0\n  }",
+                "editor": "number",
+                "advanced": "{\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "85565c2c-db5e-42d2-dd80-b3c9615d58a8",
                 "title": "Discharge Method",
                 "field": "dischargeMethod",
                 "formatter": "lookup",
-                "advanced": "{ \"editor\" : \"list\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"editorParams\": {\n       \"values\":{\n        \"0\":\"CC\",\n        \"1\":\"CR\",\n        \"2\":\"CP\"\n  },\n        \"autocomplete\":true, \n        \"allowEmpty\":false,\n        \"listOnEmpty\":true, \n        \"valuesLookup\":true\n  },\n  \"formatterParams\":{ \n        \"0\":\"CC\",\n        \"1\":\"CR\",\n        \"2\":\"CP\"\n  }\n}"
+                "formatterParams": "{ \n        \"0\":\"CC\",\n        \"1\":\"CR\",\n        \"2\":\"CP\"\n}",
+                "editor": "list",
+                "editorParams": "{\n  \"values\":{\n        \"0\":\"CC\",\n        \"1\":\"CR\",\n        \"2\":\"CP\"\n  },\n  \"autocomplete\":true, \n  \"allowEmpty\":false,\n  \"listOnEmpty\":true, \n  \"valuesLookup\":true\n }",
+                "advanced": "{ \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "8a12650d-fdf1-4fd6-99a3-d33fd9df233f",
                 "title": "Discharge Rate",
                 "field": "dischargeRate",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"C\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"C\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n}",
+                "editor": "number",
+                "editorParams": "{ \"step\": 0.1,\n  \"min\": 0.001}",
+                "advanced": "{ \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               },
               {
                 "objID": "37972542-3a8d-4091-9727-71c6e43cd5a2",
                 "title": "Discharge Stop Voltage",
                 "field": "stopVoltageDischarge",
                 "formatter": "money",
-                "advanced": "{ \"editor\" : \"number\",\n  \"headerVertical\":true,\n  \"hozAlign\":\"center\",\n  \"formatterParams\": {\n    \"symbol\": \"V\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n  }\n}"
+                "formatterParams": "{\n    \"symbol\": \"V\",\n    \"symbolAfter\" : true,\n    \"precision\": 2\n }",
+                "editor": "number",
+                "editorParams": "{ \"step\": 0.05 }",
+                "advanced": "{ \n  \"headerVertical\":true,\n  \"hozAlign\":\"center\"\n}"
               }
             ],
             "pagination": true,
