@@ -21,6 +21,9 @@ interface ExampleProject {
     displayHeight?: number;
     targetPlatform?: string;
     targetPlatformLink?: string;
+    author?: string;
+    authorLink?: string;
+    minStudioVersion?: string;
     resourceFiles: string[];
 }
 
@@ -40,6 +43,9 @@ async function getDescription(
     const displayHeight = json.settings?.general?.displayHeight;
     const targetPlatform = json.settings?.general?.targetPlatform;
     const targetPlatformLink = json.settings?.general?.targetPlatformLink;
+    const author = json.settings?.general?.author;
+    const authorLink = json.settings?.general?.authorLink;
+    const minStudioVersion = json.settings?.general?.minStudioVersion;
 
     const resourceFiles = [];
     if (json.settings?.general?.resourceFiles) {
@@ -83,6 +89,9 @@ async function getDescription(
             displayHeight,
             targetPlatform,
             targetPlatformLink,
+            author,
+            authorLink,
+            minStudioVersion,
             resourceFiles,
         };
     }

@@ -70,5 +70,6 @@ build/*.js
 */.~lock.*
 
 !examples/Dashboard/Todo on PostgreSQL.eez-project-runtime-settings
+!examples/Dashboard/Tabulator/Tabulator Examples.eez-project-runtime-settings
 
 examples/Dashboard/country-by-capital-city-1.csv
