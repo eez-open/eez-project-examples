@@ -87,7 +87,7 @@
         "name": "tb_persist",
         "type": "json",
         "defaultValue": "json`[{}, {}, {}, {}, {}]`",
-        "persistent": false,
+        "persistent": true,
         "native": false
       },
       {

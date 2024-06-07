@@ -1,16 +1,11 @@
 {
   "__persistentVariables": {
-    "example": 3,
     "db_conn": {
       "host": "envox.hr",
       "port": 5432,
       "user": "read_bb3_ate",
       "password": "read_bb3_ate",
       "database": "bb3_ate"
-    },
-    "pagination": false,
-    "tb_persist": {
-      "a": 1
     }
   }
 }
