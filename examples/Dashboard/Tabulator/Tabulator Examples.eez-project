@@ -1477,7 +1477,7 @@
           "customInputs": [],
           "customOutputs": [],
           "widget": "tabulator_widget",
-          "options": "{\n    landscape: true,\n    scale: 1,\n    pageSize: {\n       width: 20,\n       height: 20\n    },\n    margins: {\n        marginType: \"custom\",\n        top: 0.8,\n        bottom: 0.8,\n        left: 0.8,\n        right: 0.8\n    }\n}"
+          "options": "{\n    landscape: false,\n    scale: 1,\n    pageSize: \"A4\",\n    margins: {\n        marginType: \"custom\",\n        top: 0.4,\n        bottom: 0.4,\n        left: 0.4,\n        right: 0.4\n    }\n}"
         }
       ],
       "connectionLines": [

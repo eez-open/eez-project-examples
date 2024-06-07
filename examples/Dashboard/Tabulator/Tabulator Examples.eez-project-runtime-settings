@@ -6,6 +6,42 @@
       "user": "read_bb3_ate",
       "password": "read_bb3_ate",
       "database": "bb3_ate"
-    }
+    },
+    "example": 0,
+    "pagination": false,
+    "tb_persist": [
+      {
+        "columns": [
+          {
+            "field": "id",
+            "title": "ID",
+            "width": 49,
+            "visible": true
+          },
+          {
+            "field": "userId",
+            "title": "User ID",
+            "width": 84,
+            "visible": true
+          },
+          {
+            "field": "title",
+            "title": "Title",
+            "width": 418,
+            "visible": true
+          },
+          {
+            "field": "completed",
+            "title": "Completed",
+            "width": 107,
+            "visible": true
+          }
+        ]
+      },
+      {},
+      {},
+      {},
+      {}
+    ]
   }
 }
