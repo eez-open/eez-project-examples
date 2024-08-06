@@ -230,7 +230,7 @@
                   "localStyles": {
                     "objID": "97601d99-8ea6-4e52-ce6b-ece437b040b4"
                   },
-                  "tabName": "\"Tab 1\" + LVGL.LV_SYMBOL_FILE",
+                  "tabName": "LVGL.LV_SYMBOL_BARS + \" Tab 1\"",
                   "tabNameType": "expression"
                 },
                 {
