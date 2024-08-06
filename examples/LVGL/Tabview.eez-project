@@ -230,8 +230,8 @@
                   "localStyles": {
                     "objID": "97601d99-8ea6-4e52-ce6b-ece437b040b4"
                   },
-                  "tabName": "Tab 1",
-                  "tabNameType": "literal"
+                  "tabName": "\"Tab 1\" + LVGL.LV_SYMBOL_FILE",
+                  "tabNameType": "expression"
                 },
                 {
                   "objID": "b930c2ff-19e6-46e0-fafb-9b15c9faf0d2",
