@@ -21,7 +21,11 @@
         }
       ],
       "files": [],
-      "lvglInclude": "lvgl/lvgl.h"
+      "lvglInclude": "lvgl/lvgl.h",
+      "generateSourceCodeForEezFramework": false,
+      "compressFlowDefinition": false,
+      "executionQueueSize": 1000,
+      "expressionEvaluatorStackSize": 20
     }
   },
   "variables": {
@@ -102,6 +106,14 @@
         "type": "boolean",
         "defaultValue": "false",
         "persistent": false
+      },
+      {
+        "objID": "290cb99c-716a-421b-db82-f06b0ad3da48",
+        "name": "chart_json",
+        "type": "json",
+        "defaultValue": "null",
+        "persistent": false,
+        "native": false
       }
     ],
     "structures": [
@@ -302,7 +314,7 @@
           "left": 143,
           "top": -37,
           "width": 482,
-          "height": 75,
+          "height": 79,
           "customInputs": [
             {
               "objID": "faff6f7b-8e34-4e0b-b2b1-20dde3827170",
@@ -354,7 +366,7 @@
           "left": -395,
           "top": -37,
           "width": 233,
-          "height": 55,
+          "height": 57,
           "customInputs": [
             {
               "objID": "ec4875d5-d9a7-4eb7-81cc-97e938e5e5bb",
@@ -421,7 +433,7 @@
           "left": 143,
           "top": 85,
           "width": 134,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -642,7 +654,7 @@
           "left": 505,
           "top": -69,
           "width": 568,
-          "height": 75,
+          "height": 79,
           "customInputs": [
             {
               "objID": "10a85cbd-1f21-4737-db5e-b666d1ea61ac",
@@ -682,7 +694,7 @@
           "left": -530,
           "top": -69,
           "width": 194,
-          "height": 55,
+          "height": 57,
           "customInputs": [
             {
               "objID": "71587082-7e4d-4139-dd5f-57d90ce86ceb",
@@ -717,7 +729,7 @@
           "left": 829,
           "top": 75,
           "width": 263,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -757,7 +769,7 @@
           "left": -123,
           "top": -69,
           "width": 233,
-          "height": 55,
+          "height": 57,
           "customInputs": [
             {
               "objID": "a63c5525-9f67-4bcb-b061-9918ac546b00",
@@ -824,7 +836,7 @@
           "left": 505,
           "top": 75,
           "width": 134,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -1039,7 +1051,7 @@
           "left": -469,
           "top": -63,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -1103,7 +1115,7 @@
           "left": 255,
           "top": 64,
           "width": 152,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -1426,7 +1438,7 @@
           "left": 512,
           "top": -34,
           "width": 181,
-          "height": 55,
+          "height": 57,
           "customInputs": [
             {
               "objID": "75faa25d-1af6-4d91-fde4-d1b68e408879",
@@ -1484,7 +1496,7 @@
           "left": -163,
           "top": -34,
           "width": 233,
-          "height": 55,
+          "height": 57,
           "customInputs": [
             {
               "objID": "1af41099-57e5-47a8-98aa-9402cb546076",
@@ -1540,7 +1552,7 @@
           "left": 512,
           "top": 50,
           "width": 134,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -1665,6 +1677,271 @@
       ],
       "name": "detect_model_type",
       "implementationType": "flow"
+    },
+    {
+      "objID": "29c94438-d65d-4fcd-9391-624b716e5127",
+      "components": [
+        {
+          "objID": "a827eb4d-32a7-497f-dfb2-af9c5a90f4c1",
+          "type": "StartActionComponent",
+          "left": -296,
+          "top": -359,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "82a50a9e-d796-4759-f040-bd04071fcc07",
+          "type": "EndActionComponent",
+          "left": 229,
+          "top": -359,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "b68c08bc-4d1a-4b72-8239-9ab8c21a7368",
+          "type": "SetVariableActionComponent",
+          "left": -161,
+          "top": -359,
+          "width": 337,
+          "height": 1055,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "e5436dcb-775b-492b-cd56-8bdb4726149a",
+              "variable": "chart_json",
+              "value": "{\n    \"data\": [\n        {\n            \"x\": [],\n            \"y\": [],\n            \"type\": \"scatter\",\n            \"name\": \"Trace 1\",\n            \"showlegend\": true,\n            \"line\": {\n                \"color\": \"#eeff00\"\n            }\n        },\n        {\n            \"x\": [],\n            \"y\": [],\n            \"type\": \"scatter\",\n            \"name\": \"Trace 2\",\n            \"showlegend\": true,\n            \"line\": {\n                \"color\": \"#00b303\"\n            }\n        },\n        {\n            \"x\": [],\n            \"y\": [],\n            \"type\": \"scatter\",\n            \"name\": \"Trace 3\",\n            \"showlegend\": true,\n            \"line\": {\n                \"color\": \"#ff00d0\"\n            }\n        },\n        {\n            \"x\": [],\n            \"y\": [],\n            \"type\": \"scatter\",\n            \"name\": \"Trace 4\",\n            \"showlegend\": true,\n            \"line\": {\n                \"color\": \"#ff4d4d\"\n            }\n        }\n    ],\n    \"layout\": {\n        \"title\": \"\",\n        \"xaxis\": {\n            \"visible\": true,\n            \"showgrid\": true,\n            \"zeroline\": true,\n            \"ticksuffix\": \"Hz\",\n            \"type\": \"linear\",\n            \"range\": [0, 289],\n            \"autorange\": true\n        },\n        \"yaxis\": {\n            \"visible\": true,\n            \"showgrid\": true,\n            \"zeroline\": true,\n            \"range\": [-105, 5],\n            \"ticksuffix\": \"dBm\",\n            \"type\": \"linear\"\n        },\n        \"margin\": {\n            \"t\": 40,\n            \"r\": 0,\n            \"b\": 40,\n            \"l\": 60\n        },\n        \"plot_bgcolor\": \"white\",\n        \"paper_bgcolor\": \"white\",\n        \"width\": 1488,\n        \"height\": 1158\n    },\n    \"config\": {\n        \"autosizable\": false,\n        \"displayModeBar\": \"hover\"\n    }\n}\n"
+            }
+          ]
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "98cbe347-c79c-413a-f08b-068c24fc0188",
+          "source": "a827eb4d-32a7-497f-dfb2-af9c5a90f4c1",
+          "output": "@seqout",
+          "target": "b68c08bc-4d1a-4b72-8239-9ab8c21a7368",
+          "input": "@seqin"
+        },
+        {
+          "objID": "6ecabba0-2cd4-49e1-c2e5-11852f2278d7",
+          "source": "b68c08bc-4d1a-4b72-8239-9ab8c21a7368",
+          "output": "@seqout",
+          "target": "82a50a9e-d796-4759-f040-bd04071fcc07",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "name": "reset_chart_json",
+      "implementationType": "flow"
+    },
+    {
+      "objID": "85c7aff7-8211-4eed-fe52-e1d2eb1930c4",
+      "components": [
+        {
+          "objID": "70cda707-aa8a-467b-871a-242310160d22",
+          "type": "StartActionComponent",
+          "left": -561,
+          "top": -47,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "6b12201f-8ed8-47b3-83bb-21b67ac7482c",
+          "type": "EndActionComponent",
+          "left": 348,
+          "top": 198,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "type": "LoopActionComponent",
+          "left": -142,
+          "top": -47,
+          "width": 384,
+          "height": 70,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "i",
+          "from": "0",
+          "to": "Array.length(trace_values) - 1",
+          "step": "1",
+          "version": 1
+        },
+        {
+          "objID": "d760ed93-d997-474c-b824-8fcb3215520d",
+          "type": "CallActionActionComponent",
+          "left": -394,
+          "top": -47,
+          "width": 128,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "reset_chart_json"
+        },
+        {
+          "objID": "5c7cd731-5594-4e0b-f971-79e3327b2a19",
+          "type": "SetVariableActionComponent",
+          "left": 348,
+          "top": -47,
+          "width": 355,
+          "height": 167,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "a20529b5-c22c-4bfb-fbad-81ce78c63f60",
+              "variable": "chart_json.data[0].x[i]",
+              "value": "trace_values[i].freq"
+            },
+            {
+              "objID": "e6ccc2ce-7090-4791-ca30-dd76e05dde57",
+              "variable": "chart_json.data[0].y[i]",
+              "value": "trace_values[i].trace[0]"
+            },
+            {
+              "objID": "e56b21d8-db2d-4fa5-e6d2-834b9c57fe90",
+              "variable": "chart_json.data[1].x[i]",
+              "value": "trace_values[i].freq"
+            },
+            {
+              "objID": "c99952e5-c3dd-4542-d040-4b4d5c6068c0",
+              "variable": "chart_json.data[1].y[i]",
+              "value": "trace_values[i].trace[1]"
+            },
+            {
+              "objID": "d491d9a7-3942-407d-cc8f-5f4ed85a188d",
+              "variable": "chart_json.data[2].x[i]",
+              "value": "trace_values[i].freq"
+            },
+            {
+              "objID": "acdc2760-5c91-4e69-cf4d-3d7eebcbf14d",
+              "variable": "chart_json.data[2].y[i]",
+              "value": "trace_values[i].trace[2]"
+            }
+          ]
+        },
+        {
+          "objID": "8a9a8035-4b2b-43e1-901d-da6e8f5fac79",
+          "type": "IsTrueActionComponent",
+          "left": 756,
+          "top": -47,
+          "width": 141,
+          "height": 70,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "sa_version == 1"
+        },
+        {
+          "objID": "9c1522b3-a380-45a1-db55-d53cd614bd3b",
+          "type": "SetVariableActionComponent",
+          "left": 966,
+          "top": -51,
+          "width": 355,
+          "height": 79,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "8a321f2f-28b5-4f45-b8d3-1f32e5c61eb2",
+              "variable": "chart_json.data[3].x[i]",
+              "value": "trace_values[i].freq"
+            },
+            {
+              "objID": "d676b9f0-569c-4d5d-b2d8-4512d5f36dcc",
+              "variable": "chart_json.data[3].y[i]",
+              "value": "trace_values[i].trace[3]"
+            }
+          ]
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "aa666638-ca8c-4d12-d60a-19ff23a88c74",
+          "source": "70cda707-aa8a-467b-871a-242310160d22",
+          "output": "@seqout",
+          "target": "d760ed93-d997-474c-b824-8fcb3215520d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "06e1d3f4-d100-4966-c0a9-1a1ade8ae0d4",
+          "source": "d760ed93-d997-474c-b824-8fcb3215520d",
+          "output": "@seqout",
+          "target": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "input": "start"
+        },
+        {
+          "objID": "b75b5947-a6df-4d3c-fe42-d2d3840bfd36",
+          "source": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "output": "done",
+          "target": "6b12201f-8ed8-47b3-83bb-21b67ac7482c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "46f008c0-28c3-4dbd-eb2a-5e89b3575aaf",
+          "source": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "output": "@seqout",
+          "target": "5c7cd731-5594-4e0b-f971-79e3327b2a19",
+          "input": "@seqin"
+        },
+        {
+          "objID": "24674db7-11d0-423c-c00c-a180e99b82a4",
+          "source": "8a9a8035-4b2b-43e1-901d-da6e8f5fac79",
+          "output": "False",
+          "target": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "input": "next"
+        },
+        {
+          "objID": "0bea2409-4f40-4673-9289-8d08e6feed38",
+          "source": "5c7cd731-5594-4e0b-f971-79e3327b2a19",
+          "output": "@seqout",
+          "target": "8a9a8035-4b2b-43e1-901d-da6e8f5fac79",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e19a7520-78d9-49df-cfa7-d02b3d13eda6",
+          "source": "8a9a8035-4b2b-43e1-901d-da6e8f5fac79",
+          "output": "True",
+          "target": "9c1522b3-a380-45a1-db55-d53cd614bd3b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "09902e72-5a3b-4dc1-ed8c-82bce8b194ba",
+          "source": "9c1522b3-a380-45a1-db55-d53cd614bd3b",
+          "output": "@seqout",
+          "target": "0b873281-4f24-4a83-f057-bf4b8600f233",
+          "input": "next"
+        }
+      ],
+      "localVariables": [
+        {
+          "objID": "ef390f5b-b491-42bd-b8f2-e42432262743",
+          "name": "trace",
+          "type": "json",
+          "defaultValue": "null",
+          "persistent": false,
+          "native": false
+        },
+        {
+          "objID": "c4dccb11-fd90-421d-8bbd-8a1bd28e9712",
+          "name": "i",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false,
+          "native": false
+        }
+      ],
+      "name": "build_chart_json",
+      "implementationType": "flow"
     }
   ],
   "userPages": [
@@ -1695,8 +1972,8 @@
               "type": "UserWidgetWidget",
               "left": 0,
               "top": 0,
-              "width": 1552,
-              "height": 1238,
+              "width": 620,
+              "height": 741,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -1715,8 +1992,8 @@
               "type": "InstrumentTerminalWidget",
               "left": 0,
               "top": 0,
-              "width": 1004,
-              "height": 1238,
+              "width": 400,
+              "height": 741,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -1814,10 +2091,7 @@
       "top": 0,
       "width": 1024,
       "height": 768,
-      "scaleToFit": true,
-      "lvglLocalStyles": {
-        "objID": "884fb5b8-1c0a-4a21-873f-75978cb46ef3"
-      }
+      "scaleToFit": true
     }
   ],
   "userWidgets": [
@@ -1898,97 +2172,26 @@
           "eventHandlers": [],
           "widgets": [
             {
-              "objID": "1907ef94-b563-4396-de5a-06acce018f09",
-              "type": "LineChartWidget",
+              "objID": "57503560-0433-4d6d-c3b4-09201808cab4",
+              "type": "PlotlyWidget",
               "left": 10,
               "top": 10,
               "width": 870,
               "height": 690,
-              "customInputs": [
-                {
-                  "objID": "b55d3075-2a16-4089-fc78-c6a3f9723cb0",
-                  "name": "trace_value",
-                  "type": "struct:TraceValue"
-                }
-              ],
+              "customInputs": [],
               "customOutputs": [],
-              "resizing": {
-                "pinToEdge": 15,
-                "fixSize": 0
-              },
               "style": {
-                "objID": "da67ed58-213e-446f-d719-d3d878d1cba6",
+                "objID": "3eae25ff-34fa-409c-8b15-41c2432a616d",
                 "useStyle": "default",
                 "conditionalStyles": [],
-                "childStyles": [],
-                "borderSize": "1",
-                "borderColor": "#333",
-                "borderStyle": "solid"
+                "childStyles": []
               },
               "timeline": [],
               "eventHandlers": [],
               "outputWidgetHandle": true,
-              "xValue": "trace_value.freq",
-              "lines": [
-                {
-                  "objID": "e283e3f8-e27d-4302-c6fa-e648306c90e1",
-                  "label": "\"Trace 1\"",
-                  "color": "#eeff00",
-                  "value": "trace_value.trace[0]",
-                  "visible": "trace_visible[0]"
-                },
-                {
-                  "objID": "fced38f1-eb4c-43b5-b117-f3681332f8ee",
-                  "label": "\"Trace 2\"",
-                  "color": "#00b303",
-                  "value": "trace_value.trace[1]",
-                  "visible": "trace_visible[1]"
-                },
-                {
-                  "objID": "6e2c6a0b-e5cd-4e25-b78c-9cf49deb250e",
-                  "label": "\"Trace 3\"",
-                  "color": "#ff00d0",
-                  "value": "trace_value.trace[2]",
-                  "visible": "trace_visible[2]"
-                },
-                {
-                  "objID": "3ad22179-1b07-4c9a-f594-da58cbfa6415",
-                  "label": "\"Trace 4\"",
-                  "color": "#ff4d4d",
-                  "value": "trace_value.trace[3]",
-                  "visible": "trace_visible[3]"
-                }
-              ],
-              "title": "",
-              "displayModebar": "hover",
-              "showLegend": true,
-              "showXAxis": true,
-              "showYAxis": true,
-              "showGrid": true,
-              "showZeroLines": true,
-              "xAxisTickSuffix": "Hz",
-              "xAxisRangeOption": "floating",
-              "xAxisRangeFrom": 0,
-              "xAxisRangeTo": 10,
-              "yAxisTickSuffix": "dBm",
-              "yAxisRangeOption": "fixed",
-              "yAxisRangeFrom": "-105",
-              "yAxisRangeTo": "5",
-              "maxPoints": "num_points",
-              "margin": {
-                "objID": "3cbdfd8e-b562-4a1b-ad3f-700e6a5384f9",
-                "top": 40,
-                "right": 0,
-                "bottom": 40,
-                "left": 60
-              },
-              "marker": "",
-              "markerStyle": {
-                "objID": "b90766a1-9ede-4be6-9cb0-585ff4532fc6",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              }
+              "plotlyData": "chart_json.data",
+              "layout": "chart_json.layout",
+              "config": "chart_json.config"
             }
           ],
           "layout": "static"
@@ -2333,21 +2536,6 @@
           "layout": "static"
         },
         {
-          "objID": "23e6dbed-de74-4140-d227-446c5f7a1786",
-          "type": "LoopActionComponent",
-          "left": -780,
-          "top": 367,
-          "width": 384,
-          "height": 70,
-          "customInputs": [],
-          "customOutputs": [],
-          "variable": "i",
-          "from": "0",
-          "to": "Array.length(trace_values) - 1",
-          "step": "1",
-          "version": 1
-        },
-        {
           "objID": "47c196f2-158c-4bae-f1c2-d44aa6b84059",
           "type": "StartActionComponent",
           "left": -959,
@@ -2356,17 +2544,6 @@
           "height": 24,
           "customInputs": [],
           "customOutputs": []
-        },
-        {
-          "objID": "d24cb6ce-05da-45ea-d60a-553c20b3672d",
-          "type": "EvalExprActionComponent",
-          "left": -312,
-          "top": 383,
-          "width": 151,
-          "height": 54,
-          "customInputs": [],
-          "customOutputs": [],
-          "expression": "trace_values[i]"
         },
         {
           "objID": "fa1ca88b-0221-41e4-bf7b-2951c17356cb",
@@ -2451,7 +2628,7 @@
           "left": 1136,
           "top": 56,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2468,7 +2645,7 @@
           "left": 1136,
           "top": 158,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2485,7 +2662,7 @@
           "left": 1136,
           "top": 261,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2502,7 +2679,7 @@
           "left": 1136,
           "top": 363,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2519,7 +2696,7 @@
           "left": 1845,
           "top": 206,
           "width": 152,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2758,7 +2935,7 @@
           "left": 1136,
           "top": 465,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2775,7 +2952,7 @@
           "left": 1136,
           "top": -157,
           "width": 146,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2792,7 +2969,7 @@
           "left": 1995,
           "top": -55,
           "width": 152,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2897,9 +3074,9 @@
           ],
           "customOutputs": [],
           "instrument": "instrument",
-          "itemType": "plotly",
+          "itemType": "widget",
           "chartDescription": "\"Ovo je description\"",
-          "plotlyWidget": "widget"
+          "widget": "widget"
         },
         {
           "objID": "19fd3921-9bc1-469d-fd51-788243004438",
@@ -2918,7 +3095,7 @@
           "left": -583,
           "top": -120,
           "width": 288,
-          "height": 55,
+          "height": 57,
           "customInputs": [],
           "customOutputs": [],
           "entries": [
@@ -2928,30 +3105,31 @@
               "value": "num_points_arr[sa_version]"
             }
           ]
+        },
+        {
+          "objID": "af057382-e4bf-44bf-ca13-06f078cf85f4",
+          "type": "CallActionActionComponent",
+          "left": -320,
+          "top": 187,
+          "width": 128,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "reset_chart_json"
+        },
+        {
+          "objID": "9c33cc87-4ab1-4244-b64f-acbb806f7987",
+          "type": "CallActionActionComponent",
+          "left": -296,
+          "top": 357,
+          "width": 127,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": [],
+          "action": "build_chart_json"
         }
       ],
       "connectionLines": [
-        {
-          "objID": "753a62eb-d446-4822-b8a4-a266f1903cb4",
-          "source": "d24cb6ce-05da-45ea-d60a-553c20b3672d",
-          "output": "result",
-          "target": "1907ef94-b563-4396-de5a-06acce018f09",
-          "input": "trace_value"
-        },
-        {
-          "objID": "9024012a-85e5-41da-ae5e-454e7237c164",
-          "source": "23e6dbed-de74-4140-d227-446c5f7a1786",
-          "output": "@seqout",
-          "target": "d24cb6ce-05da-45ea-d60a-553c20b3672d",
-          "input": "@seqin"
-        },
-        {
-          "objID": "a8822cb8-5756-489f-a951-30d024e13dc8",
-          "source": "d24cb6ce-05da-45ea-d60a-553c20b3672d",
-          "output": "@seqout",
-          "target": "23e6dbed-de74-4140-d227-446c5f7a1786",
-          "input": "next"
-        },
         {
           "objID": "55771a42-3446-41cf-9445-243749e9af92",
           "source": "b855288b-9b80-4bd4-8df4-b479fc663100",
@@ -3215,8 +3393,8 @@
           "objID": "c6a2cf1c-3611-4eaa-9869-fb3f08105c6a",
           "source": "3a044b56-1888-4ed0-8af0-dbc2cc066a43",
           "output": "False",
-          "target": "1907ef94-b563-4396-de5a-06acce018f09",
-          "input": "reset"
+          "target": "af057382-e4bf-44bf-ca13-06f078cf85f4",
+          "input": "@seqin"
         },
         {
           "objID": "0b419630-5acf-40e3-c3cc-c28844da3571",
@@ -3236,8 +3414,8 @@
           "objID": "b52cbb99-9409-4d88-90ce-f39fc722be2f",
           "source": "9b47e219-7f48-49b8-8182-b3027e57bb8e",
           "output": "@seqout",
-          "target": "23e6dbed-de74-4140-d227-446c5f7a1786",
-          "input": "start"
+          "target": "9c33cc87-4ab1-4244-b64f-acbb806f7987",
+          "input": "@seqin"
         },
         {
           "objID": "24e804b2-2763-4c6f-d278-68e1cc3d12ba",
@@ -3250,8 +3428,8 @@
           "objID": "e0d12f1a-9bbb-40c3-93e6-573d20307115",
           "source": "1103e800-39f3-4625-a15f-e8756097e949",
           "output": "@seqout",
-          "target": "1907ef94-b563-4396-de5a-06acce018f09",
-          "input": "reset"
+          "target": "af057382-e4bf-44bf-ca13-06f078cf85f4",
+          "input": "@seqin"
         },
         {
           "objID": "bb5b48ff-fd2e-4a4c-c31c-475b04f74896",
@@ -3273,13 +3451,6 @@
           "output": "CLICKED",
           "target": "e7defa4a-5bf9-427c-a310-64e738a909ba",
           "input": "@seqin"
-        },
-        {
-          "objID": "88ea5476-0443-4df8-c461-e0d3fe061de0",
-          "source": "1907ef94-b563-4396-de5a-06acce018f09",
-          "output": "@widget",
-          "target": "e7defa4a-5bf9-427c-a310-64e738a909ba",
-          "input": "widget"
         },
         {
           "objID": "b110559a-e326-4935-92ee-c8ff85ab1524",
@@ -3322,6 +3493,13 @@
           "output": "@seqout",
           "target": "1103e800-39f3-4625-a15f-e8756097e949",
           "input": "@seqin"
+        },
+        {
+          "objID": "491d4adb-3223-4b92-ad5f-2f1503f95a27",
+          "source": "57503560-0433-4d6d-c3b4-09201808cab4",
+          "output": "@widget",
+          "target": "e7defa4a-5bf9-427c-a310-64e738a909ba",
+          "input": "widget"
         }
       ],
       "localVariables": [
@@ -3340,10 +3518,7 @@
       "width": 1024,
       "height": 768,
       "scaleToFit": false,
-      "isUsedAsUserWidget": true,
-      "lvglLocalStyles": {
-        "objID": "825ecf69-fbf1-436a-fc8d-68e44e960f9a"
-      }
+      "isUsedAsUserWidget": true
     }
   ],
   "styles": [
