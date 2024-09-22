@@ -1,0 +1,814 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "title": "TCP Client",
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "extensions": [],
+      "imports": [],
+      "displayBorderRadius": 0,
+      "colorFormat": "RGB",
+      "description": "Example of using TCP actions to implement TCP client",
+      "image": "data:image/png;base64,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AgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASCXS6XR/jwEAoB+YDQIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBIySAAIFIyCACIlAwCACIlgwCASMkgACBSMggAiJQMAgAiJYMAgEjJIAAgUjIIAIiUDAIAIiWDAIBI/f9EJeCQfHNEuQAAAABJRU5ErkJggg==",
+      "keywords": "Network TCP",
+      "minStudioVersion": "0.17.0",
+      "resourceFiles": []
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h",
+      "generateSourceCodeForEezFramework": false,
+      "compressFlowDefinition": false,
+      "executionQueueSize": 1000,
+      "expressionEvaluatorStackSize": 20
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [
+      {
+        "objID": "6cda4847-f7a7-4fd0-cf97-bf0cd57064c7",
+        "name": "ip_address",
+        "type": "string",
+        "defaultValue": "\"127.0.0.1\"",
+        "persistent": true,
+        "native": false
+      },
+      {
+        "objID": "d5baf170-39f0-4cce-81c0-69b382a3ef77",
+        "name": "port",
+        "type": "integer",
+        "defaultValue": "1337",
+        "persistent": true,
+        "native": false
+      },
+      {
+        "objID": "c08be2a1-6c59-49fa-a277-d32aaa159c7a",
+        "name": "socket",
+        "type": "object:TCPSocket",
+        "defaultValue": "null",
+        "persistent": false,
+        "native": false
+      },
+      {
+        "objID": "cba06e35-7c1d-460a-857d-15dbfd301acf",
+        "name": "line",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": false
+      },
+      {
+        "objID": "5f0527df-45f2-4215-c75d-b9272bd1007a",
+        "name": "write_line",
+        "type": "string",
+        "defaultValue": "\"\"",
+        "persistent": false,
+        "native": false
+      },
+      {
+        "objID": "331cd408-2a67-4e1f-a731-f2a534d373dd",
+        "name": "busy",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": false
+      }
+    ],
+    "structures": [],
+    "enums": []
+  },
+  "actions": [],
+  "userPages": [
+    {
+      "objID": "f7f15531-2f0d-6247-72af-17ad3967f8e0",
+      "components": [
+        {
+          "objID": "51b70d77-4e29-4daf-9b86-88953e9e2331",
+          "type": "TCPConnect",
+          "left": 175,
+          "top": -324,
+          "width": 105,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "socket": "socket",
+          "ipAddress": "ip_address",
+          "port": "port"
+        },
+        {
+          "objID": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "type": "TCPEventActionComponent",
+          "left": 341,
+          "top": -324,
+          "width": 89,
+          "height": 142,
+          "customInputs": [],
+          "customOutputs": [],
+          "eventHandlers": [
+            {
+              "objID": "d8b31ab9-875a-4c17-ff38-1ec9bf35926b",
+              "eventName": "ready",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "dba2b487-9b12-40a5-8745-edd5c03b5f3a",
+              "eventName": "data",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "f779a854-d6f4-4855-c93c-6076b8b1ce50",
+              "eventName": "close",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "74674cbe-90d7-48dd-d63a-4505892aae92",
+              "eventName": "end",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "d3eef184-d372-45ec-92cc-eb4ba611510e",
+              "eventName": "error",
+              "handlerType": "flow"
+            },
+            {
+              "objID": "70324336-fe4e-4747-d411-da28092b2bd9",
+              "eventName": "timeout",
+              "handlerType": "flow"
+            }
+          ],
+          "socket": "socket"
+        },
+        {
+          "objID": "12248a0a-05e2-449b-d725-9234d0c61a70",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -441,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"ready\""
+        },
+        {
+          "objID": "d7b84b69-df62-426d-97b4-409d0ba6042a",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -218,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"close\""
+        },
+        {
+          "objID": "1b4c3e51-8bb4-4987-8f3d-dea3b6cbef81",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -363,
+          "width": 155,
+          "height": 54,
+          "customInputs": [
+            {
+              "objID": "ef36cca5-2a99-4529-dd02-30de11597979",
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "value": "`data: ${value}`"
+        },
+        {
+          "objID": "292305b2-cb6b-47a0-d420-0c804d5d6443",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -290,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"end\""
+        },
+        {
+          "objID": "3e6a8f6b-e644-42aa-c0e5-f9c2d41a4e20",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -145,
+          "width": 161,
+          "height": 54,
+          "customInputs": [
+            {
+              "objID": "1562e2e1-e580-4385-fbc2-e0ee2364c4a5",
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "value": "`error: ${value}`"
+        },
+        {
+          "objID": "3c04b5c9-ba4d-4e7f-d1f0-27f3c39aea0b",
+          "type": "LogActionComponent",
+          "left": 715,
+          "top": -73,
+          "width": 87,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "\"timeout\""
+        },
+        {
+          "objID": "2782742c-d383-45cc-ef79-3c0cdba8c8ce",
+          "type": "TextDashboardWidget",
+          "left": 30,
+          "top": 20,
+          "width": 64,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"IP address\"",
+          "style": {
+            "objID": "328082bf-1f95-4fe8-e898-62deb1bf6513",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "f5159b9a-38e0-47a7-92f6-1a770d7bb8c9",
+          "type": "TextInputWidget",
+          "left": 140,
+          "top": 20,
+          "width": 180,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "ip_address",
+          "style": {
+            "objID": "251b01fc-55ab-47b2-f8b1-aa19342e7a90",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "dedc7578-f45c-49a9-9b8d-58c566f957d6",
+          "type": "TextDashboardWidget",
+          "left": 30,
+          "top": 64,
+          "width": 64,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Port\"",
+          "style": {
+            "objID": "d4d3418d-c3c6-4309-fb78-505d767e70c7",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "69010157-1f1f-4a5b-e9e1-28e3ef61d442",
+          "type": "NumberInputDashboardWidget",
+          "left": 140,
+          "top": 63,
+          "width": 180,
+          "height": 32,
+          "customInputs": [],
+          "customOutputs": [],
+          "visible": "",
+          "style": {
+            "objID": "32b2a026-ca47-48ec-dd45-b58826a9840d",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "value": "port",
+          "min": "0",
+          "max": "65535",
+          "step": "1"
+        },
+        {
+          "objID": "29515d03-d6dd-446b-ede1-87301875fe8c",
+          "type": "ButtonDashboardWidget",
+          "left": 30,
+          "top": 145,
+          "width": 80,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Connect\"",
+          "style": {
+            "objID": "21a7ab21-dfc3-453c-86de-af5cd2cd9813",
+            "useStyle": "button",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "d12a8515-4400-4194-d145-4ff7eb959eb1",
+              "eventName": "CLICKED",
+              "handlerType": "flow",
+              "userData": 0
+            }
+          ],
+          "enabled": "!socket.isConnected",
+          "disabledStyle": {
+            "objID": "b4edbfb9-6045-4e4c-b077-e72d77a7b9c2",
+            "useStyle": "button",
+            "conditionalStyles": [],
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "a9fdb6e4-6a7f-480d-c477-d28aef392690",
+          "type": "ButtonDashboardWidget",
+          "left": 666,
+          "top": 145,
+          "width": 80,
+          "height": 40,
+          "customInputs": [],
+          "customOutputs": [],
+          "data": "\"Disconnect\"",
+          "style": {
+            "objID": "951c03b6-ec94-44a9-9ef8-ad0b6fad2ea6",
+            "useStyle": "button",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [
+            {
+              "objID": "f00d9150-29b3-485d-d066-fab7e6269343",
+              "eventName": "CLICKED",
+              "handlerType": "flow",
+              "userData": 0
+            }
+          ],
+          "enabled": "socket.isConnected",
+          "disabledStyle": {
+            "objID": "c9f97278-b105-4157-c3c1-3395ebd720d8",
+            "useStyle": "button",
+            "conditionalStyles": [],
+            "childStyles": []
+          }
+        },
+        {
+          "objID": "8600e3c0-9dbe-448d-8862-67c973c434d5",
+          "type": "TCPDisconnect",
+          "left": 943,
+          "top": 145,
+          "width": 122,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "socket": "socket"
+        },
+        {
+          "objID": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "type": "TerminalWidget",
+          "left": 26,
+          "top": 199,
+          "width": 725,
+          "height": 378,
+          "customInputs": [
+            {
+              "objID": "ea86dc55-d50a-40f6-c5d1-e0cbc1cb1ce6",
+              "name": "data",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "data": "data",
+          "visible": "",
+          "style": {
+            "objID": "20b47ce4-aff3-41db-efce-5f5b91b1a640",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "3138c147-6205-4abb-f74d-690b476729a2",
+          "type": "IsTrueActionComponent",
+          "left": 482,
+          "top": 805,
+          "width": 200,
+          "height": 70,
+          "customInputs": [
+            {
+              "objID": "92f34f75-1e49-4fc2-f91b-bfd9d3469ad9",
+              "name": "value",
+              "type": "struct:$TerminalWidgetOnDataParams"
+            }
+          ],
+          "customOutputs": [],
+          "value": "value.data == '\\r'"
+        },
+        {
+          "objID": "64e1575a-1d6b-41b1-bd7d-38630aaa5753",
+          "type": "ConstantActionComponent",
+          "left": 775,
+          "top": 707,
+          "width": 87,
+          "height": 52,
+          "customInputs": [],
+          "customOutputs": [],
+          "description": "Send NL to terminal",
+          "value": "\"\\n\""
+        },
+        {
+          "objID": "718baba5-1ad0-4906-f6f7-66884993fcfd",
+          "type": "TCPWrite",
+          "left": 1460,
+          "top": 806,
+          "width": 152,
+          "height": 57,
+          "customInputs": [],
+          "customOutputs": [],
+          "socket": "socket",
+          "data": "write_line"
+        },
+        {
+          "objID": "f0d29e48-489c-4779-d045-d4e68f4ae20b",
+          "type": "IsTrueActionComponent",
+          "left": 1236,
+          "top": 806,
+          "width": 159,
+          "height": 70,
+          "customInputs": [],
+          "customOutputs": [],
+          "value": "socket.isConnected"
+        },
+        {
+          "objID": "bfae9b1d-3015-4cc9-9ce0-f3c918dcffa9",
+          "type": "SetVariableActionComponent",
+          "left": 901,
+          "top": -440,
+          "width": 103,
+          "height": 57,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "aa1b1f14-5307-43a7-fb0d-4aa45a554d50",
+              "variable": "line",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "0e08fc1a-0f28-407a-998a-dea6b066302d",
+          "type": "SetVariableActionComponent",
+          "left": 182,
+          "top": 806,
+          "width": 237,
+          "height": 57,
+          "customInputs": [
+            {
+              "objID": "438eea62-8adc-44ea-e2bc-ba90e594d416",
+              "name": "value",
+              "type": "struct:$TerminalWidgetOnDataParams"
+            }
+          ],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "c2c8a149-4997-42fa-ec3a-a9d6b253f8e4",
+              "variable": "line",
+              "value": "line + value.data"
+            }
+          ]
+        },
+        {
+          "objID": "7884bb9f-8895-4b76-eb89-a23a8292feea",
+          "type": "SetVariableActionComponent",
+          "left": 939,
+          "top": 806,
+          "width": 196,
+          "height": 79,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "6ffad941-d435-451e-fcfc-2e56b05fa2cf",
+              "variable": "write_line",
+              "value": "line + \"\\n\""
+            },
+            {
+              "objID": "91fda417-06ba-4db3-e42a-e2f83a180155",
+              "variable": "line",
+              "value": "\"\""
+            }
+          ]
+        },
+        {
+          "objID": "4cbb507f-ffab-4f26-e103-99aee37e58ba",
+          "type": "TestAndSetActionComponent",
+          "left": 0,
+          "top": 806,
+          "width": 100,
+          "height": 54,
+          "customInputs": [],
+          "customOutputs": [],
+          "variable": "busy"
+        },
+        {
+          "objID": "36b4447b-71cf-44e2-bcd8-968dd8e5859f",
+          "type": "SetVariableActionComponent",
+          "left": 1460,
+          "top": 997,
+          "width": 122,
+          "height": 57,
+          "customInputs": [],
+          "customOutputs": [],
+          "entries": [
+            {
+              "objID": "1a7c610a-642f-42d5-eff3-118e8ccbe508",
+              "variable": "busy",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "objID": "26a186c6-ee4a-4b10-86b4-eaaaecb21659",
+          "type": "CommentActionComponent",
+          "left": 182,
+          "top": 902,
+          "width": 435,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "text": "<div><!--block-->Collect key presses from terminal until CR is received</div>"
+        },
+        {
+          "objID": "9d524382-d6a2-4904-e9d2-58151155b76c",
+          "type": "CommentActionComponent",
+          "left": 943,
+          "top": 902,
+          "width": 435,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "text": "<div><!--block-->Send received line to the server. Line is terminated with CR NL (\\r\\n)</div>"
+        },
+        {
+          "objID": "0c3a7c82-d177-4c56-9954-c1a060b3de9f",
+          "type": "CommentActionComponent",
+          "left": 0,
+          "top": 715,
+          "width": 175,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "text": "<div><!--block-->Handle terminal input</div>"
+        },
+        {
+          "objID": "54046946-3fb0-4dcb-d8f6-392e3fea9a32",
+          "type": "CommentActionComponent",
+          "left": 175,
+          "top": -411,
+          "width": 435,
+          "height": 56,
+          "customInputs": [],
+          "customOutputs": [],
+          "text": "<div><!--block-->Connect to the TCP server</div>"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "636d17d2-e579-4565-8696-b31888beb8f7",
+          "source": "51b70d77-4e29-4daf-9b86-88953e9e2331",
+          "output": "@seqout",
+          "target": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ed2cb365-36c4-468c-c0e0-2f35ba7b4d3d",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "ready",
+          "target": "12248a0a-05e2-449b-d725-9234d0c61a70",
+          "input": "@seqin"
+        },
+        {
+          "objID": "637ce193-2276-4c26-ea15-faa9038a2200",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "end",
+          "target": "d7b84b69-df62-426d-97b4-409d0ba6042a",
+          "input": "@seqin"
+        },
+        {
+          "objID": "645bb83f-001e-4d0d-a066-e2d788c9e7d1",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "data",
+          "target": "1b4c3e51-8bb4-4987-8f3d-dea3b6cbef81",
+          "input": "value"
+        },
+        {
+          "objID": "9ee8b16e-1838-41c6-b5d8-7a6ebf54a1a6",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "close",
+          "target": "292305b2-cb6b-47a0-d420-0c804d5d6443",
+          "input": "@seqin"
+        },
+        {
+          "objID": "995cc14c-33dc-48a6-9c3c-b9044999abdd",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "error",
+          "target": "3e6a8f6b-e644-42aa-c0e5-f9c2d41a4e20",
+          "input": "value"
+        },
+        {
+          "objID": "d24d4e0d-5c4b-465e-f639-81fa9faef92a",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "timeout",
+          "target": "3c04b5c9-ba4d-4e7f-d1f0-27f3c39aea0b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2cb0f2f3-4e42-40b5-b8aa-fce21304a77a",
+          "source": "29515d03-d6dd-446b-ede1-87301875fe8c",
+          "output": "CLICKED",
+          "target": "51b70d77-4e29-4daf-9b86-88953e9e2331",
+          "input": "@seqin"
+        },
+        {
+          "objID": "c2f2aeb0-faed-42fa-99b7-8677a9075f20",
+          "source": "a9fdb6e4-6a7f-480d-c477-d28aef392690",
+          "output": "CLICKED",
+          "target": "8600e3c0-9dbe-448d-8862-67c973c434d5",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2781047a-16a2-4128-e0fe-d024fc5a67de",
+          "source": "eff42c70-dca5-4e86-f02a-c65b1b8aae0c",
+          "output": "data",
+          "target": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "input": "data"
+        },
+        {
+          "objID": "f2830398-247e-423d-f820-e09f7ff4b02b",
+          "source": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "output": "onData",
+          "target": "3138c147-6205-4abb-f74d-690b476729a2",
+          "input": "value"
+        },
+        {
+          "objID": "4d1ee6ee-84ed-45ee-da36-79dab99fb8e1",
+          "source": "3138c147-6205-4abb-f74d-690b476729a2",
+          "output": "True",
+          "target": "64e1575a-1d6b-41b1-bd7d-38630aaa5753",
+          "input": "@seqin"
+        },
+        {
+          "objID": "57bbf4fd-dc17-4227-e771-9ffd5fe93082",
+          "source": "64e1575a-1d6b-41b1-bd7d-38630aaa5753",
+          "output": "value",
+          "target": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "input": "data"
+        },
+        {
+          "objID": "97aff2f6-55b1-493c-9b0b-1f3c6df4f7b3",
+          "source": "f0d29e48-489c-4779-d045-d4e68f4ae20b",
+          "output": "True",
+          "target": "718baba5-1ad0-4906-f6f7-66884993fcfd",
+          "input": "@seqin"
+        },
+        {
+          "objID": "382fbd86-d37c-43bb-e6fa-080a9f11a6b4",
+          "source": "12248a0a-05e2-449b-d725-9234d0c61a70",
+          "output": "@seqout",
+          "target": "bfae9b1d-3015-4cc9-9ce0-f3c918dcffa9",
+          "input": "@seqin"
+        },
+        {
+          "objID": "2eaff509-73ac-4dfe-e0c1-92ab55cf5225",
+          "source": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "output": "onData",
+          "target": "4cbb507f-ffab-4f26-e103-99aee37e58ba",
+          "input": "@seqin"
+        },
+        {
+          "objID": "bce861b9-69c1-4be5-9b7d-fb55f69c12de",
+          "source": "0e08fc1a-0f28-407a-998a-dea6b066302d",
+          "output": "@seqout",
+          "target": "3138c147-6205-4abb-f74d-690b476729a2",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ae0ddcac-f242-4468-d23e-1d18c4d19bf2",
+          "source": "4cbb507f-ffab-4f26-e103-99aee37e58ba",
+          "output": "@seqout",
+          "target": "0e08fc1a-0f28-407a-998a-dea6b066302d",
+          "input": "@seqin"
+        },
+        {
+          "objID": "15d4fa3f-8dc9-427d-d989-126d311043ee",
+          "source": "3138c147-6205-4abb-f74d-690b476729a2",
+          "output": "False",
+          "target": "36b4447b-71cf-44e2-bcd8-968dd8e5859f",
+          "input": "@seqin"
+        },
+        {
+          "objID": "71293363-37a1-4aa8-dd95-fdffec177c09",
+          "source": "7884bb9f-8895-4b76-eb89-a23a8292feea",
+          "output": "@seqout",
+          "target": "36b4447b-71cf-44e2-bcd8-968dd8e5859f",
+          "input": "@seqin"
+        },
+        {
+          "objID": "e95b508f-39f9-4c27-83e0-941b7c3f9796",
+          "source": "993b0055-bf6d-4dc9-bcd7-a62d18295c39",
+          "output": "onData",
+          "target": "0e08fc1a-0f28-407a-998a-dea6b066302d",
+          "input": "value"
+        },
+        {
+          "objID": "1c14e8bf-309b-4d04-87c8-44d57cf8ee92",
+          "source": "7884bb9f-8895-4b76-eb89-a23a8292feea",
+          "output": "@seqout",
+          "target": "f0d29e48-489c-4779-d045-d4e68f4ae20b",
+          "input": "@seqin"
+        },
+        {
+          "objID": "34871ba4-9d05-4a7d-cd43-a8a67dcdd7ac",
+          "source": "3138c147-6205-4abb-f74d-690b476729a2",
+          "output": "True",
+          "target": "7884bb9f-8895-4b76-eb89-a23a8292feea",
+          "input": "@seqin"
+        }
+      ],
+      "localVariables": [],
+      "userProperties": [],
+      "name": "Main",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 770,
+      "height": 600
+    }
+  ],
+  "userWidgets": [],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default",
+      "conditionalStyles": [],
+      "childStyles": []
+    },
+    {
+      "objID": "c49c1adf-a610-28c0-027c-0e452dadb32b",
+      "name": "page",
+      "conditionalStyles": [],
+      "childStyles": [],
+      "backgroundColor": "page_color",
+      "css": "\n"
+    },
+    {
+      "objID": "6d736f33-2401-4886-cba5-1e747d0de7ca",
+      "name": "button",
+      "conditionalStyles": [],
+      "childStyles": [],
+      "borderRadius": "8",
+      "css": "border: none;\nbackground-color: #ddd;\nbox-shadow: 3px 3px 4px 0px #aaa;\n\n&:hover {\n    background-color: #ccc;\n}\n\n&: active {\n    box-shadow: none;\n    transform: translate(2px, 2px);\n}"
+    }
+  ],
+  "bitmaps": [],
+  "colors": [
+    {
+      "objID": "e6c28e5a-fe7f-09ed-9223-17769968ebea",
+      "name": "page_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": [
+        "#f0f0f0"
+      ]
+    }
+  ]
+}

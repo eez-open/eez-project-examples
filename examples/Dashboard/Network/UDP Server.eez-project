@@ -1,0 +1,231 @@
+{
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "title": "UDP Server",
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "dashboard",
+      "extensions": [],
+      "imports": [],
+      "displayBorderRadius": 0,
+      "colorFormat": "RGB",
+      "description": "Example of using UDP actions to implement UDP server",
+      "image": "data:image/png;base64,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AQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgBgxCgBAjBgFACBGjAIAECNGAQCIEaMAAMSIUQAAYsQoAAAxYhQAgJiNq6ur9BwAAPhOOTMKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAECMGAUAIEaMAgAQI0YBAIgRowAAxIhRAABixCgAADFiFACAGDEKAEDM/wNv6eadzalgNQAAAABJRU5ErkJggg==",
+      "keywords": "Network UDP",
+      "minStudioVersion": "0.17.0",
+      "resourceFiles": []
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [],
+      "lvglInclude": "lvgl/lvgl.h",
+      "generateSourceCodeForEezFramework": false,
+      "compressFlowDefinition": false,
+      "executionQueueSize": 1000,
+      "expressionEvaluatorStackSize": 20
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [],
+    "structures": [],
+    "enums": []
+  },
+  "actions": [],
+  "userPages": [
+    {
+      "objID": "f7f15531-2f0d-6247-72af-17ad3967f8e0",
+      "components": [
+        {
+          "objID": "0632e6cf-83e1-414d-91a4-6c77cee1b411",
+          "type": "UDPInActionComponent",
+          "left": 36,
+          "top": -107,
+          "width": 218,
+          "height": 80,
+          "customInputs": [],
+          "customOutputs": [],
+          "multicast": "udp",
+          "group": "",
+          "iface": "",
+          "port": "5555",
+          "ipv": "udp4"
+        },
+        {
+          "objID": "f721bda9-8a93-4393-fdd1-afa7f09715ae",
+          "type": "StartActionComponent",
+          "left": -127,
+          "top": -107,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": []
+        },
+        {
+          "objID": "3dce623b-2014-4ca8-c202-5ef2f84a33ec",
+          "type": "UDPOutActionComponent",
+          "left": 311,
+          "top": -233,
+          "width": 286,
+          "height": 106,
+          "customInputs": [
+            {
+              "objID": "748a7f72-2bda-4893-f046-8abd04517a6f",
+              "name": "message",
+              "type": "struct:$UDPMessage"
+            }
+          ],
+          "customOutputs": [],
+          "multicast": "udp",
+          "address": "message.address",
+          "group": "",
+          "iface": "",
+          "port": "message.port",
+          "ipv": "udp4",
+          "outportType": "fixed",
+          "outport": "5555",
+          "payload": "\"Hello there!\""
+        },
+        {
+          "objID": "1bc2fed5-d957-4fd7-a24a-29c435909a1a",
+          "type": "TerminalWidget",
+          "left": 40,
+          "top": 40,
+          "width": 820,
+          "height": 520,
+          "customInputs": [
+            {
+              "objID": "59c72dc4-45af-41d6-857e-8485caf82db7",
+              "name": "data",
+              "type": "string"
+            }
+          ],
+          "customOutputs": [],
+          "data": "data",
+          "style": {
+            "objID": "dcc510ed-b548-4831-9682-c7b04380e84c",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": []
+        },
+        {
+          "objID": "1b3464a4-e1f0-4595-d6a4-ae88cd0cee2e",
+          "type": "EvalExprActionComponent",
+          "left": 311,
+          "top": -107,
+          "width": 691,
+          "height": 54,
+          "customInputs": [
+            {
+              "objID": "b704dc26-6879-4802-df2d-972755d54125",
+              "name": "message",
+              "type": "struct:$UDPMessage"
+            }
+          ],
+          "customOutputs": [],
+          "expression": "`Server received: ${message.address}:${message.port} - ${Blob.toString(message.payload)}\\r\\n`"
+        },
+        {
+          "objID": "4e04aad5-2a4c-4087-b09e-3732b8d76b16",
+          "type": "NoopActionComponent",
+          "left": 984,
+          "top": 288,
+          "width": 87,
+          "height": 24,
+          "customInputs": [],
+          "customOutputs": [],
+          "name": "Ignore"
+        }
+      ],
+      "connectionLines": [
+        {
+          "objID": "da9e52e0-8883-4ee7-eaca-1d4190122f60",
+          "source": "f721bda9-8a93-4393-fdd1-afa7f09715ae",
+          "output": "@seqout",
+          "target": "0632e6cf-83e1-414d-91a4-6c77cee1b411",
+          "input": "@seqin"
+        },
+        {
+          "objID": "bc560a44-96fb-4130-d70a-56c8aacfa675",
+          "source": "0632e6cf-83e1-414d-91a4-6c77cee1b411",
+          "output": "message",
+          "target": "1b3464a4-e1f0-4595-d6a4-ae88cd0cee2e",
+          "input": "message"
+        },
+        {
+          "objID": "3cfb1f56-507a-4c8e-b3ce-310959f281e5",
+          "source": "1b3464a4-e1f0-4595-d6a4-ae88cd0cee2e",
+          "output": "result",
+          "target": "1bc2fed5-d957-4fd7-a24a-29c435909a1a",
+          "input": "data"
+        },
+        {
+          "objID": "3827dc8e-736f-491f-92c1-8b976352b2fb",
+          "source": "1bc2fed5-d957-4fd7-a24a-29c435909a1a",
+          "output": "onData",
+          "target": "4e04aad5-2a4c-4087-b09e-3732b8d76b16",
+          "input": "@seqin"
+        },
+        {
+          "objID": "ef29176a-1df7-4922-c17e-7da8f31b96c4",
+          "source": "0632e6cf-83e1-414d-91a4-6c77cee1b411",
+          "output": "message",
+          "target": "3dce623b-2014-4ca8-c202-5ef2f84a33ec",
+          "input": "message"
+        }
+      ],
+      "localVariables": [],
+      "userProperties": [],
+      "name": "Main",
+      "style": "page",
+      "left": 0,
+      "top": 0,
+      "width": 900,
+      "height": 600
+    }
+  ],
+  "userWidgets": [],
+  "styles": [
+    {
+      "objID": "04157789-da53-2f4a-e658-4ca10aa5fbef",
+      "name": "default",
+      "conditionalStyles": [],
+      "childStyles": []
+    },
+    {
+      "objID": "c49c1adf-a610-28c0-027c-0e452dadb32b",
+      "name": "page",
+      "conditionalStyles": [],
+      "childStyles": [],
+      "backgroundColor": "page_color",
+      "css": "\n"
+    }
+  ],
+  "bitmaps": [],
+  "colors": [
+    {
+      "objID": "e6c28e5a-fe7f-09ed-9223-17769968ebea",
+      "name": "page_color"
+    }
+  ],
+  "themes": [
+    {
+      "objID": "a7943c4e-90c6-cf58-2c43-9f24cf4b097c",
+      "name": "default",
+      "colors": [
+        "#f0f0f0"
+      ]
+    }
+  ]
+}
