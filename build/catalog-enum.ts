@@ -73,6 +73,14 @@ async function getDescription(
             ))
         );
     }
+    if (projectType == "iext" && json.settings?.general?.commandsDocFolder) {
+        resourceFiles.push(
+            ...(await getAllFiles(
+                __dirname + "/../" + path.dirname(eezProjectPath) + "/" +
+                    json.settings.general.commandsDocFolder, json.settings.general.commandsDocFolder + "/"
+            ))
+        );
+    }
 
     if (description && image && keywords) {
         return {
