@@ -74,7 +74,7 @@ def make_chart(chart_type):
         axs[0].set_ylabel('s1 and s2')
         axs[0].grid(True)
 
-        cxy, f = axs[1].cohere(s1, s2, 256, 1. / dt)
+        cxy, f = axs[1].cohere(s1, s2, NFFT=256, Fs=1. / dt)
         axs[1].set_ylabel('coherence')
 
         fig.tight_layout()
@@ -86,7 +86,7 @@ def make_chart(chart_type):
         # Load a numpy record array from yahoo csv data with fields date, open, close,
         # volume, adj_close from the mpl-data/example directory. The record array
         # stores the date as an np.datetime64 with a day unit ('D') in the date column.
-        price_data = (cbook.get_sample_data('goog.npz', np_load=True)['price_data']
+        price_data = (cbook.get_sample_data('goog.npz', asfileobj=True)['price_data']
                     .view(np.recarray))
         price_data = price_data[-250:]  # get the most recent 250 trading days
 
