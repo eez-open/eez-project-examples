@@ -19,7 +19,7 @@
     "homepage": "https://github.com/eez-open/eez-project-examples#readme",
     "dependencies": {
         "@types/archiver": "^5.3.2",
-        "@types/node": "^16.18.34",
+        "@types/node": "^16.18.126",
         "archiver": "^5.3.1",
         "glob": "^10.2.6",
         "request": "^2.88.2",
