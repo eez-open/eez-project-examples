@@ -68,7 +68,7 @@ All pull requests must be approved by the EEZ team. Each `.eez-project` file is 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 Individual examples may have their own licenses as specified by their authors.
 
