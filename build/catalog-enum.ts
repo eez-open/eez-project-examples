@@ -152,6 +152,7 @@ export async function getCatalog() {
                 );
             }
         } catch (err) {
+            console.error(`Error in file "${file}": ${err}`);            
             console.error(err);
         }
     }
