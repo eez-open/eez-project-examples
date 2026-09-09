@@ -174,7 +174,8 @@
               "groupIndex": 0,
               "text": "Chart widget examples",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "cd04a3d8-87a1-d1da-2d73-ffa528b7ffa1",
@@ -211,7 +212,8 @@
               "groupIndex": 0,
               "text": "Dual axis, ranges",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "15c3c4e4-9e5b-e668-1ed1-5c33ca777394",
@@ -306,7 +308,8 @@
               "groupIndex": 0,
               "text": "Three series, one axis",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "2dbd1b3c-fcf2-5b29-cc07-f767c2aa82ba",
@@ -406,7 +409,8 @@
               "groupIndex": 0,
               "text": "Div lines 6 x 10",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "a00f2076-7e24-793a-924c-5fb4fe982175",
@@ -492,7 +496,8 @@
               "groupIndex": 0,
               "text": "Point count 20",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "317f6876-ff68-9717-7419-d75ed0ce03af",

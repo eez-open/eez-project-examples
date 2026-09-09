@@ -174,7 +174,8 @@
               "groupIndex": 0,
               "text": "Table widget examples",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "cd04a3d8-87a1-d1da-2d73-ffa528b7ffa1",
@@ -211,7 +212,8 @@
               "groupIndex": 0,
               "text": "Event log, three columns",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "15c3c4e4-9e5b-e668-1ed1-5c33ca777394",
@@ -301,7 +303,8 @@
               "groupIndex": 0,
               "text": "Parameter list",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "2dbd1b3c-fcf2-5b29-cc07-f767c2aa82ba",
@@ -386,7 +389,8 @@
               "groupIndex": 0,
               "text": "Single wide column",
               "textType": "literal",
-              "useStaticText": true
+              "useStaticText": true,
+              "longMode": "WRAP"
             },
             {
               "objID": "a00f2076-7e24-793a-924c-5fb4fe982175",
